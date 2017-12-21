@@ -1,0 +1,224 @@
+[gd_scene load_steps=18 format=1]
+
+[ext_resource path="res://principal.gd" type="Script" id=1]
+[ext_resource path="res://botones.gd" type="Script" id=2]
+[ext_resource path="res://boton.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/img/blanca_1.png" type="Texture" id=4]
+[ext_resource path="res://assets/blanca_1.pbm" type="BitMap" id=5]
+[ext_resource path="res://assets/notas/8bit/1.wav" type="Sample" id=6]
+[ext_resource path="res://assets/img/blanca_2.png" type="Texture" id=7]
+[ext_resource path="res://assets/blanca_2.pbm" type="BitMap" id=8]
+[ext_resource path="res://assets/notas/8bit/3.wav" type="Sample" id=9]
+[ext_resource path="res://assets/img/blanca_3.png" type="Texture" id=10]
+[ext_resource path="res://assets/blanca_3.pbm" type="BitMap" id=11]
+[ext_resource path="res://assets/notas/8bit/5.wav" type="Sample" id=12]
+[ext_resource path="res://assets/img/fondo_juego.png" type="Texture" id=13]
+
+[sub_resource type="SampleLibrary" id=1]
+
+samples/1 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 6 )
+}
+
+[sub_resource type="SampleLibrary" id=2]
+
+samples/3 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 9 )
+}
+
+[sub_resource type="SampleLibrary" id=3]
+
+samples/5 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 12 )
+}
+
+[sub_resource type="Animation" id=4]
+
+length = 2.5
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:transform/pos")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.5, 1.7, 2.5 ),
+"transitions": FloatArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 640, -60.2936 ), Vector2( 640, 360 ), Vector2( 640, 360 ), Vector2( 640, -69.5921 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:transform/rot")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -20.0, 0.0, 20.0, 0.0, -20.0, 0.0, 20.0, 0.0, -20.0, 0.0, 20.0, 0.0 ]
+}
+
+[node name="scene" type="Node2D"]
+
+transform/pos = Vector2( -0.814575, 0.814514 )
+script/script = ExtResource( 1 )
+
+[node name="botones" type="Node2D" parent="."]
+
+script/script = ExtResource( 2 )
+
+[node name="1" parent="botones" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 741.552, 361.496 )
+
+[node name="boton-lb" parent="botones/1"]
+
+margin/left = -680.0
+margin/top = -158.0
+margin/right = 644.0
+margin/bottom = -241.0
+textures/normal = ExtResource( 4 )
+textures/click_mask = ExtResource( 5 )
+colorInactivo = Color( 1, 1, 1, 1 )
+colorActivo = Color( 0.753906, 0.753906, 0.753906, 1 )
+
+[node name="sonido" parent="botones/1"]
+
+config/samples = SubResource( 1 )
+
+[node name="3" parent="botones" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 477.006, 201.635 )
+
+[node name="boton-lb" parent="botones/3"]
+
+margin/bottom = -399.0
+textures/normal = ExtResource( 7 )
+textures/click_mask = ExtResource( 8 )
+colorInactivo = Color( 1, 1, 1, 1 )
+colorActivo = Color( 0.752941, 0.752941, 0.752941, 1 )
+
+[node name="sonido" parent="botones/3"]
+
+config/samples = SubResource( 2 )
+
+[node name="5" parent="botones" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 626.092, 488.926 )
+transform/rot = 180.0
+transform/scale = Vector2( -1, -1 )
+
+[node name="boton-lb" parent="botones/5"]
+
+margin/left = -407.0
+margin/top = -286.0
+margin/right = 134.0
+margin/bottom = -113.0
+textures/normal = ExtResource( 10 )
+textures/click_mask = ExtResource( 11 )
+colorInactivo = Color( 1, 1, 1, 1 )
+colorActivo = Color( 0.752941, 0.752941, 0.752941, 1 )
+
+[node name="sonido" parent="botones/5"]
+
+config/samples = SubResource( 3 )
+
+[node name="btnEmpezar" type="Button" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1113.0
+margin/top = 664.0
+margin/right = 1180.0
+margin/bottom = 684.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Empezar"
+flat = false
+
+[node name="timerRespuesta" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[node name="error" type="Node2D" parent="."]
+
+transform/pos = Vector2( 640, -60.2936 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="panel" type="Panel" parent="error"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -118.0
+margin/top = -48.0
+margin/right = 118.0
+margin/bottom = 49.0
+
+[node name="Label" type="Label" parent="error/panel"]
+
+rect/scale = Vector2( 2, 2 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 73.0
+margin/top = 35.0
+margin/right = 115.0
+margin/bottom = 51.0
+text = "Error :("
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="anim" type="AnimationPlayer" parent="error"]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/mostrar = SubResource( 4 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+[node name="fondo_juego" type="TextureFrame" parent="."]
+
+visibility/behind_parent = true
+rect/min_size = Vector2( 1, 2 )
+rect/scale = Vector2( 2, 2 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -125.0
+margin/top = -60.0
+margin/right = 625.0
+margin/bottom = 430.0
+texture = ExtResource( 13 )
+stretch_mode = 0
+
+[connection signal="pressed" from="btnEmpezar" to="." method="_on_btnEmpezar_pressed"]
+
+
+[editable path="botones/1"]
+[editable path="botones/3"]
+[editable path="botones/5"]
