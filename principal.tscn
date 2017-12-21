@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=1]
+[gd_scene load_steps=38 format=1]
 
 [ext_resource path="res://principal.gd" type="Script" id=1]
 [ext_resource path="res://botones.gd" type="Script" id=2]
@@ -12,7 +12,18 @@
 [ext_resource path="res://assets/img/blanca_3.png" type="Texture" id=10]
 [ext_resource path="res://assets/blanca_3.pbm" type="BitMap" id=11]
 [ext_resource path="res://assets/notas/8bit/5.wav" type="Sample" id=12]
-[ext_resource path="res://assets/img/fondo_juego.png" type="Texture" id=13]
+[ext_resource path="res://assets/notas/8bit/6.wav" type="Sample" id=13]
+[ext_resource path="res://assets/notas/8bit/8.wav" type="Sample" id=14]
+[ext_resource path="res://assets/notas/8bit/10.wav" type="Sample" id=15]
+[ext_resource path="res://assets/notas/8bit/12.wav" type="Sample" id=16]
+[ext_resource path="res://assets/img/negra.png" type="Texture" id=17]
+[ext_resource path="res://assets/negra.pbm" type="BitMap" id=18]
+[ext_resource path="res://assets/notas/8bit/2.wav" type="Sample" id=19]
+[ext_resource path="res://assets/notas/8bit/4.wav" type="Sample" id=20]
+[ext_resource path="res://assets/notas/8bit/7.wav" type="Sample" id=21]
+[ext_resource path="res://assets/notas/8bit/9.wav" type="Sample" id=22]
+[ext_resource path="res://assets/notas/8bit/11.wav" type="Sample" id=23]
+[ext_resource path="res://assets/img/fondo_juego.png" type="Texture" id=24]
 
 [sub_resource type="SampleLibrary" id=1]
 
@@ -41,7 +52,88 @@ samples/5 = {
 "sample": ExtResource( 12 )
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="SampleLibrary" id=4]
+
+samples/6 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 13 )
+}
+
+[sub_resource type="SampleLibrary" id=5]
+
+samples/8 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 14 )
+}
+
+[sub_resource type="SampleLibrary" id=6]
+
+samples/10 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 15 )
+}
+
+[sub_resource type="SampleLibrary" id=7]
+
+samples/12 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 16 )
+}
+
+[sub_resource type="SampleLibrary" id=8]
+
+samples/2 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 19 )
+}
+
+[sub_resource type="SampleLibrary" id=9]
+
+samples/4 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 20 )
+}
+
+[sub_resource type="SampleLibrary" id=10]
+
+samples/7 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 21 )
+}
+
+[sub_resource type="SampleLibrary" id=11]
+
+samples/9 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 22 )
+}
+
+[sub_resource type="SampleLibrary" id=12]
+
+samples/11 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 23 )
+}
+
+[sub_resource type="Animation" id=13]
 
 length = 2.5
 loop = false
@@ -78,6 +170,7 @@ script/script = ExtResource( 2 )
 
 [node name="1" parent="botones" instance=ExtResource( 3 )]
 
+editor/display_folded = true
 transform/pos = Vector2( 741.552, 361.496 )
 
 [node name="boton-lb" parent="botones/1"]
@@ -97,6 +190,7 @@ config/samples = SubResource( 1 )
 
 [node name="3" parent="botones" instance=ExtResource( 3 )]
 
+editor/display_folded = true
 transform/pos = Vector2( 477.006, 201.635 )
 
 [node name="boton-lb" parent="botones/3"]
@@ -113,6 +207,7 @@ config/samples = SubResource( 2 )
 
 [node name="5" parent="botones" instance=ExtResource( 3 )]
 
+editor/display_folded = true
 transform/pos = Vector2( 626.092, 488.926 )
 transform/rot = 180.0
 transform/scale = Vector2( -1, -1 )
@@ -131,6 +226,181 @@ colorActivo = Color( 0.752941, 0.752941, 0.752941, 1 )
 [node name="sonido" parent="botones/5"]
 
 config/samples = SubResource( 3 )
+
+[node name="6" parent="botones" instance=ExtResource( 3 )]
+
+editor/display_folded = true
+transform/pos = Vector2( 1023.84, 466.781 )
+
+[node name="boton-lb" parent="botones/6"]
+
+margin/left = -729.0
+margin/top = -262.0
+margin/right = 456.0
+margin/bottom = -137.0
+textures/normal = ExtResource( 4 )
+textures/click_mask = ExtResource( 5 )
+colorInactivo = Color( 1, 1, 1, 1 )
+colorActivo = Color( 0.74902, 0.74902, 0.74902, 1 )
+
+[node name="sonido" parent="botones/6"]
+
+config/samples = SubResource( 4 )
+
+[node name="8" parent="botones" instance=ExtResource( 3 )]
+
+editor/display_folded = true
+transform/pos = Vector2( 1023.84, 466.781 )
+
+[node name="boton-lb" parent="botones/8"]
+
+margin/left = -654.0
+margin/top = -261.0
+margin/right = 381.0
+margin/bottom = -138.0
+textures/normal = ExtResource( 7 )
+textures/click_mask = ExtResource( 8 )
+colorInactivo = Color( 1, 1, 1, 1 )
+colorActivo = Color( 0.8, 0.8, 0.8, 1 )
+
+[node name="sonido" parent="botones/8"]
+
+config/samples = SubResource( 5 )
+
+[node name="10" parent="botones" instance=ExtResource( 3 )]
+
+editor/display_folded = true
+transform/pos = Vector2( 1023.84, 466.781 )
+
+[node name="boton-lb" parent="botones/10"]
+
+margin/left = -576.0
+margin/top = -261.0
+margin/right = 303.0
+margin/bottom = -138.0
+textures/normal = ExtResource( 7 )
+textures/click_mask = ExtResource( 8 )
+colorInactivo = Color( 1, 1, 1, 1 )
+colorActivo = Color( 0.8, 0.8, 0.8, 1 )
+
+[node name="sonido" parent="botones/10"]
+
+config/samples = SubResource( 6 )
+
+[node name="12" parent="botones" instance=ExtResource( 3 )]
+
+editor/display_folded = true
+transform/pos = Vector2( 1023.84, 466.781 )
+
+[node name="boton-lb" parent="botones/12"]
+
+margin/left = -496.0
+margin/top = -261.0
+margin/right = 223.0
+margin/bottom = -138.0
+textures/normal = ExtResource( 10 )
+textures/click_mask = ExtResource( 11 )
+colorInactivo = Color( 1, 1, 1, 1 )
+colorActivo = Color( 0.8, 0.8, 0.8, 1 )
+
+[node name="sonido" parent="botones/12"]
+
+config/samples = SubResource( 7 )
+
+[node name="2" parent="botones" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 737.039, 365.106 )
+
+[node name="boton-lb" parent="botones/2"]
+
+margin/left = -621.0
+margin/top = -147.0
+margin/right = 348.0
+margin/bottom = -124.0
+textures/normal = ExtResource( 17 )
+textures/click_mask = ExtResource( 18 )
+colorInactivo = Color( 0.144531, 0.144531, 0.144531, 1 )
+colorActivo = Color( 0, 0, 0, 1 )
+
+[node name="sonido" parent="botones/2"]
+
+config/samples = SubResource( 8 )
+
+[node name="4" parent="botones" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 737.039, 365.106 )
+
+[node name="boton-lb" parent="botones/4"]
+
+margin/left = -535.0
+margin/top = -147.0
+margin/right = 262.0
+margin/bottom = -124.0
+textures/normal = ExtResource( 17 )
+textures/click_mask = ExtResource( 18 )
+colorInactivo = Color( 0.144531, 0.144531, 0.144531, 1 )
+colorActivo = Color( 0, 0, 0, 1 )
+
+[node name="sonido" parent="botones/4"]
+
+config/samples = SubResource( 9 )
+
+[node name="7" parent="botones" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 737.039, 365.106 )
+
+[node name="boton-lb" parent="botones/7"]
+
+margin/left = -383.0
+margin/top = -147.0
+margin/right = 110.0
+margin/bottom = -124.0
+textures/normal = ExtResource( 17 )
+textures/click_mask = ExtResource( 18 )
+colorInactivo = Color( 0.144531, 0.144531, 0.144531, 1 )
+colorActivo = Color( 0, 0, 0, 1 )
+
+[node name="sonido" parent="botones/7"]
+
+config/samples = SubResource( 10 )
+
+[node name="9" parent="botones" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 737.039, 365.106 )
+
+[node name="boton-lb" parent="botones/9"]
+
+margin/left = -305.0
+margin/top = -147.0
+margin/right = 32.0
+margin/bottom = -124.0
+textures/normal = ExtResource( 17 )
+textures/click_mask = ExtResource( 18 )
+colorInactivo = Color( 0.144531, 0.144531, 0.144531, 1 )
+colorActivo = Color( 0, 0, 0, 1 )
+
+[node name="sonido" parent="botones/9"]
+
+config/samples = SubResource( 11 )
+
+[node name="11" parent="botones" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 738.845, 361.496 )
+
+[node name="boton-lb" parent="botones/11"]
+
+margin/left = -228.0
+margin/top = -143.0
+margin/right = -45.0
+margin/bottom = -128.0
+textures/normal = ExtResource( 17 )
+textures/click_mask = ExtResource( 18 )
+colorInactivo = Color( 0.144531, 0.144531, 0.144531, 1 )
+colorActivo = Color( 0, 0, 0, 1 )
+
+[node name="sonido" parent="botones/11"]
+
+config/samples = SubResource( 12 )
 
 [node name="btnEmpezar" type="Button" parent="."]
 
@@ -194,7 +464,7 @@ max_lines_visible = -1
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/mostrar = SubResource( 4 )
+anims/mostrar = SubResource( 13 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -209,11 +479,11 @@ focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -125.0
-margin/top = -60.0
-margin/right = 625.0
-margin/bottom = 430.0
-texture = ExtResource( 13 )
+margin/left = -152.0
+margin/top = -52.0
+margin/right = 598.0
+margin/bottom = 438.0
+texture = ExtResource( 24 )
 stretch_mode = 0
 
 [connection signal="pressed" from="btnEmpezar" to="." method="_on_btnEmpezar_pressed"]
@@ -222,3 +492,12 @@ stretch_mode = 0
 [editable path="botones/1"]
 [editable path="botones/3"]
 [editable path="botones/5"]
+[editable path="botones/6"]
+[editable path="botones/8"]
+[editable path="botones/10"]
+[editable path="botones/12"]
+[editable path="botones/2"]
+[editable path="botones/4"]
+[editable path="botones/7"]
+[editable path="botones/9"]
+[editable path="botones/11"]
