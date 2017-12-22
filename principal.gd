@@ -1,19 +1,20 @@
 extends Node2D
 
-var patron = [1, 11, 9, 7, 9]
+var patron = ['C1', 'D#1', 'A1', 'F2', 'C#2', 'B2']
 var currentPosicion = 0
 var patronTocado = []
 
 func _ready():
-	for boton in get_node("botones").get_children():
-		boton.connect("apretado", self, "boton_apretado" )
+	for octava in get_node("teclado").get_children():
+		for boton in octava.get_children():
+			boton.connect("apretado", self, "boton_apretado" )
 
 func boton_apretado(quien):
-	patronTocado.append( int(quien.get_name()) )
+	patronTocado.append( str(quien.get_name()) )
 	if ( checkPatronTocado() ):
 		if patronTocado.size() == currentPosicion + 1:
 			currentPosicion += 1
-			
+			 
 			if currentPosicion == patron.size():
 				get_node("error/panel/Label").set_text("ganaste!")
 				get_node("error/anim").play("mostrar")
@@ -26,14 +27,13 @@ func boton_apretado(quien):
 	else:
 		get_node("error/anim").play("mostrar")
 		yield( get_node("error/anim"), "finished" )
-		patronTocado = []
+		patronTocado = [] 
 		continuarPatron()
 
 func checkPatronTocado():
 	for i in range(patronTocado.size()):
-		if patronTocado[i] != patron[i]:
+		if str(patronTocado[i]) != str(patron[i]):
 			return false
-
 	return true
 
 func _on_btnEmpezar_pressed():
@@ -44,6 +44,7 @@ func continuarPatron():
 	patronTocado = []
 	for i in range(0,currentPosicion+1):
 		var nombreBoton = patron[i]
-		var boton = get_node("botones/" + str(nombreBoton) )
+		var nombreOctava = "octava" + str(nombreBoton[-1])
+		var boton = get_node("teclado/"+nombreOctava+"/" + nombreBoton )
 		boton.apretar()
 		yield( boton, "finApretado")

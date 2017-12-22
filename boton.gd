@@ -2,11 +2,13 @@ extends TextureButton
 
 export var colorInactivo = Color(0.8,0.8,0.8)
 export var colorActivo = Color(1,1,1)
+var nota;
 
 signal apretado
 
 func _ready():
 	set_modulate( colorInactivo )
+	nota = str(self.get_parent().get_name())
 
 func _on_botonlb_button_down():
 	apretar()
@@ -17,8 +19,7 @@ func _on_botonlb_button_up():
 
 func apretar():
 	set_modulate( colorActivo )
-	var sonido = str(self.get_parent().get_name())
-	get_node("../sonido").play(sonido)
+	get_node("../sonido").play(nota)
 
 func desapretar():
 	set_modulate( colorInactivo )

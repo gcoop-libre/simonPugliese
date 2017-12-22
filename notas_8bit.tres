@@ -1,0 +1,173 @@
+[gd_resource type="SampleLibrary" load_steps=25 format=1]
+
+[ext_resource path="res://assets/notas/8bit/11.wav" type="Sample" id=1]
+[ext_resource path="res://assets/notas/8bit/23.wav" type="Sample" id=2]
+[ext_resource path="res://assets/notas/8bit/10.wav" type="Sample" id=3]
+[ext_resource path="res://assets/notas/8bit/24.wav" type="Sample" id=4]
+[ext_resource path="res://assets/notas/8bit/12.wav" type="Sample" id=5]
+[ext_resource path="res://assets/notas/8bit/2.wav" type="Sample" id=6]
+[ext_resource path="res://assets/notas/8bit/14.wav" type="Sample" id=7]
+[ext_resource path="res://assets/notas/8bit/1.wav" type="Sample" id=8]
+[ext_resource path="res://assets/notas/8bit/13.wav" type="Sample" id=9]
+[ext_resource path="res://assets/notas/8bit/4.wav" type="Sample" id=10]
+[ext_resource path="res://assets/notas/8bit/16.wav" type="Sample" id=11]
+[ext_resource path="res://assets/notas/8bit/3.wav" type="Sample" id=12]
+[ext_resource path="res://assets/notas/8bit/15.wav" type="Sample" id=13]
+[ext_resource path="res://assets/notas/8bit/5.wav" type="Sample" id=14]
+[ext_resource path="res://assets/notas/8bit/17.wav" type="Sample" id=15]
+[ext_resource path="res://assets/notas/8bit/7.wav" type="Sample" id=16]
+[ext_resource path="res://assets/notas/8bit/19.wav" type="Sample" id=17]
+[ext_resource path="res://assets/notas/8bit/6.wav" type="Sample" id=18]
+[ext_resource path="res://assets/notas/8bit/18.wav" type="Sample" id=19]
+[ext_resource path="res://assets/notas/8bit/22.wav" type="Sample" id=20]
+[ext_resource path="res://assets/notas/8bit/9.wav" type="Sample" id=21]
+[ext_resource path="res://assets/notas/8bit/21.wav" type="Sample" id=22]
+[ext_resource path="res://assets/notas/8bit/8.wav" type="Sample" id=23]
+[ext_resource path="res://assets/notas/8bit/20.wav" type="Sample" id=24]
+
+[resource]
+
+samples/A#1 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 1 )
+}
+samples/A#2 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 2 )
+}
+samples/A1 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 3 )
+}
+samples/B2 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 4 )
+}
+samples/B1 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 5 )
+}
+samples/C#1 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 6 )
+}
+samples/C#2 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 7 )
+}
+samples/C1 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 8 )
+}
+samples/C2 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 9 )
+}
+samples/D#1 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 10 )
+}
+samples/D#2 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 11 )
+}
+samples/D1 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 12 )
+}
+samples/D2 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 13 )
+}
+samples/E1 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 14 )
+}
+samples/E2 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 15 )
+}
+samples/F#1 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 16 )
+}
+samples/F#2 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 17 )
+}
+samples/F1 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 18 )
+}
+samples/F2 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 19 )
+}
+samples/A2 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 20 )
+}
+samples/G#1 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 21 )
+}
+samples/G#2 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 22 )
+}
+samples/G1 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 23 )
+}
+samples/G2 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 24 )
+}
