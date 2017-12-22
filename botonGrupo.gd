@@ -6,7 +6,6 @@ signal finApretado
 func _ready():
 	pass
 
-
 func _on_botonlb_apretado():
 	emit_signal("apretado", self)
 	pass # replace with function body
@@ -18,3 +17,6 @@ func apretar():
 func _on_Timer_timeout():
 	get_node("boton-lb").desapretar()
 	emit_signal("finApretado")
+	
+func tocar(nota):
+	get_node("sonidos").play(nota)
