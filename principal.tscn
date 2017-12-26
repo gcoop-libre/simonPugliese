@@ -43,6 +43,7 @@ tracks/1/keys = {
 
 [node name="scene" type="Node2D"]
 
+editor/display_folded = true
 transform/pos = Vector2( -0.814575, 0.814514 )
 script/script = ExtResource( 1 )
 

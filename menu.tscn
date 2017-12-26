@@ -1,0 +1,186 @@
+[gd_scene load_steps=13 format=1]
+
+[ext_resource path="res://menu.gd" type="Script" id=1]
+[ext_resource path="res://assets/buttons/simon_pugliese.png" type="Texture" id=2]
+[ext_resource path="res://assets/buttons/jugar_button.png" type="Texture" id=3]
+[ext_resource path="res://assets/buttons/jugar_button_press.png" type="Texture" id=4]
+[ext_resource path="res://assets/buttons/jugar_button.pbm" type="BitMap" id=5]
+[ext_resource path="res://assets/buttons/acerca_de_button.png" type="Texture" id=6]
+[ext_resource path="res://assets/buttons/acerca_de_button_press.png" type="Texture" id=7]
+[ext_resource path="res://assets/buttons/acerca_de_button.pbm" type="BitMap" id=8]
+[ext_resource path="res://assets/buttons/salir_button.png" type="Texture" id=9]
+[ext_resource path="res://assets/buttons/salir_button_press.png" type="Texture" id=10]
+[ext_resource path="res://assets/buttons/salir_button.pbm" type="BitMap" id=11]
+[ext_resource path="res://assets/img/fondo_juego.png" type="Texture" id=12]
+
+[node name="menu" type="HBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1.0
+margin/top = 1.0
+margin/right = 1279.0
+margin/bottom = 719.0
+alignment = 0
+script/script = ExtResource( 1 )
+
+[node name="spacer" type="Control" parent="."]
+
+rect/min_size = Vector2( 250, 0 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 250.0
+margin/bottom = 718.0
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+
+rect/min_size = Vector2( 680, 0 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 254.0
+margin/top = 0.0
+margin/right = 981.0
+margin/bottom = 718.0
+use_top_left = false
+
+[node name="title screen" type="VBoxContainer" parent="CenterContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 0
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 84.0
+margin/right = 727.0
+margin/bottom = 634.0
+alignment = 0
+
+[node name="emblem" type="TextureFrame" parent="CenterContainer/title screen"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 727.0
+margin/bottom = 122.0
+texture = ExtResource( 2 )
+stretch_mode = 0
+
+[node name="spacer2" type="Control" parent="CenterContainer/title screen"]
+
+rect/min_size = Vector2( 0, 120 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 0.0
+margin/top = 126.0
+margin/right = 727.0
+margin/bottom = 246.0
+
+[node name="buttons" type="VBoxContainer" parent="CenterContainer/title screen"]
+
+rect/min_size = Vector2( 200, 300 )
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 0
+size_flags/vertical = 0
+margin/left = 242.0
+margin/top = 250.0
+margin/right = 484.0
+margin/bottom = 550.0
+alignment = 0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="jugar" type="TextureButton" parent="CenterContainer/title screen/buttons"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 0
+size_flags/vertical = 0
+margin/left = 48.0
+margin/top = 0.0
+margin/right = 194.0
+margin/bottom = 63.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 3 )
+textures/pressed = ExtResource( 4 )
+textures/click_mask = ExtResource( 5 )
+params/resize_mode = 0
+params/stretch_mode = 0
+
+[node name="acerca" type="TextureButton" parent="CenterContainer/title screen/buttons"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 0
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 77.0
+margin/right = 242.0
+margin/bottom = 132.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 6 )
+textures/pressed = ExtResource( 7 )
+textures/click_mask = ExtResource( 8 )
+params/resize_mode = 0
+params/stretch_mode = 0
+
+[node name="salir" type="TextureButton" parent="CenterContainer/title screen/buttons"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 0
+size_flags/vertical = 0
+margin/left = 64.0
+margin/top = 163.0
+margin/right = 177.0
+margin/bottom = 216.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 9 )
+textures/pressed = ExtResource( 10 )
+textures/click_mask = ExtResource( 11 )
+params/resize_mode = 0
+params/stretch_mode = 0
+
+[node name="expander" type="Control" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 985.0
+margin/top = 0.0
+margin/right = 1278.0
+margin/bottom = 718.0
+
+[node name="background" type="Sprite" parent="."]
+
+visibility/behind_parent = true
+visibility/light_mask = 528947
+transform/pos = Vector2( -4.00317, -1.92651 )
+transform/scale = Vector2( 1.97302, 1.456 )
+texture = ExtResource( 12 )
+centered = false
+
+[connection signal="pressed" from="CenterContainer/title screen/buttons/jugar" to="." method="_on_jugar_pressed"]
+
+
