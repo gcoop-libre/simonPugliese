@@ -58,9 +58,9 @@ focus/stop_mouse = false
 size_flags/horizontal = 0
 size_flags/vertical = 0
 margin/left = 0.0
-margin/top = 84.0
+margin/top = 80.0
 margin/right = 727.0
-margin/bottom = 634.0
+margin/bottom = 638.0
 alignment = 0
 
 [node name="emblem" type="TextureFrame" parent="CenterContainer/title screen"]
@@ -95,10 +95,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 0
 size_flags/vertical = 0
-margin/left = 242.0
-margin/top = 250.0
-margin/right = 484.0
-margin/bottom = 550.0
+margin/left = 254.0
+margin/top = 223.0
+margin/right = 496.0
+margin/bottom = 531.0
 alignment = 0
 __meta__ = {
 "_edit_group_": true
@@ -106,6 +106,7 @@ __meta__ = {
 
 [node name="jugar" type="TextureButton" parent="CenterContainer/title screen/buttons"]
 
+rect/min_size = Vector2( 0, 100 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 0
@@ -113,7 +114,7 @@ size_flags/vertical = 0
 margin/left = 48.0
 margin/top = 0.0
 margin/right = 194.0
-margin/bottom = 63.0
+margin/bottom = 100.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -125,14 +126,15 @@ params/stretch_mode = 0
 
 [node name="acerca" type="TextureButton" parent="CenterContainer/title screen/buttons"]
 
+rect/min_size = Vector2( 0, 100 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 0
 size_flags/vertical = 0
 margin/left = 0.0
-margin/top = 77.0
+margin/top = 104.0
 margin/right = 242.0
-margin/bottom = 132.0
+margin/bottom = 204.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -144,14 +146,15 @@ params/stretch_mode = 0
 
 [node name="salir" type="TextureButton" parent="CenterContainer/title screen/buttons"]
 
+rect/min_size = Vector2( 0, 100 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 0
 size_flags/vertical = 0
 margin/left = 64.0
-margin/top = 163.0
+margin/top = 208.0
 margin/right = 177.0
-margin/bottom = 216.0
+margin/bottom = 308.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -182,5 +185,7 @@ texture = ExtResource( 12 )
 centered = false
 
 [connection signal="pressed" from="CenterContainer/title screen/buttons/jugar" to="." method="_on_jugar_pressed"]
+
+[connection signal="pressed" from="CenterContainer/title screen/buttons/salir" to="." method="_on_salir_pressed"]
 
 
