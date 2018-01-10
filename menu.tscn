@@ -95,10 +95,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 0
 size_flags/vertical = 0
-margin/left = 254.0
-margin/top = 223.0
-margin/right = 496.0
-margin/bottom = 531.0
+margin/left = 242.0
+margin/top = 250.0
+margin/right = 484.0
+margin/bottom = 558.0
 alignment = 0
 __meta__ = {
 "_edit_group_": true

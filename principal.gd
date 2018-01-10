@@ -38,6 +38,8 @@ func checkPatronTocado():
 
 func _on_btnEmpezar_pressed():
 	currentPosicion = 0
+	get_node("btnEmpezar/anim").play("ocultar")
+	yield(get_node("btnEmpezar/anim"), "finished")
 	continuarPatron()
 
 func continuarPatron():
