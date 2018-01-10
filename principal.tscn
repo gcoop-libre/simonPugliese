@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=1]
+[gd_scene load_steps=19 format=1]
 
 [ext_resource path="res://principal.gd" type="Script" id=1]
 [ext_resource path="res://botonGrupo.gd" type="Script" id=2]
@@ -13,7 +13,10 @@
 [ext_resource path="res://assets/img/negra.png" type="Texture" id=11]
 [ext_resource path="res://assets/img/negra.pbm" type="BitMap" id=12]
 [ext_resource path="res://notas_8bit.tres" type="SampleLibrary" id=13]
-[ext_resource path="res://assets/img/fondo_juego.png" type="Texture" id=14]
+[ext_resource path="res://assets/buttons/empezar_button.png" type="Texture" id=14]
+[ext_resource path="res://assets/buttons/empezar_button_press.png" type="Texture" id=15]
+[ext_resource path="res://assets/buttons/empezar_button.pbm" type="BitMap" id=16]
+[ext_resource path="res://assets/img/fondo_juego.png" type="Texture" id=17]
 
 [sub_resource type="Animation" id=1]
 
@@ -452,21 +455,26 @@ default/reverb_room = 2
 default/reverb_send = 0.0
 default/chorus_send = 0.0
 
-[node name="btnEmpezar" type="Button" parent="."]
+[node name="btnEmpezar" type="TextureButton" parent="."]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 1113.0
-margin/top = 664.0
-margin/right = 1180.0
-margin/bottom = 684.0
+margin/left = 971.0
+margin/top = 625.0
+margin/right = 1190.0
+margin/bottom = 688.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-text = "Empezar"
-flat = false
+textures/normal = ExtResource( 14 )
+textures/pressed = ExtResource( 15 )
+textures/hover = ExtResource( 15 )
+textures/click_mask = ExtResource( 16 )
+params/resize_mode = 0
+params/stretch_mode = 0
+params/modulate = Color( 0.9375, 0.0439453, 0.0439453, 1 )
 
 [node name="timerRespuesta" type="Timer" parent="."]
 
