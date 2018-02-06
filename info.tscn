@@ -1,0 +1,52 @@
+[gd_scene format=1]
+
+[node name="HBoxContainer" type="HBoxContainer"]
+
+rect/min_size = Vector2( 1280, 720 )
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 1280.0
+margin/bottom = 720.0
+alignment = 0
+
+[node name="spacer" type="Control" parent="."]
+
+rect/min_size = Vector2( 100, 720 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 100.0
+margin/bottom = 720.0
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 100.0
+margin/top = 0.0
+margin/right = 596.0
+margin/bottom = 720.0
+use_top_left = false
+
+[node name="spacer2" type="Control" parent="."]
+
+rect/min_size = Vector2( 280, 720 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1000.0
+margin/top = 0.0
+margin/right = 1280.0
+margin/bottom = 720.0
+
+

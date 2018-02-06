@@ -21,8 +21,8 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 1.0
 margin/top = 1.0
-margin/right = 1279.0
-margin/bottom = 719.0
+margin/right = 1281.0
+margin/bottom = 721.0
 alignment = 0
 script/script = ExtResource( 1 )
 
@@ -36,7 +36,7 @@ size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 0.0
 margin/right = 250.0
-margin/bottom = 718.0
+margin/bottom = 720.0
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 
@@ -48,7 +48,7 @@ size_flags/vertical = 3
 margin/left = 254.0
 margin/top = 0.0
 margin/right = 981.0
-margin/bottom = 718.0
+margin/bottom = 720.0
 use_top_left = false
 
 [node name="title screen" type="VBoxContainer" parent="CenterContainer"]
@@ -58,9 +58,9 @@ focus/stop_mouse = false
 size_flags/horizontal = 0
 size_flags/vertical = 0
 margin/left = 0.0
-margin/top = 80.0
+margin/top = 81.0
 margin/right = 727.0
-margin/bottom = 638.0
+margin/bottom = 639.0
 alignment = 0
 
 [node name="emblem" type="TextureFrame" parent="CenterContainer/title screen"]
@@ -172,19 +172,21 @@ size_flags/horizontal = 3
 size_flags/vertical = 3
 margin/left = 985.0
 margin/top = 0.0
-margin/right = 1278.0
-margin/bottom = 718.0
+margin/right = 1280.0
+margin/bottom = 720.0
 
 [node name="background" type="Sprite" parent="."]
 
 visibility/behind_parent = true
 visibility/light_mask = 528947
-transform/pos = Vector2( -4.00317, -1.92651 )
-transform/scale = Vector2( 1.97302, 1.456 )
+transform/pos = Vector2( 0.830198, -3.72998 )
+transform/scale = Vector2( 1.69951, 1.4838 )
 texture = ExtResource( 12 )
 centered = false
 
 [connection signal="pressed" from="CenterContainer/title screen/buttons/jugar" to="." method="_on_jugar_pressed"]
+
+[connection signal="pressed" from="CenterContainer/title screen/buttons/acerca" to="." method="_on_acerca_pressed"]
 
 [connection signal="pressed" from="CenterContainer/title screen/buttons/salir" to="." method="_on_salir_pressed"]
 
