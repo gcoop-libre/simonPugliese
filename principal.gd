@@ -5,6 +5,9 @@ var currentPosicion = 0
 var patronTocado = []
 
 func _ready():
+	pass
+
+func conectarTeclado():
 	for octava in get_node("teclado").get_children():
 		for boton in octava.get_children():
 			boton.connect("apretado", self, "boton_apretado" )
@@ -40,7 +43,11 @@ func _on_btnEmpezar_pressed():
 	currentPosicion = 0
 	get_node("btnEmpezar/anim").play("ocultar")
 	yield(get_node("btnEmpezar/anim"), "finished")
+	conectarTeclado()
+	get_node("timerCortito").start()
+	yield( get_node("timerCortito"), "timeout" )
 	continuarPatron()
+
 
 func continuarPatron():
 	patronTocado = []
@@ -50,3 +57,4 @@ func continuarPatron():
 		var boton = get_node("teclado/"+nombreOctava+"/" + nombreBoton )
 		boton.apretar()
 		yield( boton, "finApretado")
+

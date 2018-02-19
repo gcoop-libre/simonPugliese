@@ -5,7 +5,7 @@ signal finApretado
 
 func _ready():
 	pass
-
+	
 func _on_botonlb_apretado():
 	emit_signal("apretado", self)
 	pass # replace with function body

@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=1]
 
 [ext_resource path="res://menu.gd" type="Script" id=1]
-[ext_resource path="res://assets/buttons/simon_pugliese.png" type="Texture" id=2]
+[ext_resource path="res://assets/img/logo-Malefico/logo_resized.png" type="Texture" id=2]
 [ext_resource path="res://assets/buttons/jugar_button.png" type="Texture" id=3]
 [ext_resource path="res://assets/buttons/jugar_button_press.png" type="Texture" id=4]
 [ext_resource path="res://assets/buttons/jugar_button.pbm" type="BitMap" id=5]
@@ -36,7 +36,7 @@ size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 0.0
 margin/right = 250.0
-margin/bottom = 720.0
+margin/bottom = 746.0
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 
@@ -47,8 +47,8 @@ size_flags/horizontal = 3
 size_flags/vertical = 3
 margin/left = 254.0
 margin/top = 0.0
-margin/right = 981.0
-margin/bottom = 720.0
+margin/right = 1004.0
+margin/bottom = 746.0
 use_top_left = false
 
 [node name="title screen" type="VBoxContainer" parent="CenterContainer"]
@@ -58,35 +58,48 @@ focus/stop_mouse = false
 size_flags/horizontal = 0
 size_flags/vertical = 0
 margin/left = 0.0
-margin/top = 81.0
-margin/right = 727.0
-margin/bottom = 639.0
+margin/top = 0.0
+margin/right = 750.0
+margin/bottom = 746.0
 alignment = 0
 
-[node name="emblem" type="TextureFrame" parent="CenterContainer/title screen"]
+[node name="spacer4" type="Control" parent="CenterContainer/title screen"]
 
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 727.0
-margin/bottom = 122.0
-texture = ExtResource( 2 )
-stretch_mode = 0
-
-[node name="spacer2" type="Control" parent="CenterContainer/title screen"]
-
-rect/min_size = Vector2( 0, 120 )
+rect/min_size = Vector2( 0, 40 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 3
 size_flags/vertical = 3
 margin/left = 0.0
-margin/top = 126.0
-margin/right = 727.0
-margin/bottom = 246.0
+margin/top = 0.0
+margin/right = 750.0
+margin/bottom = 40.0
+
+[node name="emblem" type="TextureFrame" parent="CenterContainer/title screen"]
+
+rect/min_size = Vector2( 750, 300 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 44.0
+margin/right = 750.0
+margin/bottom = 361.0
+texture = ExtResource( 2 )
+stretch_mode = 0
+
+[node name="spacer2" type="Control" parent="CenterContainer/title screen"]
+
+rect/min_size = Vector2( 0, 25 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 0.0
+margin/top = 365.0
+margin/right = 750.0
+margin/bottom = 390.0
 
 [node name="buttons" type="VBoxContainer" parent="CenterContainer/title screen"]
 
@@ -95,10 +108,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 0
 size_flags/vertical = 0
-margin/left = 242.0
-margin/top = 250.0
-margin/right = 484.0
-margin/bottom = 558.0
+margin/left = 254.0
+margin/top = 394.0
+margin/right = 496.0
+margin/bottom = 746.0
 alignment = 0
 __meta__ = {
 "_edit_group_": true
@@ -164,23 +177,35 @@ textures/click_mask = ExtResource( 11 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
+[node name="spacer3" type="Control" parent="CenterContainer/title screen/buttons"]
+
+rect/min_size = Vector2( 0, 40 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 0.0
+margin/top = 312.0
+margin/right = 242.0
+margin/bottom = 352.0
+
 [node name="expander" type="Control" parent="."]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 3
 size_flags/vertical = 3
-margin/left = 985.0
+margin/left = 1008.0
 margin/top = 0.0
 margin/right = 1280.0
-margin/bottom = 720.0
+margin/bottom = 746.0
 
 [node name="background" type="Sprite" parent="."]
 
 visibility/behind_parent = true
 visibility/light_mask = 528947
-transform/pos = Vector2( 0.830198, -3.72998 )
-transform/scale = Vector2( 1.69951, 1.4838 )
+transform/pos = Vector2( -0.0476494, -1.50838 )
+transform/scale = Vector2( 1.70911, 1.47005 )
 texture = ExtResource( 12 )
 centered = false
 
