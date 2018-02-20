@@ -5,9 +5,7 @@ extends HBoxContainer
 # var b = "textvar"
 
 func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here
-	pass
+	get_node("sonidos_ui").play('intro_la_yumba')
 
 func _on_jugar_pressed():
 	play_click()

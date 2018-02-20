@@ -1,18 +1,19 @@
-[gd_scene load_steps=15 format=1]
+[gd_scene load_steps=16 format=1]
 
 [ext_resource path="res://menu.gd" type="Script" id=1]
 [ext_resource path="res://assets/sonidos_ui/click.wav" type="Sample" id=2]
-[ext_resource path="res://assets/img/logo-Malefico/logo_resized.png" type="Texture" id=3]
-[ext_resource path="res://assets/buttons/jugar_button.png" type="Texture" id=4]
-[ext_resource path="res://assets/buttons/jugar_button_press.png" type="Texture" id=5]
-[ext_resource path="res://assets/buttons/jugar_button.pbm" type="BitMap" id=6]
-[ext_resource path="res://assets/buttons/acerca_de_button.png" type="Texture" id=7]
-[ext_resource path="res://assets/buttons/acerca_de_button_press.png" type="Texture" id=8]
-[ext_resource path="res://assets/buttons/acerca_de_button.pbm" type="BitMap" id=9]
-[ext_resource path="res://assets/buttons/salir_button.png" type="Texture" id=10]
-[ext_resource path="res://assets/buttons/salir_button_press.png" type="Texture" id=11]
-[ext_resource path="res://assets/buttons/salir_button.pbm" type="BitMap" id=12]
-[ext_resource path="res://assets/img/fondo_juego.png" type="Texture" id=13]
+[ext_resource path="res://assets/sonidos_ui/intro_la_yumba.wav" type="Sample" id=3]
+[ext_resource path="res://assets/img/logo-Malefico/logo_resized.png" type="Texture" id=4]
+[ext_resource path="res://assets/buttons/jugar_button.png" type="Texture" id=5]
+[ext_resource path="res://assets/buttons/jugar_button_press.png" type="Texture" id=6]
+[ext_resource path="res://assets/buttons/jugar_button.pbm" type="BitMap" id=7]
+[ext_resource path="res://assets/buttons/acerca_de_button.png" type="Texture" id=8]
+[ext_resource path="res://assets/buttons/acerca_de_button_press.png" type="Texture" id=9]
+[ext_resource path="res://assets/buttons/acerca_de_button.pbm" type="BitMap" id=10]
+[ext_resource path="res://assets/buttons/salir_button.png" type="Texture" id=11]
+[ext_resource path="res://assets/buttons/salir_button_press.png" type="Texture" id=12]
+[ext_resource path="res://assets/buttons/salir_button.pbm" type="BitMap" id=13]
+[ext_resource path="res://assets/img/fondo_juego.png" type="Texture" id=14]
 
 [sub_resource type="SampleLibrary" id=1]
 
@@ -21,6 +22,12 @@ samples/click = {
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 2 )
+}
+samples/intro_la_yumba = {
+"db": -4.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 3 )
 }
 
 [node name="menu" type="HBoxContainer"]
@@ -113,7 +120,7 @@ margin/left = 0.0
 margin/top = 44.0
 margin/right = 750.0
 margin/bottom = 361.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 stretch_mode = 0
 
 [node name="spacer2" type="Control" parent="CenterContainer/title screen"]
@@ -155,9 +162,9 @@ margin/bottom = 100.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 4 )
-textures/pressed = ExtResource( 5 )
-textures/click_mask = ExtResource( 6 )
+textures/normal = ExtResource( 5 )
+textures/pressed = ExtResource( 6 )
+textures/click_mask = ExtResource( 7 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
@@ -175,9 +182,9 @@ margin/bottom = 204.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 7 )
-textures/pressed = ExtResource( 8 )
-textures/click_mask = ExtResource( 9 )
+textures/normal = ExtResource( 8 )
+textures/pressed = ExtResource( 9 )
+textures/click_mask = ExtResource( 10 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
@@ -195,9 +202,9 @@ margin/bottom = 308.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 10 )
-textures/pressed = ExtResource( 11 )
-textures/click_mask = ExtResource( 12 )
+textures/normal = ExtResource( 11 )
+textures/pressed = ExtResource( 12 )
+textures/click_mask = ExtResource( 13 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
@@ -228,9 +235,9 @@ margin/bottom = 746.0
 
 visibility/behind_parent = true
 visibility/light_mask = 528947
-transform/pos = Vector2( -0.0476494, -1.50838 )
+transform/pos = Vector2( 1.45984, -1.50838 )
 transform/scale = Vector2( 1.70911, 1.47005 )
-texture = ExtResource( 13 )
+texture = ExtResource( 14 )
 centered = false
 
 [connection signal="pressed" from="CenterContainer/title screen/buttons/jugar" to="." method="_on_jugar_pressed"]
