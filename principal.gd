@@ -5,6 +5,7 @@ var currentPosicion = 0
 var patronTocado = []
 
 func _ready():
+	deshabilitarInput(true)
 	conectarTeclado()
 
 func conectarTeclado():
@@ -61,4 +62,6 @@ func continuarPatron():
 	deshabilitarInput(false)
 	
 func deshabilitarInput(booleano):
-	get_tree().get_root().set_disable_input(booleano)
+	for octava in get_node("teclado").get_children():
+		for boton in octava.get_children():
+			get_node("teclado/"+octava.get_name()+"/"+boton.get_name()+"/boton-lb").set_disabled(booleano)
