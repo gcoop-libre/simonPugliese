@@ -13,8 +13,10 @@ func _ready():
 	textura_normal = get_normal_texture()
 	textura_apretado = get_pressed_texture()
 	
-func _on_botonlb_button_up():
+func _on_botonlb_button_down():
 	apretar()
+	
+func _on_botonlb_button_up():
 	emit_signal( "apretado" )
 
 func apretar():

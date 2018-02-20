@@ -10,10 +10,16 @@ func _ready():
 	pass
 
 func _on_jugar_pressed():
+	play_click()
 	get_tree().change_scene("res://principal.tscn")
 
 func _on_salir_pressed():
+	play_click()
 	get_tree().quit()
 
 func _on_acerca_pressed():
+	play_click()
 	get_tree().change_scene("res://info.tscn")
+
+func play_click():
+	get_node("sonidos_ui").play('click')
