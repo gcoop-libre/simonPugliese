@@ -28,8 +28,6 @@ shortcut = null
 params/resize_mode = 0
 params/stretch_mode = 0
 script/script = ExtResource( 2 )
-colorInactivo = Color( 0.8, 0.8, 0.8, 1 )
-colorActivo = Color( 1, 1, 1, 1 )
 
 [node name="Timer" type="Timer" parent="."]
 

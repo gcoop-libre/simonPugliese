@@ -8,14 +8,14 @@ func _ready():
 	
 func _on_botonlb_apretado():
 	emit_signal("apretado", self)
-	pass # replace with function body
 
 func apretar():
 	get_node("boton-lb").apretar()
+	get_node("boton-lb").mostrar_como_apretado()
 	get_node("Timer").start()
 
 func _on_Timer_timeout():
-	get_node("boton-lb").desapretar()
+	get_node("boton-lb").mostrar_normal()
 	emit_signal("finApretado")
 	
 func tocar(nota):
