@@ -2,7 +2,7 @@
 
 [ext_resource path="res://menu.gd" type="Script" id=1]
 [ext_resource path="res://assets/sonidos_ui/click.wav" type="Sample" id=2]
-[ext_resource path="res://assets/sonidos_ui/intro_la_yumba.wav" type="Sample" id=3]
+[ext_resource path="res://assets/sonidos_ui/intro_la_yumba.smp" type="Sample" id=3]
 [ext_resource path="res://assets/img/logo-Malefico/logo_resized.png" type="Texture" id=4]
 [ext_resource path="res://assets/buttons/jugar_button.png" type="Texture" id=5]
 [ext_resource path="res://assets/buttons/jugar_button_press.png" type="Texture" id=6]
@@ -24,7 +24,7 @@ samples/click = {
 "sample": ExtResource( 2 )
 }
 samples/intro_la_yumba = {
-"db": -4.0,
+"db": -8.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 3 )
