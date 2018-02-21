@@ -1,6 +1,6 @@
 extends Node2D
 
-var patron = ['C1', 'D#1', 'A1', 'F2', 'C#2', 'B2']
+var patron = ['C1', 'D#1', 'A1']
 var currentPosicion = 0
 var patronTocado = []
 
@@ -23,7 +23,9 @@ func boton_apretado(quien):
 				get_node("error/panel/Label").set_text("ganaste!")
 				get_node("error/anim").play("mostrar")
 				yield( get_node("error/anim"), "finished" )
+				get_tree().change_scene("res://laberinto.tscn")
 				return
+				
 			deshabilitarInput(true)
 			get_node("timerRespuesta").start()
 			yield( get_node("timerRespuesta"), "timeout" )

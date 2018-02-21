@@ -12,3 +12,5 @@ func _ready():
 func _on_personaje_chocando(colisionador):
 	if(colisionador == get_node("meta")):
 		get_node("ganaste/Panel/anim").play("mostrar")
+		yield( get_node("ganaste/Panel/anim"), "finished" )
+		get_tree().change_scene("res://principal.tscn")

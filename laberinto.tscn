@@ -154,17 +154,17 @@ tracks/0/keys = {
 "times": FloatArray( 0, 0.7 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 512, -100 ), Vector2( 514, 360 ) ]
+"values": [ Vector2( 514, -100 ), Vector2( 514, 360 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath(".:rect/rotation")
 tracks/1/interp = 2
 tracks/1/imported = false
 tracks/1/keys = {
-"times": FloatArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.7, 1 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": FloatArray( 0.1, 0.2, 0.3, 0.4, 0.5, 0.7, 1 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0, 0.06, 1.5, 3.33, 5.0, 9.57, 6.01, 0.0 ]
+"values": [ 0.06, 1.5, 3.33, 5.0, 9.57, 6.01, 0.0 ]
 }
 
 [node name="escena" type="Node2D"]
@@ -386,9 +386,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 514.0
-margin/top = 360.0
+margin/top = -100.0
 margin/right = 693.0
-margin/bottom = 415.0
+margin/bottom = -45.0
 
 [node name="anim" type="AnimationPlayer" parent="ganaste/Panel"]
 
