@@ -24,7 +24,7 @@ func boton_apretado(quien):
 				get_node("error/anim").play("mostrar")
 				yield( get_node("error/anim"), "finished" )
 				return
-			
+			deshabilitarInput(true)
 			get_node("timerRespuesta").start()
 			yield( get_node("timerRespuesta"), "timeout" )
 			continuarPatron()
@@ -34,7 +34,7 @@ func boton_apretado(quien):
 		yield( get_node("error/anim"), "finished" )
 		patronTocado = [] 
 		continuarPatron()
-
+	
 func checkPatronTocado():
 	for i in range(patronTocado.size()):
 		if str(patronTocado[i]) != str(patron[i]):
@@ -51,7 +51,6 @@ func _on_btnEmpezar_pressed():
 	continuarPatron()
 
 func continuarPatron():
-	deshabilitarInput(true)
 	patronTocado = []
 	for i in range(0,currentPosicion+1):
 		var nombreBoton = patron[i]
