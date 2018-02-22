@@ -2,6 +2,7 @@
 extends KinematicBody2D
 
 signal chocando
+signal caminando
 
 const GRAVITY = 200.0
 const WALK_SPEED = 500
@@ -24,13 +25,16 @@ func _fixed_process(delta):
 	else:
 		velocity.y = 0
 		velocity.x = 0
-	
+
 	var motion = velocity * delta
 	move(motion)
 	
 	if(is_colliding()):
 		var collider = get_collider()
 		emit_signal("chocando", collider)
-
+	else:
+		if(motion != Vector2(0,0)):
+			emit_signal("caminando")
+			
 func _ready():
 	set_fixed_process(true)
