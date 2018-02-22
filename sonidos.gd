@@ -12,7 +12,7 @@ func play_sound(key):
 	is_playing = true
 	if(key == "collision"):
 		timer = get_node("timerLargo")
-	if(key == "walk"):
+	else:
 		timer = get_node("timerCorto")
 	timer.start()
 	play(key, true)

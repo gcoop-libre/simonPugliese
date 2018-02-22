@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=1]
+[gd_scene load_steps=39 format=1]
 
 [ext_resource path="res://laberinto.gd" type="Script" id=1]
 [ext_resource path="res://assets/laberinto/laberinto_0.jpg" type="Texture" id=2]
@@ -7,8 +7,9 @@
 [ext_resource path="res://assets/laberinto/cup.png" type="Texture" id=5]
 [ext_resource path="res://assets/sonidos_ui/collision.wav" type="Sample" id=6]
 [ext_resource path="res://assets/sonidos_ui/walk.wav" type="Sample" id=7]
-[ext_resource path="res://sonidos.gd" type="Script" id=8]
-[ext_resource path="res://assets/sonidos_ui/intro_la_yumba.smp" type="Sample" id=9]
+[ext_resource path="res://assets/sonidos_ui/win.wav" type="Sample" id=8]
+[ext_resource path="res://sonidos.gd" type="Script" id=9]
+[ext_resource path="res://assets/sonidos_ui/intro_la_yumba.smp" type="Sample" id=10]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 
@@ -185,6 +186,12 @@ samples/walk = {
 "priority": 0,
 "sample": ExtResource( 7 )
 }
+samples/win = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 8 )
+}
 
 [sub_resource type="SampleLibrary" id=28]
 
@@ -192,7 +199,7 @@ samples/intro_la_yumba = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 9 )
+"sample": ExtResource( 10 )
 }
 
 [node name="escena" type="Node2D"]
@@ -465,7 +472,7 @@ default/filter/gain = 1.0
 default/reverb_room = 0
 default/reverb_send = 0.04
 default/chorus_send = 0.0
-script/script = ExtResource( 8 )
+script/script = ExtResource( 9 )
 is_playing = false
 
 [node name="timerLargo" type="Timer" parent="sonidos_laberinto"]

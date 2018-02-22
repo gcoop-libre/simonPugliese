@@ -11,6 +11,7 @@ func _on_personaje_chocando(colisionador):
 	sonarColision()
 	if(colisionador == get_node("meta")):
 		get_node("ganaste/Panel/anim").play("mostrar")
+		get_node("sonidos_laberinto").play_sound("win")
 		yield( get_node("ganaste/Panel/anim"), "finished" )
 		get_tree().change_scene("res://principal.tscn")
 	
