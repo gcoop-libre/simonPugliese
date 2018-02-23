@@ -36,7 +36,7 @@ func boton_apretado(quien):
 				if(hayMasNiveles()):
 					get_node("/root/global").siguienteNivel()
 				else:
-					print("Ganaste el juego!!")
+					ganarJuego()
 				return
 				
 			deshabilitarInput(true)
@@ -83,3 +83,12 @@ func deshabilitarInput(booleano):
 
 func hayMasNiveles():
 	return cantidadNiveles - 1 > get_node("/root/global").subNivelActual
+	
+func ganarJuego():
+	get_node("btnEmpezarDeNuevo/anim").play("mostrar")
+
+func _on_btnEmpezarDeNuevo_pressed():
+	get_node("btnEmpezarDeNuevo/anim").play("ocultar")
+	yield(get_node("btnEmpezarDeNuevo/anim"), "finished")
+	get_tree().get_root().get_node("/root/global").empezarJuego()
+	

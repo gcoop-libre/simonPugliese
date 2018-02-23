@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=1]
+[gd_scene load_steps=31 format=1]
 
 [ext_resource path="res://principal.gd" type="Script" id=1]
 [ext_resource path="res://botonGrupo.gd" type="Script" id=2]
@@ -62,6 +62,40 @@ tracks/0/keys = {
 "transitions": FloatArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 523, 401 ), Vector2( 507, 401 ), Vector2( 659, 402 ), Vector2( 1297, 407 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+
+resource/name = "mostrar"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect/pos")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.4, 0.5 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 523, -200 ), Vector2( 523, 100 ), Vector2( 523, 50 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+
+resource/name = "ocultar"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect/pos")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.2, 0.5 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 523, 50 ), Vector2( 523, 100 ), Vector2( 523, -200 ) ]
 }
 
 [node name="scene" type="Node2D"]
@@ -465,7 +499,6 @@ default/chorus_send = 0.0
 
 [node name="btnEmpezar" type="TextureButton" parent="."]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -491,6 +524,39 @@ playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
 anims/ocultar = SubResource( 2 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+[node name="btnEmpezarDeNuevo" type="TextureButton" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 523.0
+margin/top = -200.0
+margin/right = 742.0
+margin/bottom = -137.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 22 )
+textures/pressed = ExtResource( 23 )
+textures/hover = ExtResource( 23 )
+textures/click_mask = ExtResource( 24 )
+params/resize_mode = 0
+params/stretch_mode = 0
+params/modulate = Color( 0.9375, 0.0439453, 0.0439453, 1 )
+
+[node name="anim" type="AnimationPlayer" parent="btnEmpezarDeNuevo"]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/mostrar = SubResource( 4 )
+anims/ocultar = SubResource( 3 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -528,6 +594,7 @@ stretch_mode = 0
 
 [node name="error" type="Node2D" parent="."]
 
+editor/display_folded = true
 transform/pos = Vector2( 640, -60.2936 )
 __meta__ = {
 "_edit_group_": true
@@ -573,7 +640,7 @@ autoplay = ""
 
 [connection signal="pressed" from="btnEmpezar" to="." method="_on_btnEmpezar_pressed"]
 
-[connection signal="finished" from="btnEmpezar/anim" to="." method="_on_anim_finished"]
+[connection signal="pressed" from="btnEmpezarDeNuevo" to="." method="_on_btnEmpezarDeNuevo_pressed"]
 
 
 [editable path="teclado/octava1/C1"]

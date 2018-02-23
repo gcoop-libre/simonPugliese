@@ -1,7 +1,7 @@
 extends HBoxContainer
 
 func _ready():
-	#get_node("musica").play('intro_la_yumba')
+	get_node("musica").play('intro_la_yumba')
 	pass
 	
 func _on_jugar_pressed():
