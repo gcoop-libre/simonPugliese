@@ -1,8 +1,6 @@
 extends Node2D
 
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
+signal gane 
 
 func _ready():
 	get_node("musica").play('intro_la_yumba')
@@ -13,8 +11,8 @@ func _on_personaje_chocando(colisionador):
 		get_node("ganaste/Panel/anim").play("mostrar")
 		get_node("sonidos_laberinto").play_sound("win")
 		yield( get_node("ganaste/Panel/anim"), "finished" )
-		get_tree().change_scene("res://principal.tscn")
-	
+		emit_signal("gane")
+
 func sonarColision():
 	if(!get_node("sonidos_laberinto").is_playing):
 		get_node("sonidos_laberinto").play_sound("collision")
@@ -22,3 +20,6 @@ func sonarColision():
 func _on_personaje_caminando():
 	if(!get_node("sonidos_laberinto").is_playing):
 		get_node("sonidos_laberinto").play_sound("walk")
+
+func _on_escena_gane():
+	get_node("/root/global").siguienteNivel()

@@ -1,10 +1,17 @@
 extends Node2D
 
-var patron = ['C1', 'D#1', 'A1']
 var currentPosicion = 0
 var patronTocado = []
 
+var nivel_1 = ['C1', 'D1', 'E2']
+var nivel_2 = ['C#1', 'D#1', 'A1']
+var nivel_3 = ['A2', 'F#2', 'E2']
+var niveles = [nivel_1, nivel_2, nivel_3]
+var patron = null
+
 func _ready():
+	var nroPatron = get_node("/root/global").subNivelActual
+	patron = niveles[nroPatron]
 	deshabilitarInput(true)
 	conectarTeclado()
 
@@ -24,7 +31,7 @@ func boton_apretado(quien):
 				get_node("error/panel/Label").set_text("ganaste!")
 				get_node("error/anim").play("mostrar")
 				yield( get_node("error/anim"), "finished" )
-				get_tree().change_scene("res://laberinto.tscn")
+				get_node("/root/global").siguienteNivel()
 				return
 				
 			deshabilitarInput(true)

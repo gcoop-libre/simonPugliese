@@ -507,6 +507,8 @@ default/reverb_room = 2
 default/reverb_send = 0.0
 default/chorus_send = 0.0
 
+[connection signal="gane" from="." to="." method="_on_escena_gane" flags=6]
+
 [connection signal="caminando" from="personaje" to="." method="_on_personaje_caminando"]
 
 [connection signal="chocando" from="personaje" to="." method="_on_personaje_chocando"]
