@@ -20,9 +20,7 @@ func empezarJuego():
 	call_deferred("_deferred_goto_scene", 'res://principal.tscn')
 	
 func siguienteNivel():
-	print(nivelActual)
 	var siguienteNivel = nivelActual + 1
-	print(siguienteNivel)
 	var siguiente = mapa_niveles[siguienteNivel]
 	var tipo_siguiente = siguiente['tipo']
 	subNivelActual = siguiente['nro']

@@ -1,8 +1,9 @@
 extends HBoxContainer
 
 func _ready():
-	get_node("sonidos_ui").play('intro_la_yumba')
-
+	#get_node("musica").play('intro_la_yumba')
+	pass
+	
 func _on_jugar_pressed():
 	play_click()
 	get_node("/root/global").empezarJuego()
@@ -13,7 +14,9 @@ func _on_salir_pressed():
 
 func _on_acerca_pressed():
 	play_click()
+	get_node("Timer").start()
+	yield(get_node("Timer"), "finish")
 	get_tree().change_scene("res://info.tscn")
 
 func play_click():
-	get_node("sonidos_ui").play('click')
+	get_node("sonidos_ui").play("click")
