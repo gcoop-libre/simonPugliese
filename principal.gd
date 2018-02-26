@@ -29,7 +29,7 @@ func boton_apretado(quien):
 			currentPosicion += 1
 			 
 			if currentPosicion == patron.size():
-				get_node("teclado/sonidos_ui").play("win")
+				get_node("teclado/sonidos_ui").play("win_level_" + str(get_node("/root/global").subNivelActual))
 				get_node("error/panel/Label").set_text("ganaste!")
 				get_node("error/anim").play("mostrar")
 				yield( get_node("error/anim"), "finished" )
