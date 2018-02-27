@@ -21,6 +21,9 @@ func _ready():
 func empezarJuego():
 	nivelActual = 0
 	subNivelActual = 0
+	violin = 0
+	bandoneon = 0
+	contrabajo = 0
 	call_deferred("_deferred_goto_scene", 'res://principal.tscn')
 	
 func siguienteNivel():

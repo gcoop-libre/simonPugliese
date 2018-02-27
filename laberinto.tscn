@@ -1,21 +1,20 @@
-[gd_scene load_steps=45 format=1]
+[gd_scene load_steps=44 format=1]
 
 [ext_resource path="res://laberinto.gd" type="Script" id=1]
 [ext_resource path="res://inventario.tscn" type="PackedScene" id=2]
-[ext_resource path="res://inventario.gd" type="Script" id=3]
-[ext_resource path="res://assets/laberinto/laberinto_0.jpg" type="Texture" id=4]
-[ext_resource path="res://personaje.gd" type="Script" id=5]
-[ext_resource path="res://assets/laberinto/pugliese.jpg" type="Texture" id=6]
-[ext_resource path="res://assets/laberinto/cup.png" type="Texture" id=7]
-[ext_resource path="res://assets/laberinto/violin.png" type="Texture" id=8]
-[ext_resource path="res://assets/laberinto/contrabajo.png" type="Texture" id=9]
-[ext_resource path="res://assets/laberinto/badoneon.png" type="Texture" id=10]
-[ext_resource path="res://assets/sonidos_ui/collision.wav" type="Sample" id=11]
-[ext_resource path="res://assets/sonidos_ui/itemCollected.wav" type="Sample" id=12]
-[ext_resource path="res://assets/sonidos_ui/walk.wav" type="Sample" id=13]
-[ext_resource path="res://assets/sonidos_ui/win.wav" type="Sample" id=14]
-[ext_resource path="res://sonidos.gd" type="Script" id=15]
-[ext_resource path="res://assets/sonidos_ui/intro_la_yumba.smp" type="Sample" id=16]
+[ext_resource path="res://assets/laberinto/laberinto_0.jpg" type="Texture" id=3]
+[ext_resource path="res://personaje.gd" type="Script" id=4]
+[ext_resource path="res://assets/laberinto/pugliese.jpg" type="Texture" id=5]
+[ext_resource path="res://assets/laberinto/cup.png" type="Texture" id=6]
+[ext_resource path="res://assets/laberinto/violin.png" type="Texture" id=7]
+[ext_resource path="res://assets/laberinto/contrabajo.png" type="Texture" id=8]
+[ext_resource path="res://assets/laberinto/badoneon.png" type="Texture" id=9]
+[ext_resource path="res://assets/sonidos_ui/collision.wav" type="Sample" id=10]
+[ext_resource path="res://assets/sonidos_ui/itemCollected.wav" type="Sample" id=11]
+[ext_resource path="res://assets/sonidos_ui/walk.wav" type="Sample" id=12]
+[ext_resource path="res://assets/sonidos_ui/win.wav" type="Sample" id=13]
+[ext_resource path="res://sonidos.gd" type="Script" id=14]
+[ext_resource path="res://assets/sonidos_ui/intro_la_yumba.smp" type="Sample" id=15]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 
@@ -179,25 +178,25 @@ samples/collision = {
 "db": -1.2,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 11 )
+"sample": ExtResource( 10 )
 }
 samples/itemCollected = {
 "db": 10.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 12 )
+"sample": ExtResource( 11 )
 }
 samples/walk = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 13 )
+"sample": ExtResource( 12 )
 }
 samples/win = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 14 )
+"sample": ExtResource( 13 )
 }
 
 [sub_resource type="SampleLibrary" id=28]
@@ -206,7 +205,7 @@ samples/intro_la_yumba = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 16 )
+"sample": ExtResource( 15 )
 }
 
 [node name="escena" type="Node2D"]
@@ -214,8 +213,6 @@ samples/intro_la_yumba = {
 script/script = ExtResource( 1 )
 
 [node name="inventario" parent="." instance=ExtResource( 2 )]
-
-script/script = ExtResource( 3 )
 
 [node name="Sprite" parent="inventario"]
 
@@ -305,7 +302,7 @@ bounce = 0.0
 
 transform/pos = Vector2( 613.748, 360.799 )
 transform/scale = Vector2( 0.677203, 0.677203 )
-texture = ExtResource( 4 )
+texture = ExtResource( 3 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="laberinto"]
 
@@ -381,14 +378,14 @@ shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
 collision/margin = 0.08
-script/script = ExtResource( 5 )
+script/script = ExtResource( 4 )
 
 [node name="img_personaje" type="Sprite" parent="personaje"]
 
 transform/pos = Vector2( 322.288, 661.029 )
 transform/rot = -2.71166
 transform/scale = Vector2( 0.584082, 0.584082 )
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 
 [node name="collision_personaje" type="CollisionShape2D" parent="personaje"]
 
@@ -417,7 +414,7 @@ script/script = SubResource( 25 )
 transform/pos = Vector2( 922.492, 68.0777 )
 transform/rot = -2.71166
 transform/scale = Vector2( 0.146593, 0.146593 )
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 
 [node name="collision_meta" type="CollisionShape2D" parent="meta"]
 
@@ -460,7 +457,7 @@ script/script = SubResource( 25 )
 transform/pos = Vector2( 922.492, 68.0777 )
 transform/rot = -2.71166
 transform/scale = Vector2( 0.146593, 0.146593 )
-texture = ExtResource( 8 )
+texture = ExtResource( 7 )
 
 [node name="collision_meta" type="CollisionShape2D" parent="items/violin/violin"]
 
@@ -500,7 +497,7 @@ script/script = SubResource( 25 )
 transform/pos = Vector2( 922.492, 68.0777 )
 transform/rot = -2.71166
 transform/scale = Vector2( 0.146593, 0.146593 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 
 [node name="collision_meta" type="CollisionShape2D" parent="items/contrabajo/contrabajo"]
 
@@ -539,7 +536,7 @@ script/script = SubResource( 25 )
 transform/pos = Vector2( 922.492, 68.0777 )
 transform/rot = -2.71166
 transform/scale = Vector2( 0.146593, 0.146593 )
-texture = ExtResource( 10 )
+texture = ExtResource( 9 )
 
 [node name="collision_meta" type="CollisionShape2D" parent="items/bandoneon/bandoneon"]
 
@@ -578,7 +575,7 @@ script/script = SubResource( 25 )
 transform/pos = Vector2( 922.492, 68.0777 )
 transform/rot = -2.71166
 transform/scale = Vector2( 0.146593, 0.146593 )
-texture = ExtResource( 10 )
+texture = ExtResource( 9 )
 
 [node name="collision_meta" type="CollisionShape2D" parent="items/bandoneon2/bandoneon"]
 
@@ -648,7 +645,7 @@ default/filter/gain = 1.0
 default/reverb_room = 0
 default/reverb_send = 0.04
 default/chorus_send = 0.0
-script/script = ExtResource( 15 )
+script/script = ExtResource( 14 )
 is_playing = false
 
 [node name="timerLargo" type="Timer" parent="sonidos_laberinto"]
