@@ -94,6 +94,7 @@ margin/bottom = 746.0
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 
+editor/display_folded = true
 rect/min_size = Vector2( 680, 0 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -263,7 +264,7 @@ centered = false
 [node name="Timer" type="Timer" parent="."]
 
 process_mode = 1
-wait_time = 1.0
+wait_time = 0.2
 one_shot = false
 autostart = false
 
