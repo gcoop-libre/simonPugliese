@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://inventario.tscn" type="PackedScene" id=1]
+
+[node name="GUI" type="MarginContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 2.0
+margin/top = 4.0
+margin/right = 1282.0
+margin/bottom = 54.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 8.0
+margin/top = 0.0
+margin/right = 1280.0
+margin/bottom = 50.0
+alignment = 0
+
+[node name="inventario" parent="HBoxContainer" instance=ExtResource( 1 )]
+
+

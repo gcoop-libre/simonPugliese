@@ -1,6 +1,10 @@
 extends Node
 
 export var subNivelActual = 0
+export var violin = 0
+export var bandoneon = 0
+export var contrabajo = 0
+
 var nivelActual = null
 var nivel_1 = {'tipo': 'simon', 'nro': 0}
 var nivel_2 = {'tipo': 'laberinto', 'nro': 0}
@@ -8,7 +12,6 @@ var nivel_3 = {'tipo': 'simon', 'nro': 1}
 var nivel_4 = {'tipo': 'laberinto', 'nro': 1}
 var nivel_5 = {'tipo': 'simon', 'nro': 2}
 var mapa_niveles = []
-
 var current_scene = null
 
 func _ready():
@@ -50,3 +53,6 @@ func _deferred_goto_scene(path):
 
     # optional, to make it compatible with the SceneTree.change_scene() API
     get_tree().set_current_scene( current_scene )
+
+func sumarItem(nombreItem):
+	self.set(nombreItem, self.get(nombreItem) + 1)

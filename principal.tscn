@@ -125,6 +125,7 @@ script/script = ExtResource( 1 )
 
 [node name="teclado" type="Node2D" parent="."]
 
+editor/display_folded = true
 script/script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="teclado"]
@@ -519,6 +520,7 @@ default/chorus_send = 0.0
 
 [node name="btnEmpezar" type="TextureButton" parent="."]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -551,6 +553,7 @@ autoplay = ""
 
 [node name="btnEmpezarDeNuevo" type="TextureButton" parent="."]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -614,6 +617,7 @@ stretch_mode = 0
 
 [node name="error" type="Node2D" parent="."]
 
+editor/display_folded = true
 transform/pos = Vector2( 640, -60.2936 )
 __meta__ = {
 "_edit_group_": true

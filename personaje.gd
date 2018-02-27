@@ -4,7 +4,6 @@ extends KinematicBody2D
 signal chocando
 signal caminando
 
-const GRAVITY = 200.0
 const WALK_SPEED = 500
 
 var velocity = Vector2()
