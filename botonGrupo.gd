@@ -20,3 +20,8 @@ func _on_Timer_timeout():
 	
 func tocar(nota):
 	get_node("sonidos").play(nota)
+
+func quitar_teclas():
+	get_node("fondo_piano").queue_free()
+	get_node("octava1").queue_free()
+	get_node("octava2").queue_free()

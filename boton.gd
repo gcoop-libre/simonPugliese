@@ -21,6 +21,7 @@ func _on_botonlb_button_up():
 
 func apretar():
 	teclado.tocar(nota)
+	teclado.get_parent().get_node("escenario/orquesta").animarNotaMusicos()
 
 func mostrar_como_apretado():
 	set_normal_texture(textura_apretado)

@@ -13,11 +13,15 @@ var nivel_4 = {'tipo': 'laberinto', 'nro': 1}
 var nivel_5 = {'tipo': 'simon', 'nro': 2}
 var mapa_niveles = []
 var current_scene = null
+var orquesta 
+var pugliese
 
 func _ready():
 	current_scene = get_tree().get_root().get_child(get_tree().get_root().get_child_count() -1 )
 	mapa_niveles = [nivel_1, nivel_2, nivel_3, nivel_4, nivel_5]
-
+	orquesta = load("res://orquesta.tscn")
+	pugliese = load("res://pugliese.tscn")
+	
 func empezarJuego():
 	nivelActual = 0
 	subNivelActual = 0
@@ -59,3 +63,9 @@ func _deferred_goto_scene(path):
 
 func sumarItem(nombreItem):
 	self.set(nombreItem, self.get(nombreItem) + 1)
+	
+func get_orquesta():
+	return orquesta.instance()
+	
+func get_pugliese():
+	return pugliese.instance()

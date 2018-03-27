@@ -10,10 +10,13 @@ var niveles = [nivel_1, nivel_2, nivel_3]
 var patron = null
 var cantidadNiveles
 
+signal nivelGanado
+
 func _ready():
 	var nroPatron = get_node("/root/global").subNivelActual
 	patron = niveles[nroPatron]
 	cantidadNiveles = niveles.size()
+	get_node("escenario").add_child(get_node("/root/global").get_orquesta())
 	deshabilitarInput(true)
 	conectarTeclado()
 
@@ -29,6 +32,7 @@ func boton_apretado(quien):
 			currentPosicion += 1
 			 
 			if currentPosicion == patron.size():
+				emit_signal("nivelGanado")
 				get_node("teclado/sonidos_ui").play("win_level_" + str(get_node("/root/global").subNivelActual))
 				get_node("error/panel/Label").set_text("ganaste!")
 				get_node("error/anim").play("mostrar")
@@ -85,10 +89,18 @@ func hayMasNiveles():
 	return cantidadNiveles - 1 > get_node("/root/global").subNivelActual
 	
 func ganarJuego():
+	get_node("error/panel/Label").set_text("Ganaste!")
+	get_node("error/anim").play("mostrar")
+	get_node("teclado/sonidos_ui").play("intro_la_yumba")
+	get_node("teclado").quitar_teclas()
+	get_node("escenario").add_child(get_node("/root/global").get_pugliese())
+	get_node("escenario/pugliese").play()
 	get_node("btnEmpezarDeNuevo/anim").play("mostrar")
 
 func _on_btnEmpezarDeNuevo_pressed():
 	get_node("btnEmpezarDeNuevo/anim").play("ocultar")
 	yield(get_node("btnEmpezarDeNuevo/anim"), "finished")
 	get_tree().get_root().get_node("/root/global").empezarJuego()
-	
+
+func _on_scene_nivelGanado():
+	get_node("escenario/orquesta").animarMusicos()

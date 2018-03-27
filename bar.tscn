@@ -42,9 +42,9 @@ focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 8.0
+margin/left = 0.0
 margin/top = 0.0
-margin/right = 58.0
+margin/right = 0.0
 margin/bottom = 50.0
 alignment = 0
 
@@ -54,9 +54,9 @@ focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 58.0
+margin/left = 4.0
 margin/top = 0.0
-margin/right = 108.0
+margin/right = 4.0
 margin/bottom = 50.0
 alignment = 0
 
@@ -66,9 +66,9 @@ focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 108.0
+margin/left = 8.0
 margin/top = 0.0
-margin/right = 158.0
+margin/right = 8.0
 margin/bottom = 50.0
 alignment = 0
 
@@ -78,9 +78,9 @@ focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 158.0
+margin/left = 12.0
 margin/top = 0.0
-margin/right = 208.0
+margin/right = 12.0
 margin/bottom = 50.0
 alignment = 0
 
