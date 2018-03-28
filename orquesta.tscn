@@ -339,7 +339,7 @@ transform/pos = Vector2( 433.958, 240.786 )
 transform/scale = Vector2( 0.37, 0.37 )
 frames = SubResource( 1 )
 animation = "bandoneon"
-frame = 38
+frame = 28
 playing = true
 
 [node name="violin1" type="AnimatedSprite" parent="."]
@@ -349,9 +349,8 @@ transform/pos = Vector2( 621.69, 261.191 )
 transform/scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 1 )
 animation = "violin1"
-frame = 93
+frame = 82
 playing = true
-centered = false
 
 [node name="violin2" type="AnimatedSprite" parent="."]
 
@@ -360,7 +359,7 @@ transform/pos = Vector2( 824.385, 229.903 )
 transform/scale = Vector2( 0.37, 0.37 )
 frames = SubResource( 1 )
 animation = "violin2"
-frame = 13
+frame = 3
 playing = true
 
 
