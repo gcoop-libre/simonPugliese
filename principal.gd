@@ -32,13 +32,14 @@ func boton_apretado(quien):
 			currentPosicion += 1
 			 
 			if currentPosicion == patron.size():
-				emit_signal("nivelGanado")
+				animarMusicosOrquesta()
 				get_node("teclado/sonidos_ui").play("win_level_" + str(get_node("/root/global").subNivelActual))
 				get_node("error/panel/Label").set_text("ganaste!")
 				get_node("error/anim").play("mostrar")
 				yield( get_node("error/anim"), "finished" )
-				if(hayMasNiveles()):
+				if hayMasNiveles():
 					get_node("/root/global").siguienteNivel()
+					pass
 				else:
 					ganarJuego()
 				return
@@ -94,6 +95,7 @@ func ganarJuego():
 	get_node("teclado/sonidos_ui").play("intro_la_yumba")
 	get_node("teclado").quitar_teclas()
 	get_node("escenario").add_child(get_node("/root/global").get_pugliese())
+	animarMusicosOrquesta()
 	get_node("escenario/pugliese").play()
 	get_node("btnEmpezarDeNuevo/anim").play("mostrar")
 
@@ -102,5 +104,5 @@ func _on_btnEmpezarDeNuevo_pressed():
 	yield(get_node("btnEmpezarDeNuevo/anim"), "finished")
 	get_tree().get_root().get_node("/root/global").empezarJuego()
 
-func _on_scene_nivelGanado():
+func animarMusicosOrquesta():
 	get_node("escenario/orquesta").animarMusicos()

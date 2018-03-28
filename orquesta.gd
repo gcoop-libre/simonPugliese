@@ -1,12 +1,17 @@
 extends Node2D
+var timer
 
 func _ready():
-	pass
+	timer = Timer.new()
+	get_parent().add_child(timer)
 
 func animarMusicos():
 	for musico in get_children():
-		musico.play()
+		musico.set_process(true)
 
-func animarNotaMusicos():
+func pararConTimer(tiempo):
+	timer.set_wait_time(tiempo)
+	timer.start()
+	yield(timer, "timeout")
 	for musico in get_children():
-		musico.play("nota-" + musico.get_name())
+		musico.set_process(false)

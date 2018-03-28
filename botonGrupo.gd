@@ -19,6 +19,8 @@ func _on_Timer_timeout():
 	emit_signal("finApretado")
 	
 func tocar(nota):
+	get_parent().get_node("escenario/orquesta").animarMusicos()
+	get_parent().get_node("escenario/orquesta").pararConTimer(0.25)
 	get_node("sonidos").play(nota)
 
 func quitar_teclas():
