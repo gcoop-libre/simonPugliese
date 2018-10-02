@@ -3,7 +3,7 @@ extends Node2D
 signal gane 
 
 func _ready():
-	get_node("musica").play('intro_la_yumba')
+	get_node("/root/global").play_bg_music()
 
 func _on_personaje_chocando(colisionador):
 	if(colisionador.get_parent().get_parent() == get_node("items")):

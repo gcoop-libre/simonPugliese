@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=1]
+[gd_scene load_steps=37 format=1]
 
 [ext_resource path="res://principal.gd" type="Script" id=1]
 [ext_resource path="res://botonGrupo.gd" type="Script" id=2]
@@ -18,62 +18,69 @@
 [ext_resource path="res://assets/img/teclas-Malefico/04_presionada.png" type="Texture" id=16]
 [ext_resource path="res://assets/img/negra.pbm" type="BitMap" id=17]
 [ext_resource path="res://notas_8bit.tres" type="SampleLibrary" id=18]
-[ext_resource path="res://assets/sonidos_ui/click.wav" type="Sample" id=19]
-[ext_resource path="res://assets/sonidos_ui/error.wav" type="Sample" id=20]
-[ext_resource path="res://assets/sonidos_ui/intro_la_yumba.smp" type="Sample" id=21]
-[ext_resource path="res://assets/sonidos_ui/win.wav" type="Sample" id=22]
-[ext_resource path="res://assets/canciones/win_level_0.wav" type="Sample" id=23]
-[ext_resource path="res://assets/canciones/win_level_1.wav" type="Sample" id=24]
-[ext_resource path="res://assets/canciones/win_level_2.wav" type="Sample" id=25]
-[ext_resource path="res://assets/img/fondo-club.jpg" type="Texture" id=26]
-[ext_resource path="res://assets/buttons/empezar_button.png" type="Texture" id=27]
-[ext_resource path="res://assets/buttons/empezar_button_press.png" type="Texture" id=28]
-[ext_resource path="res://assets/buttons/empezar_button.pbm" type="BitMap" id=29]
-[ext_resource path="res://mostrar.tres" type="Animation" id=30]
+[ext_resource path="res://assets/sonidos_ui/aplausos.wav" type="Sample" id=19]
+[ext_resource path="res://assets/sonidos_ui/click.wav" type="Sample" id=20]
+[ext_resource path="res://assets/sonidos_ui/error.wav" type="Sample" id=21]
+[ext_resource path="res://assets/sonidos_ui/intro_la_yumba.smp" type="Sample" id=22]
+[ext_resource path="res://assets/sonidos_ui/win.wav" type="Sample" id=23]
+[ext_resource path="res://assets/canciones/win_level_0.wav" type="Sample" id=24]
+[ext_resource path="res://assets/canciones/win_level_1.wav" type="Sample" id=25]
+[ext_resource path="res://assets/canciones/win_level_2.wav" type="Sample" id=26]
+[ext_resource path="res://assets/img/fondo-club.jpg" type="Texture" id=27]
+[ext_resource path="res://assets/buttons/empezar_button.png" type="Texture" id=28]
+[ext_resource path="res://assets/buttons/empezar_button_press.png" type="Texture" id=29]
+[ext_resource path="res://assets/buttons/empezar_button.pbm" type="BitMap" id=30]
+[ext_resource path="res://mostrar.tres" type="Animation" id=31]
 
 [sub_resource type="SampleLibrary" id=1]
 
-samples/click = {
+samples/aplausos = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 19 )
 }
-samples/error = {
+samples/click = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 20 )
 }
-samples/intro_la_yumba = {
+samples/error = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 21 )
 }
-samples/win = {
+samples/intro_la_yumba = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 22 )
 }
-samples/win_level_0 = {
+samples/win = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 23 )
 }
-samples/win_level_1 = {
+samples/win_level_0 = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 24 )
 }
-samples/win_level_2 = {
+samples/win_level_1 = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 25 )
+}
+samples/win_level_2 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 26 )
 }
 
 [sub_resource type="Animation" id=2]
@@ -123,6 +130,32 @@ tracks/0/keys = {
 "transitions": FloatArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 523, 50 ), Vector2( 523, 100 ), Vector2( 523, -200 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+
+length = 2.5
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:transform/pos")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0.5, 1.7, 2.5 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 640, 360 ), Vector2( 640, 360 ), Vector2( 640, -100.592 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:transform/rot")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -20.0, 0.0, 20.0, 0.0, -20.0, 0.0, 20.0, 0.0, -20.0, 0.0, 20.0, 0.0 ]
 }
 
 [node name="scene" type="Node2D"]
@@ -319,7 +352,6 @@ textures/click_mask = ExtResource( 17 )
 
 [node name="octava2" type="Node2D" parent="teclado"]
 
-editor/display_folded = true
 script/script = ExtResource( 4 )
 
 [node name="C2" parent="teclado/octava2" instance=ExtResource( 5 )]
@@ -547,10 +579,10 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 1.0
+margin/top = -1.0
 margin/right = 2560.0
-margin/bottom = 1441.0
-texture = ExtResource( 26 )
+margin/bottom = 1439.0
+texture = ExtResource( 27 )
 stretch_mode = 0
 
 [node name="btnEmpezar" type="TextureButton" parent="."]
@@ -567,10 +599,10 @@ margin/bottom = 459.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 27 )
-textures/pressed = ExtResource( 28 )
-textures/hover = ExtResource( 28 )
-textures/click_mask = ExtResource( 29 )
+textures/normal = ExtResource( 28 )
+textures/pressed = ExtResource( 29 )
+textures/hover = ExtResource( 29 )
+textures/click_mask = ExtResource( 30 )
 params/resize_mode = 0
 params/stretch_mode = 0
 params/modulate = Color( 0.9375, 0.0439453, 0.0439453, 1 )
@@ -600,10 +632,10 @@ margin/bottom = -137.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 27 )
-textures/pressed = ExtResource( 28 )
-textures/hover = ExtResource( 28 )
-textures/click_mask = ExtResource( 29 )
+textures/normal = ExtResource( 28 )
+textures/pressed = ExtResource( 29 )
+textures/hover = ExtResource( 29 )
+textures/click_mask = ExtResource( 30 )
 params/resize_mode = 0
 params/stretch_mode = 0
 params/modulate = Color( 0.9375, 0.0439453, 0.0439453, 1 )
@@ -636,34 +668,34 @@ autostart = false
 
 [node name="error" type="Node2D" parent="."]
 
-transform/pos = Vector2( 640, -60.2936 )
-__meta__ = {
-"_edit_group_": true
-}
+transform/pos = Vector2( 640, -100.592 )
 
 [node name="panel" type="Panel" parent="error"]
 
+rect/min_size = Vector2( 580, 100 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -118.0
-margin/top = -48.0
-margin/right = 118.0
-margin/bottom = 49.0
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = -303.0
+margin/top = -9.0
+margin/right = 277.0
+margin/bottom = 91.0
 
 [node name="Label" type="Label" parent="error/panel"]
 
+rect/min_size = Vector2( 250, 0 )
 rect/scale = Vector2( 2, 2 )
 focus/ignore_mouse = true
 focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
+size_flags/horizontal = 1
+size_flags/vertical = 1
+size_flags/stretch_ratio = 100.0
 margin/left = 73.0
 margin/top = 35.0
-margin/right = 115.0
+margin/right = 573.0
 margin/bottom = 51.0
-text = "Error :("
+text = "mmm, la pifiaste! volvé a intentarlo!"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
@@ -673,7 +705,8 @@ max_lines_visible = -1
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/mostrar = ExtResource( 30 )
+anims/mostrar = ExtResource( 31 )
+"anims/mostrar (copy)" = SubResource( 5 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]

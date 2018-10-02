@@ -1,7 +1,6 @@
 extends HBoxContainer
 
 func _ready():
-	get_node("musica").play('intro_la_yumba')
 	pass
 	
 func _on_jugar_pressed():
@@ -23,4 +22,7 @@ func _on_acerca_pressed():
 	get_tree().change_scene("res://info.tscn")
 
 func play_click():
-	get_node("sonidos_ui").play("click")
+	get_node("/root/menu/sonidos_ui").play("click") 
+
+func _on_volver_pressed():
+	self._on_jugar_pressed()

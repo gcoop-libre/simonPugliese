@@ -4,6 +4,8 @@ export var subNivelActual = 0
 export var violin = 0
 export var bandoneon = 0
 export var contrabajo = 0
+export var playing_intro = false
+export var playing_bg_music = false
 
 var nivelActual = null
 var nivel_1 = {'tipo': 'simon', 'nro': 0}
@@ -15,13 +17,31 @@ var mapa_niveles = []
 var current_scene = null
 var orquesta 
 var pugliese
+var cancion
 
 func _ready():
 	current_scene = get_tree().get_root().get_child(get_tree().get_root().get_child_count() -1 )
 	mapa_niveles = [nivel_1, nivel_2, nivel_3, nivel_4, nivel_5]
 	orquesta = load("res://orquesta.tscn")
 	pugliese = load("res://pugliese.tscn")
-	
+	play_intro_song()
+
+func play_intro_song():
+	if(!playing_intro):
+		get_node("/root/menu/musica").stop_all()
+		cancion = get_node("/root/menu/musica").play('intro_la_yumba')
+		playing_intro = true
+
+func play_bg_music():
+	get_node("/root/menu/musica").stop_all()
+	print(mapa_niveles[nivelActual]['tipo'])
+	if(mapa_niveles[nivelActual]['tipo'] == 'simon'):
+		cancion = get_node("/root/menu/musica").play('bg_music_0_0')
+	else:
+		cancion = get_node("/root/menu/musica").play('calle')
+	playing_intro = false
+	playing_bg_music = true
+
 func empezarJuego():
 	nivelActual = 0
 	subNivelActual = 0
@@ -29,7 +49,7 @@ func empezarJuego():
 	bandoneon = 0
 	contrabajo = 0
 	call_deferred("_deferred_goto_scene", 'res://principal.tscn')
-	
+
 func siguienteNivel():
 	var siguienteNivel = nivelActual + 1
 	var siguiente = mapa_niveles[siguienteNivel]
@@ -44,7 +64,7 @@ func siguienteNivel():
 	call_deferred("_deferred_goto_scene", path)
 
 func _deferred_goto_scene(path):
-
+    current_scene = get_tree().get_root().get_child(get_tree().get_root().get_child_count() -1 )
     # Immediately free the current scene,
     # there is no risk here.
     current_scene.free()

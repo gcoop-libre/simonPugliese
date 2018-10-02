@@ -19,6 +19,7 @@ func _ready():
 	get_node("escenario").add_child(get_node("/root/global").get_orquesta())
 	deshabilitarInput(true)
 	conectarTeclado()
+	get_node("/root/global").play_bg_music()
 
 func conectarTeclado():
 	for octava in get_node("teclado").get_children():
@@ -32,9 +33,9 @@ func boton_apretado(quien):
 			currentPosicion += 1
 			 
 			if currentPosicion == patron.size():
+				get_node("teclado/sonidos_ui").play("aplausos")
 				animarMusicosOrquesta()
-				get_node("teclado/sonidos_ui").play("win_level_" + str(get_node("/root/global").subNivelActual))
-				get_node("error/panel/Label").set_text("ganaste!")
+				get_node("error/panel/Label").set_text("muy bien, diste en la tecla! :)")
 				get_node("error/anim").play("mostrar")
 				yield( get_node("error/anim"), "finished" )
 				if hayMasNiveles():
@@ -90,7 +91,8 @@ func hayMasNiveles():
 	return cantidadNiveles - 1 > get_node("/root/global").subNivelActual
 	
 func ganarJuego():
-	get_node("error/panel/Label").set_text("Ganaste!")
+	# agregar sonido de aplausos
+	get_node("error/panel/Label").set_text("Osvaldito y los músicos están listos para tocar!")
 	get_node("error/anim").play("mostrar")
 	get_node("teclado/sonidos_ui").play("intro_la_yumba")
 	get_node("teclado").quitar_teclas()

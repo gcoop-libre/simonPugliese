@@ -7,6 +7,7 @@ const WALK_SPEED = 100
 var velocity = Vector2()
 
 func _fixed_process(delta):
+	pass
 
 func _ready():
 	set_fixed_process(true)
