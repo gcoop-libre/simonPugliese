@@ -28,7 +28,7 @@ samples/click = {
 
 [sub_resource type="SampleLibrary" id=2]
 
-samples/bg_music_0_0 = {
+samples/bg_music = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
