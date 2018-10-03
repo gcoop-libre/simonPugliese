@@ -7,7 +7,7 @@ export var contrabajo = 0
 export var playing_intro = false
 export var playing_bg_music = false
 
-var nivelActual = null
+var nivelActual = 0
 var nivel_1 = {'tipo': 'simon', 'nro': 0}
 var nivel_2 = {'tipo': 'laberinto', 'nro': 0}
 var nivel_3 = {'tipo': 'simon', 'nro': 1}
@@ -34,7 +34,6 @@ func play_intro_song():
 
 func play_bg_music():
 	get_node("/root/menu/musica").stop_all()
-	print(mapa_niveles[nivelActual]['tipo'])
 	if(mapa_niveles[nivelActual]['tipo'] == 'simon'):
 		cancion = get_node("/root/menu/musica").play('bg_music')
 	else:

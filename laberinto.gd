@@ -11,11 +11,6 @@ func _on_personaje_chocando(colisionador):
 		agarrarItem(colisionador)
 	else: 
 		sonarColision()
-	if(colisionador == get_node("meta")):
-		get_node("ganaste/Panel/anim").play("mostrar")
-		get_node("sonidos_laberinto").play_sound("win")
-		yield( get_node("ganaste/Panel/anim"), "finished" )
-		emit_signal("gane")
 
 func sonarColision():
 	if(!get_node("sonidos_laberinto").is_playing):
@@ -33,4 +28,13 @@ func _on_escena_gane():
 	
 func agarrarItem(item):
 	get_node("inventario").agregarItem(item.get_name())
-	item.get_parent().queue_free()
+	item.get_parent().free()
+	print(cantidadItems())
+	if(cantidadItems() == 0):
+		get_node("ganaste/Panel/anim").play("mostrar")
+		get_node("sonidos_laberinto").play_sound("win")
+		yield( get_node("ganaste/Panel/anim"), "finished" )
+		emit_signal("gane")
+
+func cantidadItems():
+	return get_node("items").get_child_count()
