@@ -36,7 +36,7 @@ func play_bg_music():
 	get_node("/root/menu/musica").stop_all()
 	print(mapa_niveles[nivelActual]['tipo'])
 	if(mapa_niveles[nivelActual]['tipo'] == 'simon'):
-		cancion = get_node("/root/menu/musica").play('bg_music_0_0')
+		cancion = get_node("/root/menu/musica").play('bg_music')
 	else:
 		cancion = get_node("/root/menu/musica").play('calle')
 	playing_intro = false
