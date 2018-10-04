@@ -1,30 +1,8 @@
-[gd_scene load_steps=12 format=1]
+[gd_scene load_steps=4 format=1]
 
 [ext_resource path="res://menu.gd" type="Script" id=1]
 [ext_resource path="res://assets/img/fondo_juego.png" type="Texture" id=2]
-[ext_resource path="res://Hauracherell NC.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://about_the_game.gd" type="Script" id=4]
-[ext_resource path="res://assets/buttons/jugar_button.png" type="Texture" id=5]
-[ext_resource path="res://assets/buttons/jugar_button_press.png" type="Texture" id=6]
-[ext_resource path="res://assets/buttons/jugar_button.pbm" type="BitMap" id=7]
-[ext_resource path="res://assets/sonidos_ui/typewriter-1.smp" type="Sample" id=8]
-[ext_resource path="res://typing.gd" type="Script" id=9]
-
-[sub_resource type="DynamicFont" id=2]
-
-font/size = 24
-font/use_mipmaps = false
-font/use_filter = false
-font/font = ExtResource( 3 )
-
-[sub_resource type="SampleLibrary" id=3]
-
-samples/typewriter-1 = {
-"db": 0.0,
-"pitch": 1.0,
-"priority": 0,
-"sample": ExtResource( 8 )
-}
+[ext_resource path="res://dialog.tscn" type="PackedScene" id=3]
 
 [node name="HBoxContainer" type="HBoxContainer"]
 
@@ -46,95 +24,7 @@ transform/pos = Vector2( 640, 400 )
 transform/scale = Vector2( 1.71164, 1.71164 )
 texture = ExtResource( 2 )
 
-[node name="Polygon2D" type="Polygon2D" parent="."]
-
-transform/pos = Vector2( -0.448978, 0 )
-transform/scale = Vector2( 1.0102, 1 )
-polygon = Vector2Array( 64, 64, 64, 656, 1200, 656, 1200, 64 )
-uv = Vector2Array(  )
-color = Color( 0.320312, 0.137634, 0.137634, 0.366118 )
-vertex_colors = ColorArray(  )
-offset = Vector2( 0, 0 )
-texture/texture = null
-texture/offset = Vector2( 0, 0 )
-texture/scale = Vector2( 1, 1 )
-texture/rotation = 0.0
-invert/enable = false
-invert/border = 100.0
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Polygon2D"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 95.0
-margin/top = 96.0
-margin/right = 1157.0
-margin/bottom = 624.0
-custom_fonts/normal_font = SubResource( 2 )
-bbcode/enabled = true
-bbcode/bbcode = ""
-visible_characters = -1
-percent_visible = 1.0
-script/script = ExtResource( 4 )
-
-[node name="Timer" type="Timer" parent="Polygon2D"]
-
-process_mode = 1
-wait_time = 0.05
-one_shot = false
-autostart = true
-
-[node name="volver" type="TextureButton" parent="Polygon2D"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 1030.0
-margin/top = 576.0
-margin/right = 1176.0
-margin/bottom = 639.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-textures/normal = ExtResource( 5 )
-textures/pressed = ExtResource( 6 )
-textures/click_mask = ExtResource( 7 )
-params/resize_mode = 0
-params/stretch_mode = 0
-
-[node name="typing" type="SamplePlayer" parent="."]
-
-process/pause_mode = 2
-config/polyphony = 6
-config/samples = SubResource( 3 )
-default/volume_db = 2.0
-default/pitch_scale = 1.0
-default/pan = 0.0
-default/depth = 0.0
-default/height = 0.0
-default/filter/type = 0
-default/filter/cutoff = 5000.0
-default/filter/resonance = 0.0
-default/filter/gain = 0.0
-default/reverb_room = 0
-default/reverb_send = 0.02
-default/chorus_send = 0.0
-script/script = ExtResource( 9 )
-
-[node name="Timer" type="Timer" parent="."]
-
-process_mode = 1
-wait_time = 0.5
-one_shot = false
-autostart = false
-
-[connection signal="textoCompleto" from="Polygon2D/RichTextLabel" to="typing" method="_on_RichTextLabel_textoCompleto" flags=6]
-
-[connection signal="timeout" from="Polygon2D/Timer" to="Polygon2D/RichTextLabel" method="_on_Timer_timeout"]
-
-[connection signal="pressed" from="Polygon2D/volver" to="." method="_on_volver_pressed"]
+[node name="Polygon2D" parent="." instance=ExtResource( 3 )]
 
 
+[editable path="Polygon2D"]

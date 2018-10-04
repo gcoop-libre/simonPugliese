@@ -1,3 +1,5 @@
+# root/menu
+
 extends HBoxContainer
 
 func _ready():
@@ -5,8 +7,8 @@ func _ready():
 	
 func _on_jugar_pressed():
 	play_click()
-	get_node("Timer").start()
-	yield(get_node("Timer"), "timeout")
+	get_node("/root/menu/Timer").start()
+	yield(get_node("/root/menu/Timer"), "timeout")
 	get_node("/root/global").empezarJuego()
 
 func _on_salir_pressed():

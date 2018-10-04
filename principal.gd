@@ -20,6 +20,7 @@ func _ready():
 	deshabilitarInput(true)
 	conectarTeclado()
 	get_node("/root/global").play_bg_music()
+	mostrarPugliese()
 
 func conectarTeclado():
 	for octava in get_node("teclado").get_children():
@@ -63,7 +64,8 @@ func checkPatronTocado():
 			return false
 	return true
 
-func _on_btnEmpezar_pressed():
+func jugar():
+	mostrarTeclado()
 	get_node("teclado/sonidos_ui").play("click")
 	currentPosicion = 0
 	get_node("btnEmpezar/anim").play("ocultar")
@@ -95,10 +97,7 @@ func ganarJuego():
 	get_node("error/panel/Label").set_text("Osvaldito y los músicos están listos para tocar!")
 	get_node("error/anim").play("mostrar")
 	get_node("teclado/sonidos_ui").play("intro_la_yumba")
-	get_node("teclado").quitar_teclas()
-	get_node("escenario").add_child(get_node("/root/global").get_pugliese())
-	animarMusicosOrquesta()
-	get_node("escenario/pugliese").play()
+	mostrarPugliese()
 	get_node("btnEmpezarDeNuevo/anim").play("mostrar")
 
 func _on_btnEmpezarDeNuevo_pressed():
@@ -108,3 +107,19 @@ func _on_btnEmpezarDeNuevo_pressed():
 
 func animarMusicosOrquesta():
 	get_node("escenario/orquesta").animarMusicos()
+	
+func mostrarPugliese():
+	get_node("teclado").quitar_teclas()
+	get_node("escenario").add_child(get_node("/root/global").get_pugliese())
+	animarMusicosOrquesta()
+	get_node("escenario/pugliese").play()
+
+func mostrarTeclado():
+	get_node("teclado").mostrar_teclas()
+	get_node("escenario/pugliese").queue_free()
+
+#fixme cambiar el nombre de este boton 
+func _on_volver_pressed():
+	get_node("Polygon2D").hide()
+	mostrarTeclado()
+	jugar()

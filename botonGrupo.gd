@@ -24,6 +24,14 @@ func tocar(nota):
 	get_node("sonidos").play(nota)
 
 func quitar_teclas():
-	get_node("fondo_piano").queue_free()
-	get_node("octava1").queue_free()
-	get_node("octava2").queue_free()
+	get_node("fondo_piano").hide()
+	get_node("octava1").hide()
+	get_node("octava2").hide()
+	#get_node("fondo_piano").queue_free()
+	#get_node("octava1").queue_free()
+	#get_node("octava2").queue_free()
+
+func mostrar_teclas():
+	get_node("fondo_piano").show()
+	get_node("octava1").show()
+	get_node("octava2").show()
