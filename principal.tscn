@@ -587,7 +587,6 @@ stretch_mode = 0
 
 [node name="btnEmpezar" type="TextureButton" parent="."]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -620,7 +619,6 @@ autoplay = ""
 
 [node name="btnEmpezarDeNuevo" type="TextureButton" parent="."]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2

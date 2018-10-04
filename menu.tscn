@@ -41,9 +41,9 @@ samples/calle = {
 "sample": ExtResource( 4 )
 }
 samples/intro_la_yumba = {
-"db": -8.0,
+"db": 0.0,
 "pitch": 1.0,
-"priority": 1,
+"priority": 0,
 "sample": ExtResource( 5 )
 }
 

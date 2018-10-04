@@ -10,3 +10,4 @@ func agregarItem(nombreItem):
 	var cantidadActual = get_node(nombreItem + "/Background/Number").get_text()
 	var cantidadNueva = int(cantidadActual) + 1
 	get_node(nombreItem + "/Background/Number").set_text(str(cantidadNueva))
+	get_node("itemSounds").play(nombreItem)

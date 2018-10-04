@@ -69,7 +69,7 @@ func _on_btnEmpezar_pressed():
 	get_node("btnEmpezar/anim").play("ocultar")
 	yield(get_node("btnEmpezar/anim"), "finished")
 	get_node("timerCortito").start()
-	yield( get_node("timerCortito"), "timeout" )
+	yield(get_node("timerCortito"), "timeout")
 	continuarPatron()
 
 func continuarPatron():
