@@ -25,6 +25,3 @@ func _on_acerca_pressed():
 
 func play_click():
 	get_node("/root/menu/sonidos_ui").play("click") 
-
-func _on_volver_pressed():
-	self._on_jugar_pressed()

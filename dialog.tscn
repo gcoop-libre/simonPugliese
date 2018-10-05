@@ -1,19 +1,22 @@
-[gd_scene load_steps=10 format=1]
+[gd_scene load_steps=13 format=1]
 
-[ext_resource path="res://Hauracherell NC.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://about_the_game.gd" type="Script" id=2]
-[ext_resource path="res://assets/buttons/jugar_button.png" type="Texture" id=3]
-[ext_resource path="res://assets/buttons/jugar_button_press.png" type="Texture" id=4]
-[ext_resource path="res://assets/buttons/jugar_button.pbm" type="BitMap" id=5]
-[ext_resource path="res://assets/sonidos_ui/typewriter-1.smp" type="Sample" id=6]
-[ext_resource path="res://typing.gd" type="Script" id=7]
+[ext_resource path="res://dialog.gd" type="Script" id=1]
+[ext_resource path="res://Hauracherell NC.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://about_the_game.gd" type="Script" id=3]
+[ext_resource path="res://timer_texto.gd" type="Script" id=4]
+[ext_resource path="res://assets/buttons/jugar_button.png" type="Texture" id=5]
+[ext_resource path="res://assets/buttons/jugar_button_press.png" type="Texture" id=6]
+[ext_resource path="res://assets/buttons/jugar_button.pbm" type="BitMap" id=7]
+[ext_resource path="res://boton_texto.gd" type="Script" id=8]
+[ext_resource path="res://assets/sonidos_ui/typewriter-1.smp" type="Sample" id=9]
+[ext_resource path="res://typing.gd" type="Script" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 
 font/size = 24
 font/use_mipmaps = false
 font/use_filter = false
-font/font = ExtResource( 1 )
+font/font = ExtResource( 2 )
 
 [sub_resource type="SampleLibrary" id=2]
 
@@ -21,13 +24,13 @@ samples/typewriter-1 = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 6 )
+"sample": ExtResource( 9 )
 }
 
-[node name="Polygon2D" type="Polygon2D"]
+[node name="cuadro_texto" type="Polygon2D"]
 
-transform/pos = Vector2( -0.448978, 0 )
-transform/scale = Vector2( 1.0102, 1 )
+transform/pos = Vector2( -30.6939, -12.8354 )
+transform/scale = Vector2( 1.06122, 1.01899 )
 polygon = Vector2Array( 64, 64, 64, 656, 1200, 656, 1200, 64 )
 uv = Vector2Array(  )
 color = Color( 0.320312, 0.137634, 0.137634, 0.366118 )
@@ -39,33 +42,38 @@ texture/scale = Vector2( 1, 1 )
 texture/rotation = 0.0
 invert/enable = false
 invert/border = 100.0
+script/script = ExtResource( 1 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 
+material/use_parent = true
+rect/min_size = Vector2( 200, 200 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
+size_flags/horizontal = 1
+size_flags/vertical = 1
 margin/left = 95.0
 margin/top = 96.0
-margin/right = 1157.0
-margin/bottom = 624.0
+margin/right = 1175.0
+margin/bottom = 594.0
 custom_fonts/normal_font = SubResource( 1 )
 bbcode/enabled = true
 bbcode/bbcode = ""
 visible_characters = -1
 percent_visible = 1.0
-script/script = ExtResource( 2 )
+script/script = ExtResource( 3 )
 
 [node name="Timer" type="Timer" parent="."]
 
 process_mode = 1
 wait_time = 0.05
 one_shot = false
-autostart = true
+autostart = false
+script/script = ExtResource( 4 )
 
-[node name="volver" type="TextureButton" parent="."]
+[node name="boton" type="TextureButton" parent="."]
 
+material/use_parent = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -77,11 +85,12 @@ margin/bottom = 639.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 3 )
-textures/pressed = ExtResource( 4 )
-textures/click_mask = ExtResource( 5 )
+textures/normal = ExtResource( 5 )
+textures/pressed = ExtResource( 6 )
+textures/click_mask = ExtResource( 7 )
 params/resize_mode = 0
 params/stretch_mode = 0
+script/script = ExtResource( 8 )
 
 [node name="typing" type="SamplePlayer" parent="."]
 
@@ -100,9 +109,15 @@ default/filter/gain = 0.0
 default/reverb_room = 0
 default/reverb_send = 0.02
 default/chorus_send = 0.0
-script/script = ExtResource( 7 )
+script/script = ExtResource( 10 )
 
 [connection signal="textoCompleto" from="RichTextLabel" to="typing" method="_on_RichTextLabel_textoCompleto"]
+
+[connection signal="textoCompleto" from="RichTextLabel" to="Timer" method="_on_RichTextLabel_textoCompleto" flags=7]
+
+[connection signal="textoCompleto" from="RichTextLabel" to="boton" method="_on_RichTextLabel_textoCompleto" flags=7]
+
+[connection signal="timeout" from="Timer" to="Timer" method="_on_Timer_timeout"]
 
 [connection signal="timeout" from="Timer" to="RichTextLabel" method="_on_Timer_timeout"]
 

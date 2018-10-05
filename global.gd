@@ -18,14 +18,19 @@ var current_scene = null
 var orquesta 
 var pugliese
 var cancion
+var dialog
 
 func _ready():
 	current_scene = get_tree().get_root().get_child(get_tree().get_root().get_child_count() -1 )
 	mapa_niveles = [nivel_1, nivel_2, nivel_3, nivel_4, nivel_5]
 	orquesta = load("res://orquesta.tscn")
 	pugliese = load("res://pugliese.tscn")
+	dialog = load("res://dialog.tscn")
 	play_intro_song()
 
+func esPrimerNivel():
+	return nivelActual == 0 && subNivelActual == 0
+	
 func play_intro_song():
 	if(!playing_intro):
 		get_node("/root/menu/musica").stop_all()
@@ -88,3 +93,6 @@ func get_orquesta():
 	
 func get_pugliese():
 	return pugliese.instance()
+
+func get_dialog():
+	return dialog.instance()

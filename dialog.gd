@@ -1,10 +1,20 @@
 extends Polygon2D
 
 func _ready():
-	get_node("Timer").start()
-	get_node("volver").hide()
+	get_node("boton").hide()
 
-func _on_RichTextLabel_textoCompleto():
-	get_node("Timer").stop()
-	get_node("volver").show()
+func mostrarTexto(txt):
+	get_node("RichTextLabel").iniciar(txt)
+	get_node("Timer").start()
+
+func conectarBoton(_func, nodoControlador):
+	get_node("boton").connect("pressed", nodoControlador, _func)
 	
+func ocultar():
+	hide()
+	
+func posicionarTexto(posicion):
+	get_node("RichTextLabel").set_pos(posicion)
+	
+func posicionarBoton(posicion):
+	get_node("boton").set_pos(posicion)

@@ -2,13 +2,14 @@ extends Node2D
 
 var currentPosicion = 0
 var patronTocado = []
-
+var textoBienvenida = ["¡Bienvenidos, bienvenidas!", "Osvaldito Pugliese y los músicos quieren armar \nla orquesta y necesitan tu ayuda.", "Te proponemos un desafío ¿Te sumás?", "Prepará las antenas que vas a tener que \nrepetir la melodía"]
 var nivel_1 = ['C1', 'D1', 'E2']
 var nivel_2 = ['C#1', 'D#1', 'A1']
 var nivel_3 = ['A2', 'F#2', 'E2']
 var niveles = [nivel_1, nivel_2, nivel_3]
 var patron = null
 var cantidadNiveles
+var dialog
 
 signal nivelGanado
 
@@ -20,8 +21,20 @@ func _ready():
 	deshabilitarInput(true)
 	conectarTeclado()
 	get_node("/root/global").play_bg_music()
-	mostrarPugliese()
+	if(get_node("/root/global").esPrimerNivel()):
+		mostrarPugliese()
+		animarTextoBienvenida()
 
+func animarTextoBienvenida():
+	dialog = get_node("/root/global").get_dialog()
+	var polygon = Vector2Array([Vector2(64, 310), Vector2(64, 700), Vector2(610, 700), Vector2(610, 310)])
+	dialog.set_polygon(polygon)
+	dialog.posicionarTexto(Vector2(92,330))
+	dialog.posicionarBoton(Vector2(270,632))
+	dialog.mostrarTexto(textoBienvenida)
+	dialog.conectarBoton("_on_empezar_pressed", self)
+	add_child(dialog)
+	
 func conectarTeclado():
 	for octava in get_node("teclado").get_children():
 		for boton in octava.get_children():
@@ -118,8 +131,6 @@ func mostrarTeclado():
 	get_node("teclado").mostrar_teclas()
 	get_node("escenario/pugliese").queue_free()
 
-#fixme cambiar el nombre de este boton 
-func _on_volver_pressed():
-	get_node("Polygon2D").hide()
-	mostrarTeclado()
+func _on_empezar_pressed():
+	dialog.ocultar()
 	jugar()
