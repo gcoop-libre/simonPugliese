@@ -24,6 +24,8 @@ func _ready():
 	if(get_node("/root/global").esPrimerNivel()):
 		mostrarPugliese()
 		animarTextoBienvenida()
+	else:
+		get_node("btnEmpezar").show()
 
 func animarTextoBienvenida():
 	dialog = get_node("/root/global").get_dialog()
@@ -129,8 +131,11 @@ func mostrarPugliese():
 
 func mostrarTeclado():
 	get_node("teclado").mostrar_teclas()
-	get_node("escenario/pugliese").queue_free()
 
 func _on_empezar_pressed():
 	dialog.ocultar()
+	get_node("escenario/pugliese").queue_free()
+	jugar()
+
+func _on_btnEmpezar_pressed():
 	jugar()

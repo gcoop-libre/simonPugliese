@@ -328,6 +328,7 @@ transform/pos = Vector2( 78.1598, 660.348 )
 transform/scale = Vector2( 0.179565, 0.179565 )
 frames = SubResource( 3 )
 animation = "anim-right-stop"
+frame = 2
 playing = true
 
 [node name="items" type="Node2D" parent="."]

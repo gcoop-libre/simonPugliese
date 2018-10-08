@@ -29,7 +29,7 @@ func _ready():
 	play_intro_song()
 
 func esPrimerNivel():
-	return nivelActual == 0 && subNivelActual == 0
+	return (nivelActual == 0)
 	
 func play_intro_song():
 	if(!playing_intro):
