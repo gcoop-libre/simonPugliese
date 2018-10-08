@@ -6,7 +6,7 @@ func _ready():
 	get_node("/root/global").play_bg_music()
 	
 func _on_personaje_chocando(colisionador):
-	if(colisionador.get_parent().get_parent() == get_node("items")):
+	if(colisionador.get_parent() == get_node("items")):
 		agarrarItem(colisionador)
 	else: 
 		sonarColision()
@@ -27,8 +27,8 @@ func _on_escena_gane():
 	get_node("/root/global").siguienteNivel()
 	
 func agarrarItem(item):
-	get_node("inventario").agregarItem(item.get_name())
-	item.get_parent().queue_free()
+	get_node("inventario").agregarItem(item.instrumento)
+	item.queue_free()
 	get_node("sonidos_laberinto/timerLargo").start()
 	yield(get_node("sonidos_laberinto/timerLargo"), "timeout")
 	if(cantidadItems() == 0):
