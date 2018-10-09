@@ -1,6 +1,7 @@
 extends Polygon2D
 
 func _ready():
+	set_fixed_process(true)
 	get_node("boton").hide()
 
 func mostrarTexto(txt):
@@ -18,3 +19,7 @@ func posicionarTexto(posicion):
 	
 func posicionarBoton(posicion):
 	get_node("boton").set_pos(posicion)
+
+func _fixed_process(delta):
+	if (Input.is_action_pressed("ui_accept")):
+		get_node("RichTextLabel").completarTexto()

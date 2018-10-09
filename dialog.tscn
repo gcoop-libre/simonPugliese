@@ -29,6 +29,7 @@ samples/typewriter-1 = {
 
 [node name="cuadro_texto" type="Polygon2D"]
 
+process/pause_mode = 2
 transform/pos = Vector2( -30.6939, -12.8354 )
 transform/scale = Vector2( 1.06122, 1.01899 )
 polygon = Vector2Array( 64, 64, 64, 656, 1200, 656, 1200, 64 )
@@ -113,12 +114,12 @@ script/script = ExtResource( 10 )
 
 [connection signal="textoCompleto" from="RichTextLabel" to="typing" method="_on_RichTextLabel_textoCompleto"]
 
-[connection signal="textoCompleto" from="RichTextLabel" to="Timer" method="_on_RichTextLabel_textoCompleto" flags=7]
-
 [connection signal="textoCompleto" from="RichTextLabel" to="boton" method="_on_RichTextLabel_textoCompleto" flags=7]
 
-[connection signal="timeout" from="Timer" to="Timer" method="_on_Timer_timeout"]
+[connection signal="textoCompleto" from="RichTextLabel" to="Timer" method="_on_RichTextLabel_textoCompleto" flags=7]
 
 [connection signal="timeout" from="Timer" to="RichTextLabel" method="_on_Timer_timeout"]
+
+[connection signal="timeout" from="Timer" to="Timer" method="_on_Timer_timeout"]
 
 

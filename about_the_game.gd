@@ -22,3 +22,18 @@ func _on_Timer_timeout():
 			append_bbcode(str("\n\n", textoDialog[page]))
 		else:
 			emit_signal("textoCompleto")
+
+func completarTexto():
+	var textoCompleto = array_join(textoDialog, "\n\n")
+	set_bbcode(textoCompleto)
+	set_visible_characters(textoCompleto.length())
+	emit_signal("textoCompleto")
+	
+func array_join(arr, separator):
+    var output = "";
+    for s in arr:
+        output += str(s) + separator
+    output = output.left( output.length() - separator.length() )
+    return output
+
+	
