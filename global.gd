@@ -96,3 +96,11 @@ func get_pugliese():
 
 func get_dialog():
 	return dialog.instance()
+
+func apretar_ui_button():
+	get_node("sonidos_ui").play("click")
+	get_node("TimerBoton").start()
+	yield(get_node("TimerBoton"), "timeout")
+
+
+
