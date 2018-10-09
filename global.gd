@@ -33,16 +33,16 @@ func esPrimerNivel():
 	
 func play_intro_song():
 	if(!playing_intro):
-		get_node("/root/menu/musica").stop_all()
-		cancion = get_node("/root/menu/musica").play('intro_la_yumba')
+		get_node("/root/global/musica").stop_all()
+		cancion = get_node("/root/global/musica").play('intro_la_yumba')
 		playing_intro = true
 
 func play_bg_music():
-	get_node("/root/menu/musica").stop_all()
+	get_node("/root/global/musica").stop_all()
 	if(mapa_niveles[nivelActual]['tipo'] == 'simon'):
-		cancion = get_node("/root/menu/musica").play('bg_music')
+		cancion = get_node("/root/global/musica").play('bg_music')
 	else:
-		cancion = get_node("/root/menu/musica").play('calle')
+		cancion = get_node("/root/global/musica").play('calle')
 	playing_intro = false
 	playing_bg_music = true
 

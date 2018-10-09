@@ -1,21 +1,18 @@
-[gd_scene load_steps=19 format=1]
+[gd_scene load_steps=15 format=1]
 
 [ext_resource path="res://menu.gd" type="Script" id=1]
 [ext_resource path="res://assets/sonidos_ui/click.wav" type="Sample" id=2]
-[ext_resource path="res://assets/sonidos_ui/bg_music.smp" type="Sample" id=3]
-[ext_resource path="res://assets/sonidos_ui/calle.smp" type="Sample" id=4]
-[ext_resource path="res://assets/sonidos_ui/intro_la_yumba.smp" type="Sample" id=5]
-[ext_resource path="res://assets/img/logo-Malefico/logo_resized.png" type="Texture" id=6]
-[ext_resource path="res://assets/buttons/jugar_button.png" type="Texture" id=7]
-[ext_resource path="res://assets/buttons/jugar_button_press.png" type="Texture" id=8]
-[ext_resource path="res://assets/buttons/jugar_button.pbm" type="BitMap" id=9]
-[ext_resource path="res://assets/buttons/acerca_de_button.png" type="Texture" id=10]
-[ext_resource path="res://assets/buttons/acerca_de_button_press.png" type="Texture" id=11]
-[ext_resource path="res://assets/buttons/acerca_de_button.pbm" type="BitMap" id=12]
-[ext_resource path="res://assets/buttons/salir_button.png" type="Texture" id=13]
-[ext_resource path="res://assets/buttons/salir_button_press.png" type="Texture" id=14]
-[ext_resource path="res://assets/buttons/salir_button.pbm" type="BitMap" id=15]
-[ext_resource path="res://assets/img/fondo_juego.png" type="Texture" id=16]
+[ext_resource path="res://assets/img/logo-Malefico/logo_resized.png" type="Texture" id=3]
+[ext_resource path="res://assets/buttons/jugar_button.png" type="Texture" id=4]
+[ext_resource path="res://assets/buttons/jugar_button_press.png" type="Texture" id=5]
+[ext_resource path="res://assets/buttons/jugar_button.pbm" type="BitMap" id=6]
+[ext_resource path="res://assets/buttons/acerca_de_button.png" type="Texture" id=7]
+[ext_resource path="res://assets/buttons/acerca_de_button_press.png" type="Texture" id=8]
+[ext_resource path="res://assets/buttons/acerca_de_button.pbm" type="BitMap" id=9]
+[ext_resource path="res://assets/buttons/salir_button.png" type="Texture" id=10]
+[ext_resource path="res://assets/buttons/salir_button_press.png" type="Texture" id=11]
+[ext_resource path="res://assets/buttons/salir_button.pbm" type="BitMap" id=12]
+[ext_resource path="res://assets/img/fondo_juego.png" type="Texture" id=13]
 
 [sub_resource type="SampleLibrary" id=1]
 
@@ -24,27 +21,6 @@ samples/click = {
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 2 )
-}
-
-[sub_resource type="SampleLibrary" id=2]
-
-samples/bg_music = {
-"db": 0.0,
-"pitch": 1.0,
-"priority": 0,
-"sample": ExtResource( 3 )
-}
-samples/calle = {
-"db": 0.0,
-"pitch": 1.0,
-"priority": 0,
-"sample": ExtResource( 4 )
-}
-samples/intro_la_yumba = {
-"db": 0.0,
-"pitch": 1.0,
-"priority": 0,
-"sample": ExtResource( 5 )
 }
 
 [node name="menu" type="HBoxContainer"]
@@ -65,23 +41,6 @@ script/script = ExtResource( 1 )
 config/polyphony = 2
 config/samples = SubResource( 1 )
 default/volume_db = 1.0
-default/pitch_scale = 1.0
-default/pan = 0.0
-default/depth = 0.0
-default/height = 0.0
-default/filter/type = 0
-default/filter/cutoff = 5000.0
-default/filter/resonance = 1.0
-default/filter/gain = 1.0
-default/reverb_room = 2
-default/reverb_send = 0.0
-default/chorus_send = 0.0
-
-[node name="musica" type="SamplePlayer" parent="."]
-
-config/polyphony = 2
-config/samples = SubResource( 2 )
-default/volume_db = 0.0
 default/pitch_scale = 1.0
 default/pan = 0.0
 default/depth = 0.0
@@ -155,7 +114,7 @@ margin/left = 0.0
 margin/top = 44.0
 margin/right = 750.0
 margin/bottom = 361.0
-texture = ExtResource( 6 )
+texture = ExtResource( 3 )
 stretch_mode = 0
 
 [node name="spacer2" type="Control" parent="CenterContainer/title screen"]
@@ -197,9 +156,9 @@ margin/bottom = 100.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 7 )
-textures/pressed = ExtResource( 8 )
-textures/click_mask = ExtResource( 9 )
+textures/normal = ExtResource( 4 )
+textures/pressed = ExtResource( 5 )
+textures/click_mask = ExtResource( 6 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
@@ -217,9 +176,9 @@ margin/bottom = 204.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 10 )
-textures/pressed = ExtResource( 11 )
-textures/click_mask = ExtResource( 12 )
+textures/normal = ExtResource( 7 )
+textures/pressed = ExtResource( 8 )
+textures/click_mask = ExtResource( 9 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
@@ -237,9 +196,9 @@ margin/bottom = 308.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 13 )
-textures/pressed = ExtResource( 14 )
-textures/click_mask = ExtResource( 15 )
+textures/normal = ExtResource( 10 )
+textures/pressed = ExtResource( 11 )
+textures/click_mask = ExtResource( 12 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
@@ -272,7 +231,7 @@ visibility/behind_parent = true
 visibility/light_mask = 528947
 transform/pos = Vector2( -0.390869, -3.35904 )
 transform/scale = Vector2( 1.70911, 1.47005 )
-texture = ExtResource( 16 )
+texture = ExtResource( 13 )
 centered = false
 
 [node name="Timer" type="Timer" parent="."]
