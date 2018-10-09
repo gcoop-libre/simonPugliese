@@ -29,8 +29,8 @@ func _ready():
 	play_intro_song()
 
 func esPrimerNivel():
-	return (nivelActual == 0)
-	
+	return (subNivelActual == 0)
+
 func play_intro_song():
 	if(!playing_intro):
 		get_node("/root/global/musica").stop_all()
@@ -101,6 +101,3 @@ func apretar_ui_button():
 	get_node("sonidos_ui").play("click")
 	get_node("TimerBoton").start()
 	yield(get_node("TimerBoton"), "timeout")
-
-
-

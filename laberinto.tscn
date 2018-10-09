@@ -240,7 +240,7 @@ margin/left = 32.0
 margin/top = 32.0
 margin/right = -1248.0
 margin/bottom = -688.0
-color = Color( 0.214844, 0.196381, 0.196381, 1 )
+color = Color( 1, 1, 1, 1 )
 
 [node name="tileLaberinto" type="Node2D" parent="."]
 
@@ -327,7 +327,7 @@ transform/pos = Vector2( 78.1598, 660.348 )
 transform/scale = Vector2( 0.179565, 0.179565 )
 frames = SubResource( 3 )
 animation = "anim-right-stop"
-frame = 1
+frame = 2
 playing = true
 
 [node name="items" type="Node2D" parent="."]

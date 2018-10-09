@@ -47,7 +47,6 @@ func _fixed_process(delta):
 
 func _ready():
 	animation = get_node("camion")
-	set_fixed_process(true)
 
 func moveLeft():
 	animation.set_animation("anim-left-move")
