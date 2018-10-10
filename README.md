@@ -1,6 +1,6 @@
 ## Simon Pugliese
 
-![Logo](https://github.com/gcoop-libre/simonPugliese/blob/master/images/logosimon.png)
+![Logo](https://github.com/gcoop-libre/simonPugliese/blob/master/assets/img/logo-Malefico/logo.png)
 
 Simon Pugliese es un juego de memoria visual.
 Es un homenaje al Maestro Osvaldo Pugliese, realizado por integrantes de la
