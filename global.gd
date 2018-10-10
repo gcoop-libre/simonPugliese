@@ -101,3 +101,6 @@ func apretar_ui_button():
 	get_node("sonidos_ui").play("click")
 	get_node("TimerBoton").start()
 	yield(get_node("TimerBoton"), "timeout")
+
+func get_boton_pausa():
+	return load("res://pausa.tscn").instance()

@@ -3,13 +3,15 @@ extends Node2D
 signal gane 
 var dialog
 var textoBienvenida = ["Hola", "Como va?"]
+
 func _ready():
 	get_node("/root/global").play_bg_music()
+	add_child(get_node("/root/global/").get_boton_pausa())
 	if(get_node("/root/global").esPrimerNivel()):
 		animarTextoBienvenida()
 	else:
 		jugar()
-
+	
 func animarTextoBienvenida():
 	dialog = get_node("/root/global").get_dialog()
 	var polygon = Vector2Array([Vector2(164, 264), Vector2(164, 556), Vector2(1100, 556), Vector2(1100, 264)])
