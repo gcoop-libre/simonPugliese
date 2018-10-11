@@ -37,10 +37,13 @@ func _notification(what):
 		call_deferred("promptSalir")
 
 func promptSalir():
-	var confirmationDialog = load("res://ConfirmationDialog.tscn").instance()
-	current_scene.add_child(confirmationDialog)
-	confirmationDialog.popup()
+	var salirDialog = load("res://SalirDialog.tscn").instance()
+	prompt(salirDialog)
 
+func prompt(_dialog):
+	current_scene.add_child(_dialog)
+	_dialog.popup()
+	
 func resume():
 	get_tree().set_pause(false)
 	continuarSonido()
