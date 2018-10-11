@@ -19,7 +19,7 @@ var orquesta
 var pugliese
 var cancion
 var dialog
-var pausa = load("res://pausa.tscn").instance()
+var pausa = load("res://pausa.tscn")
 
 func _ready():
 	get_tree().set_auto_accept_quit(false)
@@ -33,7 +33,7 @@ func _ready():
 func _notification(what):
 	if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:
 		get_tree().set_pause(true)
-		pausa.pausar()
+		pausar()
 		call_deferred("promptSalir")
 
 func promptSalir():
@@ -43,7 +43,15 @@ func promptSalir():
 
 func resume():
 	get_tree().set_pause(false)
-	pausa.continuar()
+	continuar()
+
+func pausar():
+	AudioServer.set_stream_global_volume_scale(0)
+	AudioServer.set_fx_global_volume_scale(0)
+
+func continuar():
+	AudioServer.set_stream_global_volume_scale(1)
+	AudioServer.set_fx_global_volume_scale(1)
 
 func esPrimerNivel():
 	return (subNivelActual == 0)
@@ -121,4 +129,4 @@ func apretar_ui_button():
 	yield(get_node("TimerBoton"), "timeout")
 
 func get_boton_pausa():
-	return pausa
+	return pausa.instance()

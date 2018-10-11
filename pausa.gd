@@ -9,16 +9,8 @@ func _on_pausa_pressed():
 	yield(get_node("Timer"), "timeout")
 	get_tree().set_pause(!(get_tree().is_paused()))
 	if(get_tree().is_paused()):
-		pausar()
+		get_node("/root/global").pausar()
 		set_text("continuar")
 	else:
-		continuar()
+		get_node("/root/global").continuar()
 		set_text("pausa")
-	
-func pausar():
-	AudioServer.set_stream_global_volume_scale(0)
-	AudioServer.set_fx_global_volume_scale(0)
-
-func continuar():
-	AudioServer.set_stream_global_volume_scale(1)
-	AudioServer.set_fx_global_volume_scale(1)
