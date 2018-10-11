@@ -100,19 +100,16 @@ func _deferred_goto_scene(path):
     # Immediately free the current scene,
     # there is no risk here.
     current_scene.free()
-
     # Load new scene
     var s = ResourceLoader.load(path)
-
     # Instance the new scene
     current_scene = s.instance()
-
     # Add it to the active scene, as child of root
     get_tree().get_root().add_child(current_scene)
-
     # optional, to make it compatible with the SceneTree.change_scene() API
     get_tree().set_current_scene( current_scene )
-    current_scene.add_child(get_boton_pausa())
+    if(current_scene.esJugable()):
+        current_scene.add_child(get_boton_pausa())
 
 func sumarItem(nombreItem):
 	self.set(nombreItem, self.get(nombreItem) + 1)
@@ -133,3 +130,6 @@ func apretar_ui_button():
 
 func get_boton_pausa():
 	return pausa.instance()
+	
+func irAlMenu():
+	call_deferred("_deferred_goto_scene", "res://info.tscn")

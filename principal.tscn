@@ -27,9 +27,9 @@
 [ext_resource path="res://assets/canciones/win_level_1.wav" type="Sample" id=25]
 [ext_resource path="res://assets/canciones/win_level_2.wav" type="Sample" id=26]
 [ext_resource path="res://assets/img/fondo-club.jpg" type="Texture" id=27]
-[ext_resource path="res://assets/buttons/empezar_button.png" type="Texture" id=28]
-[ext_resource path="res://assets/buttons/empezar_button_press.png" type="Texture" id=29]
-[ext_resource path="res://assets/buttons/empezar_button.pbm" type="BitMap" id=30]
+[ext_resource path="res://assets/buttons/jugar.png" type="Texture" id=28]
+[ext_resource path="res://assets/buttons/jugar_pressed.png" type="Texture" id=29]
+[ext_resource path="res://assets/buttons/jugar.pbm" type="BitMap" id=30]
 [ext_resource path="res://mostrar.tres" type="Animation" id=31]
 
 [sub_resource type="SampleLibrary" id=1]
@@ -596,18 +596,17 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 523.0
 margin/top = 401.0
-margin/right = 742.0
+margin/right = 763.0
 margin/bottom = 464.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 textures/normal = ExtResource( 28 )
 textures/pressed = ExtResource( 29 )
-textures/hover = ExtResource( 29 )
 textures/click_mask = ExtResource( 30 )
 params/resize_mode = 0
+params/scale = Vector2( 0.4, 0.4 )
 params/stretch_mode = 0
-params/modulate = Color( 0.9375, 0.0439453, 0.0439453, 1 )
 
 [node name="anim" type="AnimationPlayer" parent="btnEmpezar"]
 
@@ -635,11 +634,10 @@ enabled_focus_mode = 2
 shortcut = null
 textures/normal = ExtResource( 28 )
 textures/pressed = ExtResource( 29 )
-textures/hover = ExtResource( 29 )
 textures/click_mask = ExtResource( 30 )
 params/resize_mode = 0
+params/scale = Vector2( 0.4, 0.4 )
 params/stretch_mode = 0
-params/modulate = Color( 0.9375, 0.0439453, 0.0439453, 1 )
 
 [node name="anim" type="AnimationPlayer" parent="btnEmpezarDeNuevo"]
 

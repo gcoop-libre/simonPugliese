@@ -15,4 +15,7 @@ func _on_salir_pressed():
 
 func _on_acerca_pressed():
 	get_node("/root/global").apretar_ui_button()
-	get_tree().change_scene("res://info.tscn")
+	get_node("/root/global").irAlMenu()
+
+func esJugable():
+	return false

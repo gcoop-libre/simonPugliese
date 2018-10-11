@@ -33,7 +33,7 @@ func animarTextoBienvenida():
 	var polygon = Vector2Array([Vector2(64, 310), Vector2(64, 700), Vector2(610, 700), Vector2(610, 310)])
 	dialog.set_polygon(polygon)
 	dialog.posicionarTexto(Vector2(92,330))
-	dialog.posicionarBoton(Vector2(270,632))
+	dialog.posicionarBoton(Vector2(230,632))
 	dialog.mostrarTexto(textoBienvenida)
 	dialog.conectarBoton("_on_empezar_pressed", self)
 	add_child(dialog)
@@ -140,3 +140,6 @@ func _on_empezar_pressed():
 
 func _on_btnEmpezar_pressed():
 	jugar()
+	
+func esJugable():
+	return true

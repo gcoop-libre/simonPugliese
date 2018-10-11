@@ -4,9 +4,9 @@
 [ext_resource path="res://Hauracherell NC.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://about_the_game.gd" type="Script" id=3]
 [ext_resource path="res://timer_texto.gd" type="Script" id=4]
-[ext_resource path="res://assets/buttons/jugar_button.png" type="Texture" id=5]
-[ext_resource path="res://assets/buttons/jugar_button_press.png" type="Texture" id=6]
-[ext_resource path="res://assets/buttons/jugar_button.pbm" type="BitMap" id=7]
+[ext_resource path="res://assets/buttons/jugar.png" type="Texture" id=5]
+[ext_resource path="res://assets/buttons/jugar_pressed.png" type="Texture" id=6]
+[ext_resource path="res://assets/buttons/jugar.pbm" type="BitMap" id=7]
 [ext_resource path="res://boton_texto.gd" type="Script" id=8]
 [ext_resource path="res://assets/sonidos_ui/typewriter-1.smp" type="Sample" id=9]
 [ext_resource path="res://typing.gd" type="Script" id=10]
@@ -78,10 +78,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 1030.0
-margin/top = 576.0
-margin/right = 1176.0
-margin/bottom = 639.0
+margin/left = 940.0
+margin/top = 575.0
+margin/right = 1179.2
+margin/bottom = 638.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -89,6 +89,7 @@ textures/normal = ExtResource( 5 )
 textures/pressed = ExtResource( 6 )
 textures/click_mask = ExtResource( 7 )
 params/resize_mode = 0
+params/scale = Vector2( 0.4, 0.4 )
 params/stretch_mode = 0
 script/script = ExtResource( 8 )
 
@@ -110,16 +111,16 @@ default/reverb_send = 0.0
 default/chorus_send = 0.0
 script/script = ExtResource( 10 )
 
+[connection signal="textoCompleto" from="RichTextLabel" to="boton" method="_on_RichTextLabel_textoCompleto" flags=7]
+
 [connection signal="textoCompleto" from="RichTextLabel" to="Timer" method="_on_RichTextLabel_textoCompleto" flags=7]
 
 [connection signal="textoCompleto" from="RichTextLabel" to="typing" method="_on_RichTextLabel_textoCompleto"]
 
 [connection signal="textoCompleto" from="RichTextLabel" to="." method="_on_RichTextLabel_textoCompleto"]
 
-[connection signal="textoCompleto" from="RichTextLabel" to="boton" method="_on_RichTextLabel_textoCompleto" flags=7]
+[connection signal="timeout" from="Timer" to="RichTextLabel" method="_on_Timer_timeout"]
 
 [connection signal="timeout" from="Timer" to="Timer" method="_on_Timer_timeout"]
-
-[connection signal="timeout" from="Timer" to="RichTextLabel" method="_on_Timer_timeout"]
 
 
