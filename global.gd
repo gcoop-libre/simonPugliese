@@ -33,7 +33,7 @@ func _ready():
 func _notification(what):
 	if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:
 		get_tree().set_pause(true)
-		pausar()
+		pausarSonido()
 		call_deferred("promptSalir")
 
 func promptSalir():
@@ -43,13 +43,13 @@ func promptSalir():
 
 func resume():
 	get_tree().set_pause(false)
-	continuar()
+	continuarSonido()
 
-func pausar():
+func pausarSonido():
 	AudioServer.set_stream_global_volume_scale(0)
 	AudioServer.set_fx_global_volume_scale(0)
 
-func continuar():
+func continuarSonido():
 	AudioServer.set_stream_global_volume_scale(1)
 	AudioServer.set_fx_global_volume_scale(1)
 
