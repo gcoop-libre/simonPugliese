@@ -19,14 +19,31 @@ var orquesta
 var pugliese
 var cancion
 var dialog
+var pausa = load("res://pausa.tscn").instance()
 
 func _ready():
+	get_tree().set_auto_accept_quit(false)
 	current_scene = get_tree().get_root().get_child(get_tree().get_root().get_child_count() -1 )
 	mapa_niveles = [nivel_1, nivel_2, nivel_3, nivel_4, nivel_5]
 	orquesta = load("res://orquesta.tscn")
 	pugliese = load("res://pugliese.tscn")
 	dialog = load("res://dialog.tscn")
 	play_intro_song()
+
+func _notification(what):
+	if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:
+		get_tree().set_pause(true)
+		pausa.pausar()
+		call_deferred("promptSalir")
+
+func promptSalir():
+	var confirmationDialog = load("res://ConfirmationDialog.tscn").instance()
+	current_scene.add_child(confirmationDialog)
+	confirmationDialog.popup()
+
+func resume():
+	get_tree().set_pause(false)
+	pausa.continuar()
 
 func esPrimerNivel():
 	return (subNivelActual == 0)
@@ -84,6 +101,7 @@ func _deferred_goto_scene(path):
 
     # optional, to make it compatible with the SceneTree.change_scene() API
     get_tree().set_current_scene( current_scene )
+    current_scene.add_child(get_boton_pausa())
 
 func sumarItem(nombreItem):
 	self.set(nombreItem, self.get(nombreItem) + 1)
@@ -103,4 +121,4 @@ func apretar_ui_button():
 	yield(get_node("TimerBoton"), "timeout")
 
 func get_boton_pausa():
-	return load("res://pausa.tscn").instance()
+	return pausa

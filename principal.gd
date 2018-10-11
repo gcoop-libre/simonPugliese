@@ -14,7 +14,6 @@ var dialog
 signal nivelGanado
 
 func _ready():
-	add_child(get_node("/root/global/").get_boton_pausa())
 	var nroPatron = get_node("/root/global").subNivelActual
 	patron = niveles[nroPatron]
 	cantidadNiveles = niveles.size()

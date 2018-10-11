@@ -202,7 +202,7 @@ margin/bottom = 746.0
 
 visibility/behind_parent = true
 visibility/light_mask = 528947
-transform/pos = Vector2( -0.390869, -3.35904 )
+transform/pos = Vector2( -1.39087, -1.35904 )
 transform/scale = Vector2( 1.70911, 1.47005 )
 texture = ExtResource( 12 )
 centered = false

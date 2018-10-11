@@ -6,7 +6,6 @@ var textoBienvenida = ["Hola", "Como va?"]
 
 func _ready():
 	get_node("/root/global").play_bg_music()
-	add_child(get_node("/root/global/").get_boton_pausa())
 	if(get_node("/root/global").esPrimerNivel()):
 		animarTextoBienvenida()
 	else:
