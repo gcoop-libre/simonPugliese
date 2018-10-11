@@ -89,7 +89,7 @@ stretch_mode = 0
 
 [node name="spacer2" type="Control" parent="CenterContainer/title screen"]
 
-rect/min_size = Vector2( 0, 25 )
+rect/min_size = Vector2( 0, 5 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 3
@@ -97,7 +97,7 @@ size_flags/vertical = 3
 margin/left = 0.0
 margin/top = 365.0
 margin/right = 750.0
-margin/bottom = 390.0
+margin/bottom = 370.0
 
 [node name="buttons" type="VBoxContainer" parent="CenterContainer/title screen"]
 
@@ -107,7 +107,7 @@ focus/stop_mouse = false
 size_flags/horizontal = 0
 size_flags/vertical = 0
 margin/left = 225.0
-margin/top = 394.0
+margin/top = 374.0
 margin/right = 524.0
 margin/bottom = 746.0
 alignment = 0
@@ -177,7 +177,7 @@ params/stretch_mode = 0
 
 [node name="spacer3" type="Control" parent="CenterContainer/title screen/buttons"]
 
-rect/min_size = Vector2( 0, 40 )
+rect/min_size = Vector2( 0, 60 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 3
@@ -185,7 +185,7 @@ size_flags/vertical = 3
 margin/left = 0.0
 margin/top = 312.0
 margin/right = 299.0
-margin/bottom = 352.0
+margin/bottom = 372.0
 
 [node name="expander" type="Control" parent="."]
 
