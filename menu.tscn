@@ -1,17 +1,15 @@
-[gd_scene load_steps=13 format=1]
+[gd_scene load_steps=11 format=1]
 
 [ext_resource path="res://menu.gd" type="Script" id=1]
 [ext_resource path="res://assets/img/logo-Malefico/logo_resized.png" type="Texture" id=2]
-[ext_resource path="res://assets/buttons/jugar_button.png" type="Texture" id=3]
-[ext_resource path="res://assets/buttons/jugar_button_press.png" type="Texture" id=4]
-[ext_resource path="res://assets/buttons/jugar_button.pbm" type="BitMap" id=5]
-[ext_resource path="res://assets/buttons/acerca_de_button.png" type="Texture" id=6]
-[ext_resource path="res://assets/buttons/acerca_de_button_press.png" type="Texture" id=7]
-[ext_resource path="res://assets/buttons/acerca_de_button.pbm" type="BitMap" id=8]
-[ext_resource path="res://assets/buttons/salir_button.png" type="Texture" id=9]
-[ext_resource path="res://assets/buttons/salir_button_press.png" type="Texture" id=10]
-[ext_resource path="res://assets/buttons/salir_button.pbm" type="BitMap" id=11]
-[ext_resource path="res://assets/img/fondo_juego.png" type="Texture" id=12]
+[ext_resource path="res://assets/buttons/jugar.png" type="Texture" id=3]
+[ext_resource path="res://assets/buttons/jugar_pressed.png" type="Texture" id=4]
+[ext_resource path="res://assets/buttons/jugar.pbm" type="BitMap" id=5]
+[ext_resource path="res://assets/buttons/acerca_de.png" type="Texture" id=6]
+[ext_resource path="res://assets/buttons/acerca_de_pressed.png" type="Texture" id=7]
+[ext_resource path="res://assets/buttons/salir.png" type="Texture" id=8]
+[ext_resource path="res://assets/buttons/salir_pressed.png" type="Texture" id=9]
+[ext_resource path="res://assets/img/fondo_juego.png" type="Texture" id=10]
 
 [node name="menu" type="HBoxContainer"]
 
@@ -40,7 +38,6 @@ margin/bottom = 746.0
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 
-editor/display_folded = true
 rect/min_size = Vector2( 680, 0 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -109,9 +106,9 @@ focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 0
 size_flags/vertical = 0
-margin/left = 254.0
+margin/left = 225.0
 margin/top = 394.0
-margin/right = 496.0
+margin/right = 524.0
 margin/bottom = 746.0
 alignment = 0
 
@@ -122,9 +119,9 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 0
 size_flags/vertical = 0
-margin/left = 48.0
+margin/left = 0.0
 margin/top = 0.0
-margin/right = 194.0
+margin/right = 299.0
 margin/bottom = 100.0
 toggle_mode = false
 enabled_focus_mode = 2
@@ -133,7 +130,8 @@ textures/normal = ExtResource( 3 )
 textures/pressed = ExtResource( 4 )
 textures/click_mask = ExtResource( 5 )
 params/resize_mode = 0
-params/stretch_mode = 0
+params/scale = Vector2( 0.5, 0.5 )
+params/stretch_mode = 1
 
 [node name="acerca" type="TextureButton" parent="CenterContainer/title screen/buttons"]
 
@@ -144,16 +142,17 @@ size_flags/horizontal = 0
 size_flags/vertical = 0
 margin/left = 0.0
 margin/top = 104.0
-margin/right = 242.0
+margin/right = 299.0
 margin/bottom = 204.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 textures/normal = ExtResource( 6 )
 textures/pressed = ExtResource( 7 )
-textures/click_mask = ExtResource( 8 )
+textures/click_mask = ExtResource( 5 )
 params/resize_mode = 0
-params/stretch_mode = 0
+params/scale = Vector2( 0.5, 0.5 )
+params/stretch_mode = 1
 
 [node name="salir" type="TextureButton" parent="CenterContainer/title screen/buttons"]
 
@@ -162,17 +161,18 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 0
 size_flags/vertical = 0
-margin/left = 64.0
+margin/left = 0.0
 margin/top = 208.0
-margin/right = 177.0
+margin/right = 299.0
 margin/bottom = 308.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 9 )
-textures/pressed = ExtResource( 10 )
-textures/click_mask = ExtResource( 11 )
+textures/normal = ExtResource( 8 )
+textures/pressed = ExtResource( 9 )
+textures/click_mask = ExtResource( 5 )
 params/resize_mode = 0
+params/scale = Vector2( 0.5, 0.5 )
 params/stretch_mode = 0
 
 [node name="spacer3" type="Control" parent="CenterContainer/title screen/buttons"]
@@ -184,7 +184,7 @@ size_flags/horizontal = 3
 size_flags/vertical = 3
 margin/left = 0.0
 margin/top = 312.0
-margin/right = 242.0
+margin/right = 299.0
 margin/bottom = 352.0
 
 [node name="expander" type="Control" parent="."]
@@ -202,9 +202,9 @@ margin/bottom = 746.0
 
 visibility/behind_parent = true
 visibility/light_mask = 528947
-transform/pos = Vector2( -1.39087, -1.35904 )
+transform/pos = Vector2( -0.931213, -1.89941 )
 transform/scale = Vector2( 1.70911, 1.47005 )
-texture = ExtResource( 12 )
+texture = ExtResource( 10 )
 centered = false
 
 [connection signal="pressed" from="CenterContainer/title screen/buttons/jugar" to="." method="_on_jugar_pressed"]
