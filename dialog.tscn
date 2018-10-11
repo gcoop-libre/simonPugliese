@@ -94,7 +94,6 @@ script/script = ExtResource( 8 )
 
 [node name="typing" type="SamplePlayer" parent="."]
 
-process/pause_mode = 2
 config/polyphony = 6
 config/samples = SubResource( 2 )
 default/volume_db = 2.0
@@ -107,7 +106,7 @@ default/filter/cutoff = 5000.0
 default/filter/resonance = 0.0
 default/filter/gain = 0.0
 default/reverb_room = 0
-default/reverb_send = 0.02
+default/reverb_send = 0.0
 default/chorus_send = 0.0
 script/script = ExtResource( 10 )
 
