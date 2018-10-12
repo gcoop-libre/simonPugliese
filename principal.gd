@@ -52,9 +52,10 @@ func boton_apretado(quien):
 			if currentPosicion == patron.size():
 				get_node("teclado/sonidos_ui").play("aplausos")
 				animarMusicosOrquesta()
-				get_node("error/panel/Label").set_text("muy bien, diste en la tecla! :)")
-				get_node("error/anim").play("mostrar")
-				yield( get_node("error/anim"), "finished" )
+				get_node("label/ganaste").show()
+				get_node("label/anim").play("mostrar")
+				yield(get_node("label/anim"), "finished")
+				get_node("label/ganaste").hide()
 				if hayMasNiveles():
 					get_node("/root/global").siguienteNivel()
 					pass
@@ -69,8 +70,10 @@ func boton_apretado(quien):
 	else:
 		deshabilitarInput(true)
 		get_node("teclado/sonidos_ui").play("error")
-		get_node("error/anim").play("mostrar")
-		yield( get_node("error/anim"), "finished" )
+		get_node("label/error").show()
+		get_node("label/anim").play("mostrar")
+		yield(get_node("label/anim"), "finished")
+		get_node("label/error").hide()
 		patronTocado = [] 
 		continuarPatron()
 	
@@ -110,8 +113,10 @@ func hayMasNiveles():
 	
 func ganarJuego():
 	# agregar sonido de aplausos
-	get_node("error/panel/Label").set_text("Osvaldito y los músicos están listos para tocar!")
-	get_node("error/anim").play("mostrar")
+	get_node("label/fin").show()
+	get_node("label/anim").play("mostrar")
+	yield(get_node("label/anim"), "finished")
+	get_node("label/fin").hide()
 	get_node("teclado/sonidos_ui").play("intro_la_yumba")
 	mostrarPugliese()
 	get_node("btnEmpezarDeNuevo/anim").play("mostrar")

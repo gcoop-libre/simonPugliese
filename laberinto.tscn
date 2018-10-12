@@ -44,29 +44,29 @@
 [ext_resource path="res://assets_laberinto/anim-camion-andando/N/camion-N-0009.png" type="Texture" id=42]
 [ext_resource path="res://assets_laberinto/anim-camion-andando/N/camion-N-0010.png" type="Texture" id=43]
 [ext_resource path="res://assets_laberinto/anim-camion-andando/N/camion-N-0011.png" type="Texture" id=44]
-[ext_resource path="res://assets_laberinto/anim-camion-quieto/S/camion-S-0001.png" type="Texture" id=45]
-[ext_resource path="res://assets_laberinto/anim-camion-quieto/S/camion-S-0002.png" type="Texture" id=46]
-[ext_resource path="res://assets_laberinto/anim-camion-quieto/S/camion-S-0003.png" type="Texture" id=47]
-[ext_resource path="res://assets_laberinto/anim-camion-quieto/S/camion-S-0004.png" type="Texture" id=48]
-[ext_resource path="res://assets_laberinto/anim-camion-andando/E/camion-E-0001.png" type="Texture" id=49]
-[ext_resource path="res://assets_laberinto/anim-camion-andando/E/camion-E-0002.png" type="Texture" id=50]
-[ext_resource path="res://assets_laberinto/anim-camion-andando/E/camion-E-0003.png" type="Texture" id=51]
-[ext_resource path="res://assets_laberinto/anim-camion-andando/E/camion-E-0004.png" type="Texture" id=52]
-[ext_resource path="res://assets_laberinto/anim-camion-andando/E/camion-E-0005.png" type="Texture" id=53]
-[ext_resource path="res://assets_laberinto/anim-camion-andando/E/camion-E-0006.png" type="Texture" id=54]
-[ext_resource path="res://assets_laberinto/anim-camion-andando/E/camion-E-0007.png" type="Texture" id=55]
-[ext_resource path="res://assets_laberinto/anim-camion-andando/E/camion-E-0008.png" type="Texture" id=56]
-[ext_resource path="res://assets_laberinto/anim-camion-andando/E/camion-E-0009.png" type="Texture" id=57]
-[ext_resource path="res://assets_laberinto/anim-camion-andando/E/camion-E-0010.png" type="Texture" id=58]
-[ext_resource path="res://assets_laberinto/anim-camion-andando/E/camion-E-0011.png" type="Texture" id=59]
-[ext_resource path="res://assets_laberinto/anim-camion-quieto/W/camion-W-0001.png" type="Texture" id=60]
-[ext_resource path="res://assets_laberinto/anim-camion-quieto/W/camion-W-0002.png" type="Texture" id=61]
-[ext_resource path="res://assets_laberinto/anim-camion-quieto/W/camion-W-0003.png" type="Texture" id=62]
-[ext_resource path="res://assets_laberinto/anim-camion-quieto/W/camion-W-0004.png" type="Texture" id=63]
-[ext_resource path="res://assets_laberinto/anim-camion-quieto/E/camion-E-0001.png" type="Texture" id=64]
-[ext_resource path="res://assets_laberinto/anim-camion-quieto/E/camion-E-0002.png" type="Texture" id=65]
-[ext_resource path="res://assets_laberinto/anim-camion-quieto/E/camion-E-0003.png" type="Texture" id=66]
-[ext_resource path="res://assets_laberinto/anim-camion-quieto/E/camion-E-0004.png" type="Texture" id=67]
+[ext_resource path="res://assets_laberinto/anim-camion-andando/E/camion-E-0001.png" type="Texture" id=45]
+[ext_resource path="res://assets_laberinto/anim-camion-andando/E/camion-E-0002.png" type="Texture" id=46]
+[ext_resource path="res://assets_laberinto/anim-camion-andando/E/camion-E-0003.png" type="Texture" id=47]
+[ext_resource path="res://assets_laberinto/anim-camion-andando/E/camion-E-0004.png" type="Texture" id=48]
+[ext_resource path="res://assets_laberinto/anim-camion-andando/E/camion-E-0005.png" type="Texture" id=49]
+[ext_resource path="res://assets_laberinto/anim-camion-andando/E/camion-E-0006.png" type="Texture" id=50]
+[ext_resource path="res://assets_laberinto/anim-camion-andando/E/camion-E-0007.png" type="Texture" id=51]
+[ext_resource path="res://assets_laberinto/anim-camion-andando/E/camion-E-0008.png" type="Texture" id=52]
+[ext_resource path="res://assets_laberinto/anim-camion-andando/E/camion-E-0009.png" type="Texture" id=53]
+[ext_resource path="res://assets_laberinto/anim-camion-andando/E/camion-E-0010.png" type="Texture" id=54]
+[ext_resource path="res://assets_laberinto/anim-camion-andando/E/camion-E-0011.png" type="Texture" id=55]
+[ext_resource path="res://assets_laberinto/anim-camion-quieto/S/camion-S-0001.png" type="Texture" id=56]
+[ext_resource path="res://assets_laberinto/anim-camion-quieto/S/camion-S-0002.png" type="Texture" id=57]
+[ext_resource path="res://assets_laberinto/anim-camion-quieto/S/camion-S-0003.png" type="Texture" id=58]
+[ext_resource path="res://assets_laberinto/anim-camion-quieto/S/camion-S-0004.png" type="Texture" id=59]
+[ext_resource path="res://assets_laberinto/anim-camion-quieto/E/camion-E-0001.png" type="Texture" id=60]
+[ext_resource path="res://assets_laberinto/anim-camion-quieto/E/camion-E-0002.png" type="Texture" id=61]
+[ext_resource path="res://assets_laberinto/anim-camion-quieto/E/camion-E-0003.png" type="Texture" id=62]
+[ext_resource path="res://assets_laberinto/anim-camion-quieto/E/camion-E-0004.png" type="Texture" id=63]
+[ext_resource path="res://assets_laberinto/anim-camion-quieto/W/camion-W-0001.png" type="Texture" id=64]
+[ext_resource path="res://assets_laberinto/anim-camion-quieto/W/camion-W-0002.png" type="Texture" id=65]
+[ext_resource path="res://assets_laberinto/anim-camion-quieto/W/camion-W-0003.png" type="Texture" id=66]
+[ext_resource path="res://assets_laberinto/anim-camion-quieto/W/camion-W-0004.png" type="Texture" id=67]
 [ext_resource path="res://itemsLaberinto.gd" type="Script" id=68]
 [ext_resource path="res://assets/sonidos_ui/collision.wav" type="Sample" id=69]
 [ext_resource path="res://assets/sonidos_ui/engine_idle.wav" type="Sample" id=70]
@@ -128,24 +128,24 @@ animations = [ {
 "name": "anim-up-move",
 "speed": 8.0
 }, {
-"frames": [ ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ) ],
-"loop": true,
-"name": "anim-down-stop",
-"speed": 8.0
-}, {
-"frames": [ ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ) ],
+"frames": [ ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 55 ) ],
 "loop": true,
 "name": "anim-right-move",
 "speed": 8.0
 }, {
+"frames": [ ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ) ],
+"loop": true,
+"name": "anim-down-stop",
+"speed": 8.0
+}, {
 "frames": [ ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ) ],
 "loop": true,
-"name": "anim-left-stop",
+"name": "anim-right-stop",
 "speed": 8.0
 }, {
 "frames": [ ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ) ],
 "loop": true,
-"name": "anim-right-stop",
+"name": "anim-left-stop",
 "speed": 8.0
 } ]
 
@@ -327,7 +327,7 @@ transform/pos = Vector2( 78.1598, 660.348 )
 transform/scale = Vector2( 0.179565, 0.179565 )
 frames = SubResource( 3 )
 animation = "anim-right-stop"
-frame = 2
+frame = 3
 playing = true
 
 [node name="items" type="Node2D" parent="."]
