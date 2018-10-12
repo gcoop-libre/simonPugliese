@@ -1,4 +1,4 @@
-[gd_scene load_steps=83 format=1]
+[gd_scene load_steps=84 format=1]
 
 [ext_resource path="res://laberinto.gd" type="Script" id=1]
 [ext_resource path="res://tileLaberinto.gd" type="Script" id=2]
@@ -67,12 +67,13 @@
 [ext_resource path="res://assets_laberinto/anim-camion-quieto/W/camion-W-0002.png" type="Texture" id=65]
 [ext_resource path="res://assets_laberinto/anim-camion-quieto/W/camion-W-0003.png" type="Texture" id=66]
 [ext_resource path="res://assets_laberinto/anim-camion-quieto/W/camion-W-0004.png" type="Texture" id=67]
-[ext_resource path="res://itemsLaberinto.gd" type="Script" id=68]
-[ext_resource path="res://assets/sonidos_ui/collision.wav" type="Sample" id=69]
-[ext_resource path="res://assets/sonidos_ui/engine_idle.wav" type="Sample" id=70]
-[ext_resource path="res://assets/sonidos_ui/engine_running.wav" type="Sample" id=71]
-[ext_resource path="res://assets/sonidos_ui/win.wav" type="Sample" id=72]
-[ext_resource path="res://sonidos.gd" type="Script" id=73]
+[ext_resource path="res://assets_laberinto/humo.tex" type="Texture" id=68]
+[ext_resource path="res://itemsLaberinto.gd" type="Script" id=69]
+[ext_resource path="res://assets/sonidos_ui/collision.wav" type="Sample" id=70]
+[ext_resource path="res://assets/sonidos_ui/engine_idle.wav" type="Sample" id=71]
+[ext_resource path="res://assets/sonidos_ui/engine_running.wav" type="Sample" id=72]
+[ext_resource path="res://assets/sonidos_ui/win.wav" type="Sample" id=73]
+[ext_resource path="res://sonidos.gd" type="Script" id=74]
 
 [sub_resource type="SampleLibrary" id=1]
 
@@ -181,25 +182,25 @@ samples/collision = {
 "db": -1.2,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 69 )
+"sample": ExtResource( 70 )
 }
 samples/engine_idle = {
 "db": 4.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 70 )
+"sample": ExtResource( 71 )
 }
 samples/engine_running = {
 "db": 6.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 71 )
+"sample": ExtResource( 72 )
 }
 samples/win = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 72 )
+"sample": ExtResource( 73 )
 }
 
 [sub_resource type="ConvexPolygonShape2D" id=6]
@@ -327,12 +328,41 @@ transform/pos = Vector2( 78.1598, 660.348 )
 transform/scale = Vector2( 0.179565, 0.179565 )
 frames = SubResource( 3 )
 animation = "anim-right-stop"
-frame = 3
 playing = true
+
+[node name="humo" type="Particles2D" parent="personaje/camion"]
+
+visibility/visible = false
+visibility/behind_parent = true
+transform/pos = Vector2( -11.8646, 28.5691 )
+transform/scale = Vector2( 4, 4 )
+config/amount = 3
+config/lifetime = 0.3
+config/preprocess = 3600.0
+config/process_mode = 1
+config/offset = Vector2( -50, 0 )
+config/explosiveness = 0.38
+config/texture = ExtResource( 68 )
+params/direction = 270.0
+params/spread = 5.0
+params/linear_velocity = 150.0
+params/spin_velocity = 0.0
+params/orbit_velocity = 0.0
+params/gravity_direction = 0.0
+params/gravity_strength = 0.0
+params/radial_accel = 0.0
+params/tangential_accel = 0.0
+params/damping = 744.727
+params/initial_angle = 0.0
+params/initial_size = 0.5
+params/final_size = 1.0
+params/hue_variation = 0.0
+params/anim_speed_scale = 0.0
+params/anim_initial_pos = 0.0
 
 [node name="items" type="Node2D" parent="."]
 
-script/script = ExtResource( 68 )
+script/script = ExtResource( 69 )
 
 [node name="ganaste" type="Node2D" parent="."]
 
@@ -396,7 +426,7 @@ default/filter/gain = 1.0
 default/reverb_room = 0
 default/reverb_send = 0.1
 default/chorus_send = 0.0
-script/script = ExtResource( 73 )
+script/script = ExtResource( 74 )
 is_playing = false
 
 [node name="timerLargo" type="Timer" parent="sonidos_laberinto"]

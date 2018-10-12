@@ -1,24 +1,14 @@
 [gd_scene load_steps=6 format=1]
 
-[ext_resource path="res://assets/laberinto/violin.png" type="Texture" id=1]
-[ext_resource path="res://assets/laberinto/contrabajo.png" type="Texture" id=2]
-[ext_resource path="res://assets/laberinto/badoneon.png" type="Texture" id=3]
+[ext_resource path="res://item.gd" type="Script" id=1]
+[ext_resource path="res://assets/laberinto/violin.png" type="Texture" id=2]
+[ext_resource path="res://assets/laberinto/contrabajo.png" type="Texture" id=3]
+[ext_resource path="res://assets/laberinto/badoneon.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
-
-[sub_resource type="GDScript" id=2]
-
-script/source = "
-extends KinematicBody2D
-
-export var instrumento = \"\"
-
-func _ready():
-	set_fixed_process(true)
-"
 
 [node name="item" type="KinematicBody2D"]
 
@@ -29,7 +19,7 @@ shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
 collision/margin = 0.08
-script/script = SubResource( 2 )
+script/script = ExtResource( 1 )
 instrumento = ""
 
 [node name="violin" type="Sprite" parent="."]
@@ -37,21 +27,21 @@ instrumento = ""
 visibility/visible = false
 transform/rot = -2.71166
 transform/scale = Vector2( 0.146593, 0.146593 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 
 [node name="contrabajo" type="Sprite" parent="."]
 
 visibility/visible = false
 transform/rot = -2.71166
 transform/scale = Vector2( 0.146593, 0.146593 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
 [node name="bandoneon" type="Sprite" parent="."]
 
 visibility/visible = false
 transform/rot = -2.71166
 transform/scale = Vector2( 0.146593, 0.146593 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="collisionShape" type="CollisionShape2D" parent="."]
 

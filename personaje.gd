@@ -9,33 +9,35 @@ const WALK_SPEED = 150
 
 var velocity = Vector2()
 var animation
+var humo
 var direction = "right"
 
-func _fixed_process(delta):
+func _fixed_process(delta):	
 	if (Input.is_action_pressed("ui_left")):
 		velocity.x = -WALK_SPEED
 		velocity.y = 0
-		moveLeft()
+		mover("left")
 	elif (Input.is_action_pressed("ui_right")):
 		velocity.x =  WALK_SPEED
 		velocity.y = 0
-		moveRight()
+		mover("right")
 	elif(Input.is_action_pressed("ui_up")):
 		velocity.y = -WALK_SPEED
 		velocity.x = 0
-		moveUp()
+		mover("up")
 	elif (Input.is_action_pressed("ui_down")):
 		velocity.x = 0
 		velocity.y = WALK_SPEED
-		moveDown()
+		mover("down")
 	else:
 		velocity.y = 0
 		velocity.x = 0
 		stayStill()
-
+		
+	alinearHumo()
 	var motion = velocity * delta
 	move(motion)
-	
+
 	if(is_colliding()):
 		var collider = get_collider()
 		emit_signal("chocando", collider)
@@ -47,22 +49,20 @@ func _fixed_process(delta):
 
 func _ready():
 	animation = get_node("camion")
-
-func moveLeft():
-	animation.set_animation("anim-left-move")
-	direction = "left"
+	humo = get_node("camion/humo")
 	
-func moveRight():
-	animation.set_animation("anim-right-move")
-	direction = "right"
-
-func moveUp():
-	animation.set_animation("anim-up-move")
-	direction = "up"
+func mover(sentido):
+	if(direction != sentido):
+		direction = sentido
+	animation.set_animation(str("anim-",direction,"-move"))
+	humo.set_param(humo.PARAM_LINEAR_VELOCITY,300)
 	
-func moveDown():
-	animation.set_animation("anim-down-move")
-	direction = "down"
-
 func stayStill():
 	animation.set_animation(str("anim-",direction,"-stop"))
+	humo.set_param(humo.PARAM_LINEAR_VELOCITY,150)
+
+func alinearHumo():
+	var offsetParticula = {'up': Vector2(0,60), 'left': Vector2(60,0), 'down': Vector2(0,-50), 'right': Vector2(-70,0)}
+	humo.set_emissor_offset(offsetParticula[direction])
+	var direccionParticula = {'up': 0, 'left': 90, 'down': 180, 'right': 270}
+	humo.set_param(humo.PARAM_DIRECTION, direccionParticula[direction])

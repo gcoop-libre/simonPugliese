@@ -27,6 +27,7 @@ func _on_empezar_pressed():
 
 func jugar():
 	get_node("personaje").set_fixed_process(true)
+	get_node("personaje/camion/humo").show()
 
 func _on_personaje_chocando(colisionador):
 	if(colisionador.get_parent() == get_node("items")):
