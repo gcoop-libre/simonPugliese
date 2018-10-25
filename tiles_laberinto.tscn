@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://tilemap_1.tscn" type="PackedScene" id=1]
+
+[node name="tile" type="Node2D"]
+
+[node name="tilemap_1" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 15.9041, 54.5298 )
+
+
