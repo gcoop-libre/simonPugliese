@@ -35,8 +35,8 @@
      showgrid="false"
      inkscape:current-layer="layer1"
      inkscape:document-units="mm"
-     inkscape:cy="969.99384"
-     inkscape:cx="1425.2409"
+     inkscape:cy="805.06768"
+     inkscape:cx="1549.9412"
      inkscape:zoom="0.24859611"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
@@ -257,7 +257,10 @@
      inkscape:label="Layer 1"
      style="display:inline">
     <g
-       id="g1806">
+       id="g1806"
+       inkscape:export-filename="/home/malefico/Documentos/proyectos/simonPugliese/assets/img/telon-mitad.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
       <rect
          y="-12.794718"
          x="340.57919"
@@ -327,6 +330,9 @@
        width="356.01172"
        height="13.83603"
        x="338.45059"
-       y="324.59155" />
+       y="324.59155"
+       inkscape:export-filename="/home/malefico/Documentos/proyectos/simonPugliese/assets/img/telon-mitad.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
   </g>
 </svg>
