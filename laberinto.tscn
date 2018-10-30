@@ -326,6 +326,7 @@ transform/pos = Vector2( 68.9066, 92.2083 )
 transform/scale = Vector2( 0.12, 0.12 )
 frames = SubResource( 3 )
 animation = "anim-right-stop"
+frame = 2
 playing = true
 
 [node name="humo" type="Particles2D" parent="personaje/camion"]
@@ -446,8 +447,8 @@ autostart = false
 
 [node name="limites" type="StaticBody2D" parent="."]
 
-transform/pos = Vector2( 640, 383.025 )
-transform/scale = Vector2( 19.5, 10.5 )
+transform/pos = Vector2( 637.854, 375.676 )
+transform/scale = Vector2( 19.7999, 10.4397 )
 input/pickable = true
 shapes/0/shape = SubResource( 6 )
 shapes/0/transform = Matrix32( 0.0512821, 0, 0, 0.0952381, -32.7692, -36.5714 )
