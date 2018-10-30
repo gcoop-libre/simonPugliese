@@ -1,15 +1,18 @@
 [gd_scene load_steps=13 format=1]
 
-[ext_resource path="res://dialog.gd" type="Script" id=1]
-[ext_resource path="res://Hauracherell NC.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://about_the_game.gd" type="Script" id=3]
+[ext_resource path="res://dialog/dialog.gd" type="Script" id=1]
+[ext_resource path="res://assets/Hauracherell NC.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://menu/about_the_game.gd" type="Script" id=3]
 [ext_resource path="res://timer_texto.gd" type="Script" id=4]
 [ext_resource path="res://assets/buttons/jugar.png" type="Texture" id=5]
 [ext_resource path="res://assets/buttons/jugar_pressed.png" type="Texture" id=6]
 [ext_resource path="res://assets/buttons/jugar.pbm" type="BitMap" id=7]
-[ext_resource path="res://boton_texto.gd" type="Script" id=8]
+[ext_resource path="res://dialog/boton_texto.gd" type="Script" id=8]
 [ext_resource path="res://assets/sonidos_ui/typewriter-1.smp" type="Sample" id=9]
-[ext_resource path="res://typing.gd" type="Script" id=10]
+[ext_resource path="res://dialog/typing.gd" type="Script" id=10]
+
+
+
 
 [sub_resource type="DynamicFont" id=1]
 

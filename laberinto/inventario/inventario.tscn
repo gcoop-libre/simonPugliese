@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=1]
 
-[ext_resource path="res://inventario.gd" type="Script" id=1]
+[ext_resource path="res://laberinto/inventario/inventario.gd" type="Script" id=1]
 [ext_resource path="res://assets/laberinto/bar_bg.png" type="Texture" id=2]
 [ext_resource path="res://assets/laberinto/violin.png" type="Texture" id=3]
-[ext_resource path="res://Hauracherell NC.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://assets/Hauracherell NC.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://assets/laberinto/contrabajo.png" type="Texture" id=5]
 [ext_resource path="res://assets/laberinto/badoneon.png" type="Texture" id=6]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=1]
 
-[ext_resource path="res://menu.gd" type="Script" id=1]
+[ext_resource path="res://menu/menu.gd" type="Script" id=1]
 [ext_resource path="res://assets/img/logo-Malefico/logo_resized.png" type="Texture" id=2]
 [ext_resource path="res://assets/buttons/jugar.png" type="Texture" id=3]
 [ext_resource path="res://assets/buttons/jugar_pressed.png" type="Texture" id=4]

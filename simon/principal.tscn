@@ -1,10 +1,10 @@
 [gd_scene load_steps=40 format=1]
 
-[ext_resource path="res://principal.gd" type="Script" id=1]
-[ext_resource path="res://botonGrupo.gd" type="Script" id=2]
+[ext_resource path="res://simon/principal.gd" type="Script" id=1]
+[ext_resource path="res://simon/botonGrupo.gd" type="Script" id=2]
 [ext_resource path="res://assets/img/teclas-Malefico/fondo.png" type="Texture" id=3]
-[ext_resource path="res://botones.gd" type="Script" id=4]
-[ext_resource path="res://boton.tscn" type="PackedScene" id=5]
+[ext_resource path="res://simon/botones.gd" type="Script" id=4]
+[ext_resource path="res://simon/boton.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/img/teclas-Malefico/01_normal.png" type="Texture" id=6]
 [ext_resource path="res://assets/img/teclas-Malefico/01_presionada.png" type="Texture" id=7]
 [ext_resource path="res://assets/img/blanca_1.pbm" type="BitMap" id=8]
@@ -17,7 +17,7 @@
 [ext_resource path="res://assets/img/teclas-Malefico/04_normal.png" type="Texture" id=15]
 [ext_resource path="res://assets/img/teclas-Malefico/04_presionada.png" type="Texture" id=16]
 [ext_resource path="res://assets/img/negra.pbm" type="BitMap" id=17]
-[ext_resource path="res://notas_8bit.tres" type="SampleLibrary" id=18]
+[ext_resource path="res://simon/notas_8bit.tres" type="SampleLibrary" id=18]
 [ext_resource path="res://assets/sonidos_ui/aplausos.wav" type="Sample" id=19]
 [ext_resource path="res://assets/sonidos_ui/click.wav" type="Sample" id=20]
 [ext_resource path="res://assets/sonidos_ui/error.wav" type="Sample" id=21]
@@ -30,10 +30,12 @@
 [ext_resource path="res://assets/buttons/jugar.png" type="Texture" id=28]
 [ext_resource path="res://assets/buttons/jugar_pressed.png" type="Texture" id=29]
 [ext_resource path="res://assets/buttons/jugar.pbm" type="BitMap" id=30]
-[ext_resource path="res://mostrar.tres" type="Animation" id=31]
+[ext_resource path="res://game/mostrar.tres" type="Animation" id=31]
 [ext_resource path="res://assets/labels/fin.tex" type="Texture" id=32]
 [ext_resource path="res://assets/labels/win_simon.tex" type="Texture" id=33]
 [ext_resource path="res://assets/labels/error.tex" type="Texture" id=34]
+
+
 
 [sub_resource type="SampleLibrary" id=1]
 

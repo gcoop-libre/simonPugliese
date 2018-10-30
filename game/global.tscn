@@ -1,8 +1,10 @@
 [gd_scene load_steps=4 format=1]
 
-[ext_resource path="res://global.gd" type="Script" id=1]
-[ext_resource path="res://musica.tscn" type="PackedScene" id=2]
-[ext_resource path="res://sonidos_ui.tscn" type="PackedScene" id=3]
+[ext_resource path="res://game/global.gd" type="Script" id=1]
+[ext_resource path="res://game/musica.tscn" type="PackedScene" id=2]
+[ext_resource path="res://menu/sonidos_ui.tscn" type="PackedScene" id=3]
+
+
 
 [node name="global" type="Node2D"]
 

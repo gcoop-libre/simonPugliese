@@ -19,15 +19,15 @@ var orquesta
 var pugliese
 var cancion
 var dialog
-var pausa = load("res://pausa.tscn")
+var pausa = load("res://game/pausa.tscn")
 
 func _ready():
 	get_tree().set_auto_accept_quit(false)
 	current_scene = get_tree().get_root().get_child(get_tree().get_root().get_child_count() -1 )
 	mapa_niveles = [nivel_1, nivel_2, nivel_3, nivel_4, nivel_5]
-	orquesta = load("res://orquesta.tscn")
-	pugliese = load("res://pugliese.tscn")
-	dialog = load("res://dialog.tscn")
+	orquesta = load("res://orquesta/orquesta.tscn")
+	pugliese = load("res://orquesta/pugliese.tscn")
+	dialog = load("res://dialog/dialog.tscn")
 	play_intro_song()
 
 func _notification(what):
@@ -37,7 +37,7 @@ func _notification(what):
 		call_deferred("promptSalir")
 
 func promptSalir():
-	var salirDialog = load("res://SalirDialog.tscn").instance()
+	var salirDialog = load("res://menu/SalirDialog.tscn").instance()
 	prompt(salirDialog)
 
 func prompt(_dialog):
@@ -80,7 +80,7 @@ func empezarJuego():
 	violin = 0
 	bandoneon = 0
 	contrabajo = 0
-	call_deferred("_deferred_goto_scene", 'res://principal.tscn')
+	call_deferred("_deferred_goto_scene", 'res://simon/principal.tscn')
 
 func siguienteNivel():
 	var siguienteNivel = nivelActual + 1
@@ -89,14 +89,15 @@ func siguienteNivel():
 	subNivelActual = siguiente['nro']
 	var path
 	if(tipo_siguiente == 'simon'):
-		path = 'res://principal.tscn'
+		path = 'res://simon/principal.tscn'
 	else:
-		path = 'res://laberinto.tscn'
+		path = 'res://laberinto/laberinto.tscn'
 	nivelActual = siguienteNivel
 	call_deferred("_deferred_goto_scene", path)
 
 func _deferred_goto_scene(path):
     current_scene = get_tree().get_root().get_child(get_tree().get_root().get_child_count() -1 )
+    print(current_scene)
     # Immediately free the current scene,
     # there is no risk here.
     current_scene.free()
@@ -132,4 +133,4 @@ func get_boton_pausa():
 	return pausa.instance()
 	
 func irAlMenu():
-	call_deferred("_deferred_goto_scene", "res://info.tscn")
+	call_deferred("_deferred_goto_scene", "res://menu/info.tscn")

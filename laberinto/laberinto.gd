@@ -4,7 +4,7 @@ signal gane
 var dialog
 var textoBienvenida = ["Hola", "Como va?"]
 
-func _ready():
+func _ready(): 
 	get_node("/root/global").play_bg_music()
 	if(get_node("/root/global").esPrimerNivel()):
 		animarTextoBienvenida()

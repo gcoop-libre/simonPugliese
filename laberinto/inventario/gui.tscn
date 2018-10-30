@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=1]
 
-[ext_resource path="res://inventario.tscn" type="PackedScene" id=1]
+[ext_resource path="res://laberinto/inventario/inventario.tscn" type="PackedScene" id=1]
 
 [node name="GUI" type="MarginContainer"]
 
@@ -28,3 +28,4 @@ alignment = 0
 [node name="inventario" parent="HBoxContainer" instance=ExtResource( 1 )]
 
 
+[editable path="HBoxContainer/inventario"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=303 format=1]
 
-[ext_resource path="res://orquesta.gd" type="Script" id=1]
+[ext_resource path="res://orquesta/orquesta.gd" type="Script" id=1]
 [ext_resource path="res://assets/frames/bandoneon/bandoneon-001.tex" type="Texture" id=2]
 [ext_resource path="res://assets/frames/bandoneon/bandoneon-002.tex" type="Texture" id=3]
 [ext_resource path="res://assets/frames/bandoneon/bandoneon-003.tex" type="Texture" id=4]
@@ -301,6 +301,7 @@
 [ext_resource path="res://assets/frames/violin2/violinista-2-098.tex" type="Texture" id=299]
 [ext_resource path="res://assets/frames/violin2/violinista-2-099.tex" type="Texture" id=300]
 [ext_resource path="res://assets/frames/violin2/violinista-2-100.tex" type="Texture" id=301]
+
 
 [sub_resource type="SpriteFrames" id=1]
 

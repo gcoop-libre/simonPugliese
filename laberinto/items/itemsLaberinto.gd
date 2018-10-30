@@ -7,7 +7,7 @@ func _ready():
 
 func ubicarItems():
 	var posiciones = get_children()
-	var itemScene = load("res://item.tscn")
+	var itemScene = load("res://laberinto/items/item.tscn")
 	for i in range(posiciones.size()):
 		var itemNode = itemScene.instance()
 		itemNode.instrumento = instrumentos[i]

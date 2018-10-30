@@ -1,6 +1,7 @@
 [gd_scene load_steps=2 format=1]
 
-[ext_resource path="res://laberintoTileSet.tres" type="TileSet" id=1]
+[ext_resource path="res://laberinto/tilemap/laberintoTileSet.tres" type="TileSet" id=1]
+
 
 [node name="TileMap2" type="TileMap"]
 

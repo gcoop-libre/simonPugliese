@@ -1,7 +1,8 @@
 [gd_scene load_steps=3 format=1]
 
-[ext_resource path="res://botonGrupo.gd" type="Script" id=1]
-[ext_resource path="res://boton.gd" type="Script" id=2]
+[ext_resource path="res://simon/botonGrupo.gd" type="Script" id=1]
+[ext_resource path="res://simon/boton.gd" type="Script" id=2]
+
 
 [node name="boton" type="Node2D"]
 
