@@ -1,11 +1,71 @@
-[gd_scene load_steps=2 format=1]
+[gd_scene load_steps=4 format=1]
 
 [ext_resource path="res://tilemap_1.tscn" type="PackedScene" id=1]
+[ext_resource path="res://tile.gd" type="Script" id=2]
+[ext_resource path="res://itemsLaberinto.gd" type="Script" id=3]
 
 [node name="tile" type="Node2D"]
 
 [node name="tilemap_1" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 15.9041, 54.5298 )
+script/script = ExtResource( 2 )
+
+[node name="posiciones" type="Node" parent="tilemap_1"]
+
+editor/display_folded = true
+script/script = ExtResource( 3 )
+
+[node name="pos1" type="Position2D" parent="tilemap_1/posiciones"]
+
+visibility/visible = false
+transform/pos = Vector2( 791.891, 185.388 )
+
+[node name="pos2" type="Position2D" parent="tilemap_1/posiciones"]
+
+visibility/visible = false
+transform/pos = Vector2( 1192.13, 180.477 )
+
+[node name="pos3" type="Position2D" parent="tilemap_1/posiciones"]
+
+visibility/visible = false
+transform/pos = Vector2( 1136.89, 380.599 )
+
+[node name="pos4" type="Position2D" parent="tilemap_1/posiciones"]
+
+visibility/visible = false
+transform/pos = Vector2( 1037.98, 532.066 )
+
+[node name="pos5" type="Position2D" parent="tilemap_1/posiciones"]
+
+visibility/visible = false
+transform/pos = Vector2( 645.107, 630.285 )
+
+[node name="pos6" type="Position2D" parent="tilemap_1/posiciones"]
+
+visibility/visible = false
+transform/pos = Vector2( 242.409, 379.826 )
+
+[node name="pos7" type="Position2D" parent="tilemap_1/posiciones"]
+
+visibility/visible = false
+transform/pos = Vector2( 248.547, 178.478 )
+
+[node name="pos8" type="Position2D" parent="tilemap_1/posiciones"]
+
+visibility/visible = false
+transform/pos = Vector2( 188.388, 479.273 )
+
+[node name="pos9" type="Position2D" parent="tilemap_1/posiciones"]
+
+visibility/visible = false
+transform/pos = Vector2( 583.72, 282.835 )
+
+[node name="pos10" type="Position2D" parent="tilemap_1/posiciones"]
+
+visibility/visible = false
+transform/pos = Vector2( 592.314, 478.046 )
+
+[node name="items" type="Node" parent="tilemap_1"]
 
 

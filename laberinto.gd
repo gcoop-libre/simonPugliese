@@ -30,7 +30,7 @@ func jugar():
 	get_node("personaje/camion/humo").show()
 
 func _on_personaje_chocando(colisionador):
-	if(colisionador.get_parent() == get_node("items")):
+	if(colisionador.get_parent().get_name() == "items"):
 		agarrarItem(colisionador)
 	else: 
 		sonarColision()
@@ -55,14 +55,11 @@ func agarrarItem(item):
 	item.queue_free()
 	get_node("sonidos_laberinto/timerLargo").start()
 	yield(get_node("sonidos_laberinto/timerLargo"), "timeout")
-	if(cantidadItems() == 0):
+	if(get_node("tileLaberinto").cantidadItems() == 0):
 		get_node("ganaste/Panel/anim").play("mostrar")
 		get_node("sonidos_laberinto").play_sound("win")
 		yield( get_node("ganaste/Panel/anim"), "finished" )
 		emit_signal("gane")
-
-func cantidadItems():
-	return get_node("items").get_child_count()
 
 func esJugable():
 	return true
