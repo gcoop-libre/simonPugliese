@@ -57,6 +57,7 @@ func boton_apretado(quien):
 				get_node("label/anim").play("mostrar")
 				yield(get_node("label/anim"), "finished")
 				get_node("label/ganaste").hide()
+				tocarCancion()
 				if hayMasNiveles():
 					get_node("/root/global").siguienteNivel()
 					pass
@@ -149,3 +150,15 @@ func _on_btnEmpezar_pressed():
 	
 func esJugable():
 	return true
+	
+func tocarCancion():
+	var canciones = get_node("canciones")
+	var track = str("cancion_",get_node("/root/global").subNivelActual)
+	canciones.play(track)
+	var texto_cancion = get_node("texto_cancion")
+	texto_cancion.show()
+	texto_cancion.set_text(canciones.get_texto_cancion(track))
+	get_node("timerCancion").start()
+	yield(get_node("timerCancion"), "timeout")
+	
+	
