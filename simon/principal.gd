@@ -14,10 +14,12 @@ var dialog
 signal nivelGanado
 
 func _ready():
+	var fondo_nivel = get_node("/root/global").get_fondo_principal()
+	get_node("fondo").add_child(fondo_nivel)
 	var nroPatron = get_node("/root/global").subNivelActual
 	patron = niveles[nroPatron]
 	cantidadNiveles = niveles.size()
-	get_node("escenario").add_child(get_node("/root/global").get_orquesta())
+	get_node("fondo/fondo/escenario").add_child(get_node("/root/global").get_orquesta())
 	deshabilitarInput(true)
 	conectarTeclado()
 	get_node("/root/global").play_bg_music()
@@ -26,7 +28,6 @@ func _ready():
 		animarTextoBienvenida()
 	else:
 		get_node("btnEmpezar").show()
-
 
 func animarTextoBienvenida():
 	dialog = get_node("/root/global").get_dialog()
@@ -127,20 +128,20 @@ func _on_btnEmpezarDeNuevo_pressed():
 	get_tree().get_root().get_node("/root/global").empezarJuego()
 
 func animarMusicosOrquesta():
-	get_node("escenario/orquesta").animarMusicos()
+	get_node("fondo/fondo/escenario/orquesta").animarMusicos()
 	
 func mostrarPugliese():
 	get_node("teclado").quitar_teclas()
-	get_node("posicionPugliese").add_child(get_node("/root/global").get_pugliese())
+	get_node("fondo/fondo/posicionPugliese/pugliese").show()
 	animarMusicosOrquesta()
-	get_node("posicionPugliese/pugliese").play()
+	get_node("fondo/fondo/posicionPugliese/pugliese").play()
 
 func mostrarTeclado():
 	get_node("teclado").mostrar_teclas()
 
 func _on_empezar_pressed():
 	dialog.ocultar()
-	get_node("posicionPugliese/pugliese").queue_free()
+	get_node("fondo/fondo/posicionPugliese/pugliese").queue_free()
 	jugar()
 
 func _on_btnEmpezar_pressed():

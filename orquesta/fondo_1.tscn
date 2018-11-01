@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://assets/img/fondo-calle.jpg" type="Texture" id=1]
+
+[node name="fondo" type="Node2D"]
+
+[node name="escenario" type="Position2D" parent="."]
+
+transform/pos = Vector2( 644.448, 363.863 )
+
+[node name="posicionPugliese" type="Position2D" parent="."]
+
+transform/pos = Vector2( 880.196, 510.273 )
+
+[node name="bg" type="TextureFrame" parent="."]
+
+visibility/behind_parent = true
+rect/min_size = Vector2( 1, 2 )
+rect/scale = Vector2( 0.5, 0.5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -0.814575
+margin/top = -0.185486
+margin/right = 2559.19
+margin/bottom = 1439.81
+texture = ExtResource( 1 )
+stretch_mode = 0
+
+

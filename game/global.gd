@@ -134,3 +134,6 @@ func get_boton_pausa():
 	
 func irAlMenu():
 	call_deferred("_deferred_goto_scene", "res://menu/info.tscn")
+
+func get_fondo_principal():
+	return load(str("res://orquesta/fondo_",subNivelActual,".tscn")).instance();
