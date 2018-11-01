@@ -35,8 +35,6 @@
 [ext_resource path="res://assets/labels/win_simon.tex" type="Texture" id=33]
 [ext_resource path="res://assets/labels/error.tex" type="Texture" id=34]
 
-
-
 [sub_resource type="SampleLibrary" id=1]
 
 samples/aplausos = {
@@ -565,16 +563,13 @@ default/reverb_room = 2
 default/reverb_send = 0.0
 default/chorus_send = 0.0
 
-[node name="escenario" type="Control" parent="."]
+[node name="escenario" type="Position2D" parent="."]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 40.0
-margin/bottom = 40.0
+transform/pos = Vector2( 637.647, 281.66 )
+
+[node name="posicionPugliese" type="Position2D" parent="."]
+
+transform/pos = Vector2( 881.011, 509.458 )
 
 [node name="fondo_juego" type="TextureFrame" parent="."]
 

@@ -131,16 +131,16 @@ func animarMusicosOrquesta():
 	
 func mostrarPugliese():
 	get_node("teclado").quitar_teclas()
-	get_node("escenario").add_child(get_node("/root/global").get_pugliese())
+	get_node("posicionPugliese").add_child(get_node("/root/global").get_pugliese())
 	animarMusicosOrquesta()
-	get_node("escenario/pugliese").play()
+	get_node("posicionPugliese/pugliese").play()
 
 func mostrarTeclado():
 	get_node("teclado").mostrar_teclas()
 
 func _on_empezar_pressed():
 	dialog.ocultar()
-	get_node("escenario/pugliese").queue_free()
+	get_node("posicionPugliese/pugliese").queue_free()
 	jugar()
 
 func _on_btnEmpezar_pressed():
