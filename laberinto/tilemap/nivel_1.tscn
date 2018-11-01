@@ -151,6 +151,7 @@ func _ready():
 
 [node name="nivel_1" type="TileMap"]
 
+visibility/opacity = 0.31
 transform/pos = Vector2( 15, 60 )
 mode = 0
 tile_set = ExtResource( 1 )
@@ -192,13 +193,13 @@ instrumento = "violin"
 
 [node name="pos4" type="Position2D" parent="posiciones"]
 
-transform/pos = Vector2( 771.29, 628.298 )
+transform/pos = Vector2( 721.185, 476.311 )
 script/script = SubResource( 4 )
 instrumento = "violin"
 
 [node name="pos5" type="Position2D" parent="posiciones"]
 
-transform/pos = Vector2( 476.601, 678.468 )
+transform/pos = Vector2( 725.458, 322.719 )
 script/script = SubResource( 5 )
 instrumento = "violin"
 
