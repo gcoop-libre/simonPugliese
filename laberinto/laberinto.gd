@@ -55,7 +55,7 @@ func agarrarItem(item):
 	item.queue_free()
 	get_node("sonidos_laberinto/timerLargo").start()
 	yield(get_node("sonidos_laberinto/timerLargo"), "timeout")
-	if(get_node("tileLaberinto/tile").itemsRestantes() == 0):
+	if(get_node("tileLaberinto").itemsRestantes() == 0):
 		get_node("ganaste/Panel/anim").play("mostrar")
 		get_node("sonidos_laberinto").play_sound("win")
 		yield( get_node("ganaste/Panel/anim"), "finished" )
