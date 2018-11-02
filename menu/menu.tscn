@@ -9,7 +9,7 @@
 [ext_resource path="res://assets/buttons/acerca_de_pressed.png" type="Texture" id=7]
 [ext_resource path="res://assets/buttons/salir.png" type="Texture" id=8]
 [ext_resource path="res://assets/buttons/salir_pressed.png" type="Texture" id=9]
-[ext_resource path="res://assets/img/fondo_juego.png" type="Texture" id=10]
+[ext_resource path="res://assets/img/fondo-plaza.jpg" type="Texture" id=10]
 
 [node name="menu" type="HBoxContainer"]
 
@@ -203,7 +203,7 @@ margin/bottom = 746.0
 visibility/behind_parent = true
 visibility/light_mask = 528947
 transform/pos = Vector2( -0.931213, -1.89941 )
-transform/scale = Vector2( 1.70911, 1.47005 )
+transform/scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 10 )
 centered = false
 
