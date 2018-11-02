@@ -2,7 +2,8 @@
 
 [ext_resource path="res://game/global.gd" type="Script" id=1]
 [ext_resource path="res://game/musica.tscn" type="PackedScene" id=2]
-[ext_resource path="res://menu/sonidos_ui.tscn" type="PackedScene" id=3]
+[ext_resource path="res://game/sonidos_ui.tscn" type="PackedScene" id=3]
+
 
 
 

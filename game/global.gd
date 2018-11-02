@@ -97,7 +97,6 @@ func siguienteNivel():
 
 func _deferred_goto_scene(path):
     current_scene = get_tree().get_root().get_child(get_tree().get_root().get_child_count() -1 )
-    print(current_scene)
     # Immediately free the current scene,
     # there is no risk here.
     current_scene.free()
