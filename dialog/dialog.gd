@@ -22,6 +22,9 @@ func posicionarTexto(posicion):
 func posicionarBoton(posicion):
 	get_node("boton").set_pos(posicion)
 
+func quitarBoton():
+	get_node("boton").queue_free()
+	
 func _fixed_process(delta):
 	var ok = Input.is_action_pressed('ui_accept')
 	if ok and not ok_held:

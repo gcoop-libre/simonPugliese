@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=1]
+[gd_scene load_steps=3 format=1]
 
-[ext_resource path="res://assets/img/fondo-calle.jpg" type="Texture" id=1]
+[ext_resource path="res://orquesta/pugliese.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/img/fondo-calle.jpg" type="Texture" id=2]
 
 [node name="fondo" type="Node2D"]
 
@@ -10,7 +11,13 @@ transform/pos = Vector2( 644.448, 363.863 )
 
 [node name="posicionPugliese" type="Position2D" parent="."]
 
-transform/pos = Vector2( 880.196, 510.273 )
+transform/pos = Vector2( 629.16, 574.337 )
+
+[node name="pugliese" parent="posicionPugliese" instance=ExtResource( 1 )]
+
+visibility/visible = false
+transform/pos = Vector2( -9.52264, -24.4867 )
+transform/scale = Vector2( 0.6, 0.6 )
 
 [node name="bg" type="TextureFrame" parent="."]
 
@@ -25,7 +32,7 @@ margin/left = -0.814575
 margin/top = -0.185486
 margin/right = 2559.19
 margin/bottom = 1439.81
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 stretch_mode = 0
 
 

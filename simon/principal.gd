@@ -57,7 +57,10 @@ func boton_apretado(quien):
 				get_node("label/anim").play("mostrar")
 				yield(get_node("label/anim"), "finished")
 				get_node("label/ganaste").hide()
+				get_node("timerCancion").start()
 				tocarCancion()
+				yield(get_node("timerCancion"), "timeout")
+				get_node("cuadro_texto").queue_free()
 				if hayMasNiveles():
 					get_node("/root/global").siguienteNivel()
 					pass
@@ -142,7 +145,7 @@ func mostrarTeclado():
 
 func _on_empezar_pressed():
 	dialog.ocultar()
-	get_node("fondo/fondo/posicionPugliese/pugliese").queue_free()
+	get_node("fondo/fondo/posicionPugliese/pugliese").hide()
 	jugar()
 
 func _on_btnEmpezar_pressed():
@@ -152,13 +155,18 @@ func esJugable():
 	return true
 	
 func tocarCancion():
+	mostrarPugliese()
 	var canciones = get_node("canciones")
-	var track = str("cancion_",get_node("/root/global").subNivelActual)
-	canciones.play(track)
-	var texto_cancion = get_node("texto_cancion")
-	texto_cancion.show()
-	texto_cancion.set_text(canciones.get_texto_cancion(track))
-	get_node("timerCancion").start()
-	yield(get_node("timerCancion"), "timeout")
+	canciones.sonar()
+	animarTextoCancion()
 	
-	
+func animarTextoCancion():
+	var textoCancion = get_node("canciones").get_texto_cancion()
+	dialog = get_node("/root/global").get_dialog()
+	var posicion = (get_node("nombre_cancion").get_pos())
+	var polygon = Vector2Array([Vector2(posicion.x, posicion.y), Vector2(posicion.x, posicion.y + 80), Vector2(posicion.x + 426, posicion.y + 80), Vector2(posicion.x + 426, posicion.y)])
+	dialog.set_polygon(polygon)
+	dialog.posicionarTexto(Vector2(posicion.x + 40, posicion.y + 20))
+	dialog.mostrarTexto(textoCancion)
+	dialog.quitarBoton()
+	add_child(dialog)

@@ -1,49 +1,41 @@
-[gd_scene load_steps=46 format=1]
+[gd_scene load_steps=44 format=1]
 
 [ext_resource path="res://simon/principal.gd" type="Script" id=1]
-[ext_resource path="res://assets/Hauracherell NC.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://simon/botonGrupo.gd" type="Script" id=3]
-[ext_resource path="res://assets/img/teclas-Malefico/fondo.png" type="Texture" id=4]
-[ext_resource path="res://simon/botones.gd" type="Script" id=5]
-[ext_resource path="res://simon/boton.tscn" type="PackedScene" id=6]
-[ext_resource path="res://assets/img/teclas-Malefico/01_normal.png" type="Texture" id=7]
-[ext_resource path="res://assets/img/teclas-Malefico/01_presionada.png" type="Texture" id=8]
-[ext_resource path="res://assets/img/blanca_1.pbm" type="BitMap" id=9]
-[ext_resource path="res://assets/img/teclas-Malefico/02_normal.png" type="Texture" id=10]
-[ext_resource path="res://assets/img/teclas-Malefico/02_presionada.png" type="Texture" id=11]
-[ext_resource path="res://assets/img/blanca_2.pbm" type="BitMap" id=12]
-[ext_resource path="res://assets/img/teclas-Malefico/03_normal.png" type="Texture" id=13]
-[ext_resource path="res://assets/img/teclas-Malefico/03_presionada.png" type="Texture" id=14]
-[ext_resource path="res://assets/img/blanca_3.pbm" type="BitMap" id=15]
-[ext_resource path="res://assets/img/teclas-Malefico/04_normal.png" type="Texture" id=16]
-[ext_resource path="res://assets/img/teclas-Malefico/04_presionada.png" type="Texture" id=17]
-[ext_resource path="res://assets/img/negra.pbm" type="BitMap" id=18]
-[ext_resource path="res://simon/notas_8bit.tres" type="SampleLibrary" id=19]
-[ext_resource path="res://assets/sonidos_ui/aplausos.wav" type="Sample" id=20]
-[ext_resource path="res://assets/sonidos_ui/click.wav" type="Sample" id=21]
-[ext_resource path="res://assets/sonidos_ui/error.wav" type="Sample" id=22]
-[ext_resource path="res://assets/sonidos_ui/intro_la_yumba.smp" type="Sample" id=23]
-[ext_resource path="res://assets/sonidos_ui/win.wav" type="Sample" id=24]
-[ext_resource path="res://assets/canciones/win_level_0.wav" type="Sample" id=25]
-[ext_resource path="res://assets/canciones/win_level_1.wav" type="Sample" id=26]
-[ext_resource path="res://assets/canciones/win_level_2.wav" type="Sample" id=27]
-[ext_resource path="res://assets/buttons/jugar.png" type="Texture" id=28]
-[ext_resource path="res://assets/buttons/jugar_pressed.png" type="Texture" id=29]
-[ext_resource path="res://assets/buttons/jugar.pbm" type="BitMap" id=30]
-[ext_resource path="res://game/mostrar.tres" type="Animation" id=31]
-[ext_resource path="res://assets/labels/fin.tex" type="Texture" id=32]
-[ext_resource path="res://assets/labels/win_simon.tex" type="Texture" id=33]
-[ext_resource path="res://assets/labels/error.tex" type="Texture" id=34]
-[ext_resource path="res://assets/canciones/cancion_3.wav" type="Sample" id=35]
-[ext_resource path="res://assets/canciones/cancion_1.wav" type="Sample" id=36]
-[ext_resource path="res://assets/canciones/cancion_2.wav" type="Sample" id=37]
-
-[sub_resource type="DynamicFont" id=8]
-
-font/size = 80
-font/use_mipmaps = true
-font/use_filter = true
-font/font = ExtResource( 2 )
+[ext_resource path="res://simon/botonGrupo.gd" type="Script" id=2]
+[ext_resource path="res://assets/img/teclas-Malefico/fondo.png" type="Texture" id=3]
+[ext_resource path="res://simon/botones.gd" type="Script" id=4]
+[ext_resource path="res://simon/boton.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/img/teclas-Malefico/01_normal.png" type="Texture" id=6]
+[ext_resource path="res://assets/img/teclas-Malefico/01_presionada.png" type="Texture" id=7]
+[ext_resource path="res://assets/img/blanca_1.pbm" type="BitMap" id=8]
+[ext_resource path="res://assets/img/teclas-Malefico/02_normal.png" type="Texture" id=9]
+[ext_resource path="res://assets/img/teclas-Malefico/02_presionada.png" type="Texture" id=10]
+[ext_resource path="res://assets/img/blanca_2.pbm" type="BitMap" id=11]
+[ext_resource path="res://assets/img/teclas-Malefico/03_normal.png" type="Texture" id=12]
+[ext_resource path="res://assets/img/teclas-Malefico/03_presionada.png" type="Texture" id=13]
+[ext_resource path="res://assets/img/blanca_3.pbm" type="BitMap" id=14]
+[ext_resource path="res://assets/img/teclas-Malefico/04_normal.png" type="Texture" id=15]
+[ext_resource path="res://assets/img/teclas-Malefico/04_presionada.png" type="Texture" id=16]
+[ext_resource path="res://assets/img/negra.pbm" type="BitMap" id=17]
+[ext_resource path="res://simon/notas_8bit.tres" type="SampleLibrary" id=18]
+[ext_resource path="res://assets/sonidos_ui/aplausos.wav" type="Sample" id=19]
+[ext_resource path="res://assets/sonidos_ui/click.wav" type="Sample" id=20]
+[ext_resource path="res://assets/sonidos_ui/error.wav" type="Sample" id=21]
+[ext_resource path="res://assets/sonidos_ui/intro_la_yumba.smp" type="Sample" id=22]
+[ext_resource path="res://assets/sonidos_ui/win.wav" type="Sample" id=23]
+[ext_resource path="res://assets/canciones/win_level_0.wav" type="Sample" id=24]
+[ext_resource path="res://assets/canciones/win_level_1.wav" type="Sample" id=25]
+[ext_resource path="res://assets/canciones/win_level_2.wav" type="Sample" id=26]
+[ext_resource path="res://assets/buttons/jugar.png" type="Texture" id=27]
+[ext_resource path="res://assets/buttons/jugar_pressed.png" type="Texture" id=28]
+[ext_resource path="res://assets/buttons/jugar.pbm" type="BitMap" id=29]
+[ext_resource path="res://game/mostrar.tres" type="Animation" id=30]
+[ext_resource path="res://assets/labels/fin.tex" type="Texture" id=31]
+[ext_resource path="res://assets/labels/win_simon.tex" type="Texture" id=32]
+[ext_resource path="res://assets/labels/error.tex" type="Texture" id=33]
+[ext_resource path="res://assets/canciones/cancion_3.wav" type="Sample" id=34]
+[ext_resource path="res://assets/canciones/cancion_1.wav" type="Sample" id=35]
+[ext_resource path="res://assets/canciones/cancion_2.wav" type="Sample" id=36]
 
 [sub_resource type="SampleLibrary" id=1]
 
@@ -51,49 +43,49 @@ samples/aplausos = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 20 )
+"sample": ExtResource( 19 )
 }
 samples/click = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 21 )
+"sample": ExtResource( 20 )
 }
 samples/error = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 22 )
+"sample": ExtResource( 21 )
 }
 samples/intro_la_yumba = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 23 )
+"sample": ExtResource( 22 )
 }
 samples/win = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 24 )
+"sample": ExtResource( 23 )
 }
 samples/win_level_0 = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 25 )
+"sample": ExtResource( 24 )
 }
 samples/win_level_1 = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 26 )
+"sample": ExtResource( 25 )
 }
 samples/win_level_2 = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 27 )
+"sample": ExtResource( 26 )
 }
 
 [sub_resource type="Animation" id=2]
@@ -114,7 +106,6 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=3]
 
-resource/name = "mostrar"
 length = 1.0
 loop = false
 step = 0.1
@@ -171,64 +162,57 @@ tracks/1/keys = {
 "values": [ 0.0, -20.0, 0.0, 20.0, 0.0, -20.0, 0.0, 20.0, 0.0, -20.0, 0.0, 20.0, 0.0 ]
 }
 
-[sub_resource type="SampleLibrary" id=9]
+[sub_resource type="SampleLibrary" id=6]
 
 samples/cancion_0 = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 35 )
+"sample": ExtResource( 34 )
 }
 samples/cancion_1 = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 36 )
+"sample": ExtResource( 35 )
 }
 samples/cancion_2 = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 37 )
+"sample": ExtResource( 36 )
 }
 
 [sub_resource type="GDScript" id=7]
 
 script/source = "extends SamplePlayer
 
-func _ready():
-	pass
+var track
 
-func get_texto_cancion(cancion):
+func _ready():
+	track = str(\"cancion_\",get_node(\"/root/global\").subNivelActual)
+
+func get_texto_cancion():
 	var txt = \"\"
-	if(cancion == \"cancion_0\"):
-		txt = \"La yumba - Simon Pugliese y Orquesta\"
-	if(cancion == \"cancion_1\"):
-		txt = \"La otra yumba - Simon Pugliese y Orquesta\"
-	if(cancion == \"cancion_2\"):
-		txt = \"La otra otra yumba - Simon Pugliese y Orquesta\"
-	return txt"
+	if(track == \"cancion_0\"):
+		txt = [\"La yumba - Simon Pugliese y Orquesta\"]
+	if(track == \"cancion_1\"):
+		txt = [\"La otra yumba - Simon Pugliese y Orquesta\"]
+	if(track == \"cancion_2\"):
+		txt = [\"La otra otra yumba - Simon Pugliese y Orquesta\"]
+	return txt
+
+func sonar():
+	play(track)"
 
 [node name="scene" type="Node2D"]
 
 transform/pos = Vector2( -0.814575, 0.814514 )
 script/script = ExtResource( 1 )
 
-[node name="texto_cancion" type="Label" parent="."]
+[node name="nombre_cancion" type="Position2D" parent="."]
 
-visibility/visible = false
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 351.0
-margin/top = 49.0
-margin/right = 951.0
-margin/bottom = 50949.0
-custom_fonts/font = SubResource( 8 )
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
+transform/pos = Vector2( 426, 50 )
 
 [node name="fondo" type="Node2D" parent="."]
 
@@ -237,20 +221,20 @@ max_lines_visible = -1
 editor/display_folded = true
 transform/pos = Vector2( 67.5685, 352.812 )
 transform/scale = Vector2( 1, 0.5 )
-script/script = ExtResource( 3 )
+script/script = ExtResource( 2 )
 
 [node name="fondo_piano" type="Sprite" parent="teclado"]
 
 transform/pos = Vector2( 571.835, 422.377 )
 transform/scale = Vector2( 0.797441, 0.418289 )
-texture = ExtResource( 4 )
+texture = ExtResource( 3 )
 
 [node name="octava1" type="Node2D" parent="teclado"]
 
 editor/display_folded = true
-script/script = ExtResource( 5 )
+script/script = ExtResource( 4 )
 
-[node name="C1" parent="teclado/octava1" instance=ExtResource( 6 )]
+[node name="C1" parent="teclado/octava1" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 477.006, 201.635 )
 
@@ -260,11 +244,11 @@ margin/left = -415.0
 margin/top = 2.0
 margin/right = -78.0
 margin/bottom = -3516.0
-textures/normal = ExtResource( 7 )
-textures/pressed = ExtResource( 8 )
-textures/click_mask = ExtResource( 9 )
+textures/normal = ExtResource( 6 )
+textures/pressed = ExtResource( 7 )
+textures/click_mask = ExtResource( 8 )
 
-[node name="D1" parent="teclado/octava1" instance=ExtResource( 6 )]
+[node name="D1" parent="teclado/octava1" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 477.006, 201.635 )
 
@@ -274,11 +258,11 @@ margin/left = -343.0
 margin/top = 2.0
 margin/right = 70.0
 margin/bottom = -401.0
-textures/normal = ExtResource( 10 )
-textures/pressed = ExtResource( 11 )
-textures/click_mask = ExtResource( 12 )
+textures/normal = ExtResource( 9 )
+textures/pressed = ExtResource( 10 )
+textures/click_mask = ExtResource( 11 )
 
-[node name="E1" parent="teclado/octava1" instance=ExtResource( 6 )]
+[node name="E1" parent="teclado/octava1" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 626.092, 488.926 )
 transform/rot = 180.0
@@ -290,11 +274,11 @@ margin/left = -419.0
 margin/top = -286.0
 margin/right = 146.0
 margin/bottom = -113.0
-textures/normal = ExtResource( 13 )
-textures/pressed = ExtResource( 14 )
-textures/click_mask = ExtResource( 15 )
+textures/normal = ExtResource( 12 )
+textures/pressed = ExtResource( 13 )
+textures/click_mask = ExtResource( 14 )
 
-[node name="F1" parent="teclado/octava1" instance=ExtResource( 6 )]
+[node name="F1" parent="teclado/octava1" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 1023.84, 466.781 )
 
@@ -304,11 +288,11 @@ margin/left = -746.0
 margin/top = -266.0
 margin/right = 473.0
 margin/bottom = -133.0
-textures/normal = ExtResource( 7 )
-textures/pressed = ExtResource( 8 )
-textures/click_mask = ExtResource( 9 )
+textures/normal = ExtResource( 6 )
+textures/pressed = ExtResource( 7 )
+textures/click_mask = ExtResource( 8 )
 
-[node name="G1" parent="teclado/octava1" instance=ExtResource( 6 )]
+[node name="G1" parent="teclado/octava1" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 1023.84, 466.781 )
 
@@ -318,11 +302,11 @@ margin/left = -674.0
 margin/top = -266.0
 margin/right = 401.0
 margin/bottom = -133.0
-textures/normal = ExtResource( 10 )
-textures/pressed = ExtResource( 11 )
-textures/click_mask = ExtResource( 12 )
+textures/normal = ExtResource( 9 )
+textures/pressed = ExtResource( 10 )
+textures/click_mask = ExtResource( 11 )
 
-[node name="A1" parent="teclado/octava1" instance=ExtResource( 6 )]
+[node name="A1" parent="teclado/octava1" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 1023.84, 466.781 )
 
@@ -332,11 +316,11 @@ margin/left = -601.0
 margin/top = -266.0
 margin/right = 328.0
 margin/bottom = -133.0
-textures/normal = ExtResource( 10 )
-textures/pressed = ExtResource( 11 )
-textures/click_mask = ExtResource( 12 )
+textures/normal = ExtResource( 9 )
+textures/pressed = ExtResource( 10 )
+textures/click_mask = ExtResource( 11 )
 
-[node name="B1" parent="teclado/octava1" instance=ExtResource( 6 )]
+[node name="B1" parent="teclado/octava1" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 1023.84, 466.781 )
 
@@ -346,11 +330,11 @@ margin/left = -527.0
 margin/top = -267.0
 margin/right = 254.0
 margin/bottom = -132.0
-textures/normal = ExtResource( 13 )
-textures/pressed = ExtResource( 14 )
-textures/click_mask = ExtResource( 15 )
+textures/normal = ExtResource( 12 )
+textures/pressed = ExtResource( 13 )
+textures/click_mask = ExtResource( 14 )
 
-[node name="C#1" parent="teclado/octava1" instance=ExtResource( 6 )]
+[node name="C#1" parent="teclado/octava1" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 737.039, 365.106 )
 
@@ -360,11 +344,11 @@ margin/left = -621.0
 margin/top = -194.0
 margin/right = 348.0
 margin/bottom = -167.0
-textures/normal = ExtResource( 16 )
-textures/pressed = ExtResource( 17 )
-textures/click_mask = ExtResource( 18 )
+textures/normal = ExtResource( 15 )
+textures/pressed = ExtResource( 16 )
+textures/click_mask = ExtResource( 17 )
 
-[node name="D#1" parent="teclado/octava1" instance=ExtResource( 6 )]
+[node name="D#1" parent="teclado/octava1" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 737.039, 365.106 )
 
@@ -374,11 +358,11 @@ margin/left = -547.0
 margin/top = -194.0
 margin/right = 274.0
 margin/bottom = -77.0
-textures/normal = ExtResource( 16 )
-textures/pressed = ExtResource( 17 )
-textures/click_mask = ExtResource( 18 )
+textures/normal = ExtResource( 15 )
+textures/pressed = ExtResource( 16 )
+textures/click_mask = ExtResource( 17 )
 
-[node name="F#1" parent="teclado/octava1" instance=ExtResource( 6 )]
+[node name="F#1" parent="teclado/octava1" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 737.039, 365.106 )
 
@@ -388,11 +372,11 @@ margin/left = -405.0
 margin/top = -197.0
 margin/right = 132.0
 margin/bottom = -74.0
-textures/normal = ExtResource( 16 )
-textures/pressed = ExtResource( 17 )
-textures/click_mask = ExtResource( 18 )
+textures/normal = ExtResource( 15 )
+textures/pressed = ExtResource( 16 )
+textures/click_mask = ExtResource( 17 )
 
-[node name="G#1" parent="teclado/octava1" instance=ExtResource( 6 )]
+[node name="G#1" parent="teclado/octava1" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 737.039, 365.106 )
 
@@ -402,11 +386,11 @@ margin/left = -331.0
 margin/top = -197.0
 margin/right = 58.0
 margin/bottom = -74.0
-textures/normal = ExtResource( 16 )
-textures/pressed = ExtResource( 17 )
-textures/click_mask = ExtResource( 18 )
+textures/normal = ExtResource( 15 )
+textures/pressed = ExtResource( 16 )
+textures/click_mask = ExtResource( 17 )
 
-[node name="A#1" parent="teclado/octava1" instance=ExtResource( 6 )]
+[node name="A#1" parent="teclado/octava1" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 738.845, 361.496 )
 
@@ -416,16 +400,16 @@ margin/left = -260.0
 margin/top = -194.0
 margin/right = -13.0
 margin/bottom = -77.0
-textures/normal = ExtResource( 16 )
-textures/pressed = ExtResource( 17 )
-textures/click_mask = ExtResource( 18 )
+textures/normal = ExtResource( 15 )
+textures/pressed = ExtResource( 16 )
+textures/click_mask = ExtResource( 17 )
 
 [node name="octava2" type="Node2D" parent="teclado"]
 
 editor/display_folded = true
-script/script = ExtResource( 5 )
+script/script = ExtResource( 4 )
 
-[node name="C2" parent="teclado/octava2" instance=ExtResource( 6 )]
+[node name="C2" parent="teclado/octava2" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 936.744, 206.157 )
 
@@ -435,11 +419,11 @@ margin/left = -368.0
 margin/top = -6.0
 margin/right = 95.0
 margin/bottom = -393.0
-textures/normal = ExtResource( 7 )
-textures/pressed = ExtResource( 8 )
-textures/click_mask = ExtResource( 9 )
+textures/normal = ExtResource( 6 )
+textures/pressed = ExtResource( 7 )
+textures/click_mask = ExtResource( 8 )
 
-[node name="D2" parent="teclado/octava2" instance=ExtResource( 6 )]
+[node name="D2" parent="teclado/octava2" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 477.006, 201.635 )
 
@@ -449,11 +433,11 @@ margin/left = 164.0
 margin/top = -2.0
 margin/right = -437.0
 margin/bottom = -397.0
-textures/normal = ExtResource( 10 )
-textures/pressed = ExtResource( 11 )
-textures/click_mask = ExtResource( 12 )
+textures/normal = ExtResource( 9 )
+textures/pressed = ExtResource( 10 )
+textures/click_mask = ExtResource( 11 )
 
-[node name="E2" parent="teclado/octava2" instance=ExtResource( 6 )]
+[node name="E2" parent="teclado/octava2" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 631.102, 490.596 )
 transform/rot = 180.0
@@ -465,11 +449,11 @@ margin/left = 83.0
 margin/top = -292.0
 margin/right = -356.0
 margin/bottom = -107.0
-textures/normal = ExtResource( 13 )
-textures/pressed = ExtResource( 14 )
-textures/click_mask = ExtResource( 15 )
+textures/normal = ExtResource( 12 )
+textures/pressed = ExtResource( 13 )
+textures/click_mask = ExtResource( 14 )
 
-[node name="F2" parent="teclado/octava2" instance=ExtResource( 6 )]
+[node name="F2" parent="teclado/octava2" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 1023.84, 466.781 )
 
@@ -479,11 +463,11 @@ margin/left = -238.0
 margin/top = -267.0
 margin/right = -35.0
 margin/bottom = -132.0
-textures/normal = ExtResource( 7 )
-textures/pressed = ExtResource( 8 )
-textures/click_mask = ExtResource( 9 )
+textures/normal = ExtResource( 6 )
+textures/pressed = ExtResource( 7 )
+textures/click_mask = ExtResource( 8 )
 
-[node name="G2" parent="teclado/octava2" instance=ExtResource( 6 )]
+[node name="G2" parent="teclado/octava2" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 1023.84, 466.781 )
 
@@ -493,11 +477,11 @@ margin/left = -166.0
 margin/top = -268.0
 margin/right = -107.0
 margin/bottom = -131.0
-textures/normal = ExtResource( 10 )
-textures/pressed = ExtResource( 11 )
-textures/click_mask = ExtResource( 12 )
+textures/normal = ExtResource( 9 )
+textures/pressed = ExtResource( 10 )
+textures/click_mask = ExtResource( 11 )
 
-[node name="A2" parent="teclado/octava2" instance=ExtResource( 6 )]
+[node name="A2" parent="teclado/octava2" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 1313.25, 207.519 )
 
@@ -507,11 +491,11 @@ margin/left = -383.0
 margin/top = -9.0
 margin/right = 110.0
 margin/bottom = -390.0
-textures/normal = ExtResource( 10 )
-textures/pressed = ExtResource( 11 )
-textures/click_mask = ExtResource( 12 )
+textures/normal = ExtResource( 9 )
+textures/pressed = ExtResource( 10 )
+textures/click_mask = ExtResource( 11 )
 
-[node name="B2" parent="teclado/octava2" instance=ExtResource( 6 )]
+[node name="B2" parent="teclado/octava2" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 1023.84, 466.781 )
 
@@ -521,11 +505,11 @@ margin/left = -19.0
 margin/top = -268.0
 margin/right = -254.0
 margin/bottom = -131.0
-textures/normal = ExtResource( 13 )
-textures/pressed = ExtResource( 14 )
-textures/click_mask = ExtResource( 15 )
+textures/normal = ExtResource( 12 )
+textures/pressed = ExtResource( 13 )
+textures/click_mask = ExtResource( 14 )
 
-[node name="C#2" parent="teclado/octava2" instance=ExtResource( 6 )]
+[node name="C#2" parent="teclado/octava2" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 737.039, 365.106 )
 
@@ -535,11 +519,11 @@ margin/left = -114.0
 margin/top = -198.0
 margin/right = -159.0
 margin/bottom = -73.0
-textures/normal = ExtResource( 16 )
-textures/pressed = ExtResource( 17 )
-textures/click_mask = ExtResource( 18 )
+textures/normal = ExtResource( 15 )
+textures/pressed = ExtResource( 16 )
+textures/click_mask = ExtResource( 17 )
 
-[node name="D#2" parent="teclado/octava2" instance=ExtResource( 6 )]
+[node name="D#2" parent="teclado/octava2" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 737.039, 364.106 )
 
@@ -549,11 +533,11 @@ margin/left = -40.0
 margin/top = -198.0
 margin/right = -233.0
 margin/bottom = -73.0
-textures/normal = ExtResource( 16 )
-textures/pressed = ExtResource( 17 )
-textures/click_mask = ExtResource( 18 )
+textures/normal = ExtResource( 15 )
+textures/pressed = ExtResource( 16 )
+textures/click_mask = ExtResource( 17 )
 
-[node name="F#2" parent="teclado/octava2" instance=ExtResource( 6 )]
+[node name="F#2" parent="teclado/octava2" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 737.039, 365.106 )
 
@@ -563,11 +547,11 @@ margin/left = 103.0
 margin/top = -198.0
 margin/right = -376.0
 margin/bottom = -73.0
-textures/normal = ExtResource( 16 )
-textures/pressed = ExtResource( 17 )
-textures/click_mask = ExtResource( 18 )
+textures/normal = ExtResource( 15 )
+textures/pressed = ExtResource( 16 )
+textures/click_mask = ExtResource( 17 )
 
-[node name="G#2" parent="teclado/octava2" instance=ExtResource( 6 )]
+[node name="G#2" parent="teclado/octava2" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 737.039, 365.106 )
 
@@ -577,11 +561,11 @@ margin/left = 173.0
 margin/top = -198.0
 margin/right = -446.0
 margin/bottom = -73.0
-textures/normal = ExtResource( 16 )
-textures/pressed = ExtResource( 17 )
-textures/click_mask = ExtResource( 18 )
+textures/normal = ExtResource( 15 )
+textures/pressed = ExtResource( 16 )
+textures/click_mask = ExtResource( 17 )
 
-[node name="A#2" parent="teclado/octava2" instance=ExtResource( 6 )]
+[node name="A#2" parent="teclado/octava2" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 737.845, 360.388 )
 
@@ -591,14 +575,14 @@ margin/left = 249.0
 margin/top = -195.0
 margin/right = -522.0
 margin/bottom = -76.0
-textures/normal = ExtResource( 16 )
-textures/pressed = ExtResource( 17 )
-textures/click_mask = ExtResource( 18 )
+textures/normal = ExtResource( 15 )
+textures/pressed = ExtResource( 16 )
+textures/click_mask = ExtResource( 17 )
 
 [node name="sonidos" type="SamplePlayer" parent="teclado"]
 
 config/polyphony = 1
-config/samples = ExtResource( 19 )
+config/samples = ExtResource( 18 )
 default/volume_db = 0.0
 default/pitch_scale = 1.0
 default/pan = 0.0
@@ -643,9 +627,9 @@ margin/bottom = 464.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 28 )
-textures/pressed = ExtResource( 29 )
-textures/click_mask = ExtResource( 30 )
+textures/normal = ExtResource( 27 )
+textures/pressed = ExtResource( 28 )
+textures/click_mask = ExtResource( 29 )
 params/resize_mode = 0
 params/scale = Vector2( 0.4, 0.4 )
 params/stretch_mode = 0
@@ -675,9 +659,9 @@ margin/bottom = -137.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 28 )
-textures/pressed = ExtResource( 29 )
-textures/click_mask = ExtResource( 30 )
+textures/normal = ExtResource( 27 )
+textures/pressed = ExtResource( 28 )
+textures/click_mask = ExtResource( 29 )
 params/resize_mode = 0
 params/scale = Vector2( 0.4, 0.4 )
 params/stretch_mode = 0
@@ -718,7 +702,7 @@ transform/pos = Vector2( 640, -100.592 )
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/mostrar = ExtResource( 31 )
+anims/mostrar = ExtResource( 30 )
 "anims/mostrar (copy)" = SubResource( 5 )
 playback/active = true
 playback/speed = 1.0
@@ -729,24 +713,24 @@ autoplay = ""
 
 visibility/visible = false
 transform/scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 32 )
+texture = ExtResource( 31 )
 
 [node name="ganaste" type="Sprite" parent="label"]
 
 visibility/visible = false
 transform/scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 33 )
+texture = ExtResource( 32 )
 
 [node name="error" type="Sprite" parent="label"]
 
 visibility/visible = false
 transform/scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 34 )
+texture = ExtResource( 33 )
 
 [node name="canciones" type="SamplePlayer" parent="."]
 
 config/polyphony = 29
-config/samples = SubResource( 9 )
+config/samples = SubResource( 6 )
 default/volume_db = 12.65
 default/pitch_scale = 1.0
 default/pan = 0.0
@@ -764,7 +748,7 @@ script/script = SubResource( 7 )
 [node name="timerCancion" type="Timer" parent="."]
 
 process_mode = 1
-wait_time = 4.0
+wait_time = 6.0
 one_shot = true
 autostart = false
 
