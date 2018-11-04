@@ -1,11 +1,14 @@
 extends Node
 
-var instrumentos = ["bandoneon", "violin", "contrabajo", "bandoneon", "violin", "contrabajo", "bandoneon", "violin", "bandoneon", "violin"]
+const bandoneon = "bandoneon"
+const violin = "violin"
+const contrabajo = "contrabajo"
 
 func _ready():
 	ubicarItems()
 
 func ubicarItems():
+	var instrumentos = [bandoneon, violin, contrabajo, bandoneon, violin, contrabajo, bandoneon, violin, bandoneon, violin]
 	var posiciones = get_children()
 	var itemScene = load("res://laberinto/items/item.tscn")
 	for i in range(posiciones.size()):

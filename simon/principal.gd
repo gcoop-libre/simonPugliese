@@ -51,6 +51,7 @@ func boton_apretado(quien):
 			currentPosicion += 1
 			 
 			if currentPosicion == patron.size():
+				deshabilitarInput(true)
 				get_node("teclado/sonidos_ui").play("aplausos")
 				animarMusicosOrquesta()
 				get_node("label/ganaste").show()

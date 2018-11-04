@@ -35,7 +35,8 @@ func apurar():
 	if !(completo):
 		get_node("RichTextLabel").completarTexto()
 	else:
-		get_node("boton").emit_signal("pressed")
+		if(has_node("boton")):
+			get_node("boton").emit_signal("pressed")
 
 func _on_RichTextLabel_textoCompleto():
 	completo = true
