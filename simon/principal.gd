@@ -169,5 +169,6 @@ func animarTextoCancion():
 	dialog.set_polygon(polygon)
 	dialog.posicionarTexto(Vector2(posicion.x + 40, posicion.y + 20))
 	dialog.mostrarTexto(textoCancion)
+	add_child(dialog) 
 	dialog.quitarBoton()
-	add_child(dialog)
+	
