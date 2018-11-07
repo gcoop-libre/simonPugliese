@@ -710,6 +710,7 @@ autoplay = ""
 
 [node name="fin" type="Sprite" parent="label"]
 
+visibility/visible = false
 transform/scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 31 )
 
