@@ -2,7 +2,7 @@ extends Node2D
 
 signal gane 
 var dialog
-var textoBienvenida = ["Hola", "Como va?"]
+var textoBienvenida = ["La orquesta tiene que trasladar los instrumentos", "y Buenos Aires es un laberinto de calles, ", "¡cuidado de no perderte!"]
 
 func _ready(): 
 	get_node("/root/global").play_bg_music()
@@ -13,10 +13,10 @@ func _ready():
 	
 func animarTextoBienvenida():
 	dialog = get_node("/root/global").get_dialog()
-	var polygon = Vector2Array([Vector2(164, 264), Vector2(164, 556), Vector2(1100, 556), Vector2(1100, 264)])
+	var polygon = Vector2Array([Vector2(391, 264), Vector2(391, 530), Vector2(890, 530), Vector2(890, 264)])
 	dialog.set_polygon(polygon)
-	dialog.posicionarTexto(Vector2(185,280))
-	dialog.posicionarBoton(Vector2(820,480))
+	dialog.posicionarTexto(Vector2(410,280))
+	dialog.posicionarBoton(Vector2(520,450))
 	dialog.mostrarTexto(textoBienvenida)
 	dialog.conectarBoton("_on_empezar_pressed", self)
 	add_child(dialog)
