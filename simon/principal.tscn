@@ -694,8 +694,7 @@ autostart = false
 
 [node name="label" type="Node2D" parent="."]
 
-editor/display_folded = true
-transform/pos = Vector2( 640, -100.592 )
+transform/pos = Vector2( 640, -100 )
 
 [node name="anim" type="AnimationPlayer" parent="label"]
 
@@ -711,7 +710,6 @@ autoplay = ""
 
 [node name="fin" type="Sprite" parent="label"]
 
-visibility/visible = false
 transform/scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 31 )
 

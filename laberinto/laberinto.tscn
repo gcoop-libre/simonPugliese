@@ -1,4 +1,4 @@
-[gd_scene load_steps=83 format=1]
+[gd_scene load_steps=84 format=1]
 
 [ext_resource path="res://laberinto/laberinto.gd" type="Script" id=1]
 [ext_resource path="res://laberinto/tilemap/tileLaberinto.gd" type="Script" id=2]
@@ -68,11 +68,13 @@
 [ext_resource path="res://assets_laberinto/anim-camion-quieto-texturas/N/camion-N-0003.tex" type="Texture" id=66]
 [ext_resource path="res://assets_laberinto/anim-camion-quieto-texturas/N/camion-N-0004.tex" type="Texture" id=67]
 [ext_resource path="res://assets_laberinto/humo.tex" type="Texture" id=68]
-[ext_resource path="res://assets/sonidos_ui/collision.wav" type="Sample" id=69]
-[ext_resource path="res://assets/sonidos_ui/engine_idle.wav" type="Sample" id=70]
-[ext_resource path="res://assets/sonidos_ui/engine_running.wav" type="Sample" id=71]
-[ext_resource path="res://assets/sonidos_ui/win.wav" type="Sample" id=72]
-[ext_resource path="res://laberinto/sonidos.gd" type="Script" id=73]
+[ext_resource path="res://game/mostrar.tres" type="Animation" id=69]
+[ext_resource path="res://assets/labels/win_laberinto.tex" type="Texture" id=70]
+[ext_resource path="res://assets/sonidos_ui/collision.wav" type="Sample" id=71]
+[ext_resource path="res://assets/sonidos_ui/engine_idle.wav" type="Sample" id=72]
+[ext_resource path="res://assets/sonidos_ui/engine_running.wav" type="Sample" id=73]
+[ext_resource path="res://assets/sonidos_ui/win.wav" type="Sample" id=74]
+[ext_resource path="res://laberinto/sonidos.gd" type="Script" id=75]
 
 [sub_resource type="SampleLibrary" id=1]
 
@@ -149,57 +151,31 @@ animations = [ {
 "speed": 8.0
 } ]
 
-[sub_resource type="Animation" id=4]
-
-length = 1.0
-loop = false
-step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:rect/pos")
-tracks/0/interp = 1
-tracks/0/imported = false
-tracks/0/keys = {
-"times": FloatArray( 0, 0.7 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 514, -100 ), Vector2( 514, 360 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath(".:rect/rotation")
-tracks/1/interp = 2
-tracks/1/imported = false
-tracks/1/keys = {
-"times": FloatArray( 0.1, 0.2, 0.3, 0.4, 0.5, 0.7, 1 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.06, 1.5, 3.33, 5.0, 9.57, 6.01, 0.0 ]
-}
-
 [sub_resource type="SampleLibrary" id=5]
 
 samples/collision = {
 "db": -1.2,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 69 )
+"sample": ExtResource( 71 )
 }
 samples/engine_idle = {
 "db": 4.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 70 )
+"sample": ExtResource( 72 )
 }
 samples/engine_running = {
 "db": 6.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 71 )
+"sample": ExtResource( 73 )
 }
 samples/win = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 72 )
+"sample": ExtResource( 74 )
 }
 
 [sub_resource type="ConvexPolygonShape2D" id=6]
@@ -363,48 +339,24 @@ params/anim_initial_pos = 0.0
 
 [node name="ganaste" type="Node2D" parent="."]
 
-editor/display_folded = true
-transform/pos = Vector2( 0, 1 )
+transform/pos = Vector2( 640, -100.592 )
 
-[node name="Panel" type="Panel" parent="ganaste"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 514.0
-margin/top = -100.0
-margin/right = 693.0
-margin/bottom = -45.0
-
-[node name="anim" type="AnimationPlayer" parent="ganaste/Panel"]
+[node name="anim" type="AnimationPlayer" parent="ganaste"]
 
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/mostrar = SubResource( 4 )
+anims/mostrar = ExtResource( 69 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
 autoplay = ""
 
-[node name="Label" type="Label" parent="ganaste/Panel"]
+[node name="ganaste" type="Sprite" parent="ganaste"]
 
-rect/scale = Vector2( 3, 3 )
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 7.0
-margin/top = 3.0
-margin/right = 63.0
-margin/bottom = 21.0
-text = "Ganaste!"
-align = 1
-valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
+transform/pos = Vector2( 10, -100 )
+transform/scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 70 )
 
 [node name="sonidos_laberinto" type="SamplePlayer" parent="."]
 
@@ -424,7 +376,7 @@ default/filter/gain = 1.0
 default/reverb_room = 0
 default/reverb_send = 0.1
 default/chorus_send = 0.0
-script/script = ExtResource( 73 )
+script/script = ExtResource( 75 )
 is_playing = false
 
 [node name="timerLargo" type="Timer" parent="sonidos_laberinto"]

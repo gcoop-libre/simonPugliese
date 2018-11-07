@@ -26,7 +26,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.98994949"
-     inkscape:cx="433.85568"
+     inkscape:cx="555.49243"
      inkscape:cy="716.05954"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -44,7 +44,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -176,6 +176,50 @@
            y="540.94574"
            x="83.561668"
            sodipodi:role="line" /></text>
+    </g>
+    <g
+       id="g4198"
+       inkscape:export-filename="/home/marin/jueguitos/simonPugliese/assets/labels/win_laberinto.png"
+       inkscape:export-xdpi="310"
+       inkscape:export-ydpi="310">
+      <g
+         id="g4191">
+        <rect
+           style="opacity:1;fill:#69c672;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="rect4138-3-7-6-6"
+           width="1129.6476"
+           height="82.865852"
+           x="58.945389"
+           y="530.60175"
+           rx="8.9098978"
+           ry="7.1392117" />
+        <rect
+           style="opacity:1;fill:#307e38;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="rect4138-5-0-7"
+           width="1114.8077"
+           height="62.6628"
+           x="65.860275"
+           y="540.19818"
+           rx="8.7928495"
+           ry="5.3986411" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:40px;line-height:169.00000572%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="83.741577"
+           y="583.94171"
+           id="text4140-3-6-5"
+           sodipodi:linespacing="169.00001%"><tspan
+             sodipodi:role="line"
+             x="83.741577"
+             y="583.94171"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Hauracherell NC';-inkscape-font-specification:'Hauracherell NC';fill:#ffffff;fill-opacity:1"
+             id="tspan4264-5">¡La orquesta está lista para tocar! ¡Osvaldito es un maestro y vos también!</tspan><tspan
+             sodipodi:role="line"
+             x="83.741577"
+             y="651.54169"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Hauracherell NC';-inkscape-font-specification:'Hauracherell NC';fill:#ffffff;fill-opacity:1"
+             id="tspan4189" /></text>
+      </g>
     </g>
   </g>
 </svg>

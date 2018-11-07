@@ -56,9 +56,9 @@ func agarrarItem(item):
 	get_node("sonidos_laberinto/timerLargo").start()
 	yield(get_node("sonidos_laberinto/timerLargo"), "timeout")
 	if(get_node("tileLaberinto").itemsRestantes() == 0):
-		get_node("ganaste/Panel/anim").play("mostrar")
+		get_node("ganaste/anim").play("mostrar")
 		get_node("sonidos_laberinto").play_sound("win")
-		yield( get_node("ganaste/Panel/anim"), "finished" )
+		yield( get_node("ganaste/anim"), "finished" )
 		emit_signal("gane")
 
 func esJugable():
