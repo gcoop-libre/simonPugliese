@@ -10,6 +10,7 @@ var niveles = [nivel_1, nivel_2, nivel_3]
 var patron = null
 var cantidadNiveles
 var dialog
+var telon 
 
 signal nivelGanado
 
@@ -23,12 +24,19 @@ func _ready():
 	deshabilitarInput(true)
 	conectarTeclado()
 	get_node("/root/global").play_bg_music()
+	mostrarPugliese()
+	telon = load("res://simon/telon.tscn").instance()
+	add_child(telon)
+	telon.connect("telonAbierto", self, "_on_telon_abierto", [], CONNECT_ONESHOT)
+	telon.abrir_telon()
+
+func _on_telon_abierto():
+	telon.queue_free()
 	if(get_node("/root/global").esPrimerNivel()):
-		mostrarPugliese()
 		animarTextoBienvenida()
 	else:
 		get_node("btnEmpezar").show()
-
+		
 func animarTextoBienvenida():
 	dialog = get_node("/root/global").get_dialog()
 	var polygon = Vector2Array([Vector2(64, 310), Vector2(64, 700), Vector2(610, 700), Vector2(610, 310)])
