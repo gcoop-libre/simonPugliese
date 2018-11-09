@@ -25,6 +25,9 @@ func _ready():
 	conectarTeclado()
 	get_node("/root/global").play_bg_music()
 	mostrarPugliese()
+	instanciarTelon()
+	
+func instanciarTelon():
 	telon = load("res://simon/telon.tscn").instance()
 	add_child(telon)
 	telon.connect("telonAbierto", self, "_on_telon_abierto", [], CONNECT_ONESHOT)
@@ -36,7 +39,7 @@ func _on_telon_abierto():
 		animarTextoBienvenida()
 	else:
 		get_node("btnEmpezar").show()
-		
+
 func animarTextoBienvenida():
 	dialog = get_node("/root/global").get_dialog()
 	var polygon = Vector2Array([Vector2(64, 310), Vector2(64, 700), Vector2(610, 700), Vector2(610, 310)])
@@ -154,10 +157,10 @@ func mostrarTeclado():
 
 func _on_empezar_pressed():
 	dialog.ocultar()
-	get_node("fondo/fondo/posicionPugliese/pugliese").hide()
-	jugar()
+	_on_btnEmpezar_pressed()
 
 func _on_btnEmpezar_pressed():
+	get_node("fondo/fondo/posicionPugliese/pugliese").hide()
 	jugar()
 	
 func esJugable():
