@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=1]
+[gd_scene load_steps=18 format=1]
 
 [ext_resource path="res://assets_laberinto/bloques-texturas/calle-horizontal-01.tex" type="Texture" id=1]
 [ext_resource path="res://assets_laberinto/bloques-texturas/calle-horizontal-02.tex" type="Texture" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://assets_laberinto/bloques-texturas/casa-06.tex" type="Texture" id=13]
 [ext_resource path="res://assets_laberinto/bloques-texturas/casa-07.tex" type="Texture" id=14]
 [ext_resource path="res://assets_laberinto/bloques-texturas/casa-08.tex" type="Texture" id=15]
+[ext_resource path="res://assets_laberinto/bloques-texturas/calle-borde.tex" type="Texture" id=16]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -49,10 +50,12 @@ texture = ExtResource( 6 )
 
 [node name="calle-cruce" type="Sprite" parent="."]
 
+transform/pos = Vector2( -1.67018, 1.67018 )
 texture = ExtResource( 7 )
 
 [node name="casa1" type="Sprite" parent="."]
 
+editor/display_folded = true
 transform/pos = Vector2( 90.0251, 129.98 )
 texture = ExtResource( 8 )
 __meta__ = {
@@ -270,6 +273,30 @@ friction = 1.0
 bounce = 0.16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="casa8/StaticBody2D"]
+
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="calle-borde" type="Sprite" parent="."]
+
+texture = ExtResource( 16 )
+region = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="calle-borde"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="calle-borde/StaticBody2D"]
 
 shape = SubResource( 1 )
 trigger = false

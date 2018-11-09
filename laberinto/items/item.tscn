@@ -15,7 +15,7 @@ extents = Vector2( 10, 10 )
 transform/scale = Vector2( 0.5, 0.5 )
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 3.3534, 0.0960402, -0.101139, 3.53145, 0, 0 )
+shapes/0/transform = Matrix32( 3.35478, 0, 0, 3.5329, 0, 0 )
 shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -26,27 +26,29 @@ instrumento = ""
 [node name="violin" type="Sprite" parent="."]
 
 visibility/visible = false
-transform/rot = -2.71166
-transform/scale = Vector2( 0.146593, 0.146593 )
+transform/pos = Vector2( 4.99747, -2.05229 )
+transform/rot = -39.0
+transform/scale = Vector2( 0.224922, 0.224922 )
 texture = ExtResource( 2 )
 
 [node name="contrabajo" type="Sprite" parent="."]
 
 visibility/visible = false
-transform/rot = -2.71166
-transform/scale = Vector2( 0.146593, 0.146593 )
+transform/pos = Vector2( -1.41602, 0.58397 )
+transform/rot = -10.0
+transform/scale = Vector2( 0.11, 0.11 )
 texture = ExtResource( 3 )
 
 [node name="bandoneon" type="Sprite" parent="."]
 
 visibility/visible = false
-transform/rot = -2.71166
-transform/scale = Vector2( 0.146593, 0.146593 )
+transform/pos = Vector2( 0.858536, 2.42928 )
+transform/rot = -2.7
+transform/scale = Vector2( 0.18, 0.18 )
 texture = ExtResource( 4 )
 
 [node name="collisionShape" type="CollisionShape2D" parent="."]
 
-transform/rot = -1.64048
 transform/scale = Vector2( 3.35478, 3.5329 )
 shape = SubResource( 1 )
 trigger = false
