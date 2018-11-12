@@ -17,7 +17,7 @@ func _on_botonlb_button_down():
 	apretar()
 	
 func _on_botonlb_button_up():
-	emit_signal( "apretado" )
+	emit_signal("apretado")
 
 func apretar():
 	teclado.tocar(nota)

@@ -2,7 +2,6 @@
 
 [ext_resource path="res://game/pausa.gd" type="Script" id=1]
 
-
 [node name="pausa" type="Button"]
 
 process/pause_mode = 2

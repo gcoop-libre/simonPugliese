@@ -57,13 +57,15 @@ func conectarTeclado():
 			boton.connect("apretado", self, "boton_apretado" )
 
 func boton_apretado(quien):
+	deshabilitarInput(true)
 	patronTocado.append( str(quien.get_name()) )
+	# chequeamos si la nota es la correcta
 	if ( checkPatronTocado() ):
+		# chequeamos si ya toque las notas que me piden (patron parcial)
 		if patronTocado.size() == currentPosicion + 1:
-			currentPosicion += 1
-			 
+			currentPosicion += 1  
+			# chequeamos si ya termine de tocar el patron del nivel
 			if currentPosicion == patron.size():
-				deshabilitarInput(true)
 				get_node("teclado/sonidos_ui").play("aplausos")
 				animarMusicosOrquesta()
 				get_node("label/ganaste").show()
@@ -82,14 +84,13 @@ func boton_apretado(quien):
 					pass
 				else:
 					ganarJuego()
-				return
-				
-			deshabilitarInput(true)
 			get_node("timerRespuesta").start()
 			yield( get_node("timerRespuesta"), "timeout" )
 			continuarPatron()
+		else:
+			# si todavia me faltan notas del patron parcial, habilito input
+			deshabilitarInput(false)
 	else:
-		deshabilitarInput(true)
 		get_node("teclado/sonidos_ui").play("error")
 		get_node("label/error").show()
 		get_node("label/anim").play("mostrar")
@@ -129,6 +130,7 @@ func deshabilitarInput(booleano):
 	for octava in get_node("teclado").get_children():
 		for boton in octava.get_children():
 			get_node("teclado/"+octava.get_name()+"/"+boton.get_name()+"/boton-lb").set_disabled(booleano)
+			get_node("teclado/"+octava.get_name()+"/"+boton.get_name()+"/boton-lb").set_ignore_mouse(booleano)
 
 func hayMasNiveles():
 	return cantidadNiveles - 1 > get_node("/root/global").subNivelActual

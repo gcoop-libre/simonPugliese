@@ -218,7 +218,6 @@ transform/pos = Vector2( 426, 50 )
 
 [node name="teclado" type="Node2D" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 67.5685, 352.812 )
 transform/scale = Vector2( 1, 0.5 )
 script/script = ExtResource( 2 )
@@ -231,7 +230,6 @@ texture = ExtResource( 3 )
 
 [node name="octava1" type="Node2D" parent="teclado"]
 
-editor/display_folded = true
 script/script = ExtResource( 4 )
 
 [node name="C1" parent="teclado/octava1" instance=ExtResource( 5 )]
