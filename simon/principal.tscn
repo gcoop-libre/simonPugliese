@@ -645,6 +645,38 @@ playback/speed = 1.0
 blend_times = [  ]
 autoplay = ""
 
+[node name="btnEmpezar1" type="TextureButton" parent="."]
+
+visibility/visible = false
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 523.0
+margin/top = 401.0
+margin/right = 763.0
+margin/bottom = 464.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 27 )
+textures/pressed = ExtResource( 28 )
+textures/click_mask = ExtResource( 29 )
+params/resize_mode = 0
+params/scale = Vector2( 0.4, 0.4 )
+params/stretch_mode = 0
+
+[node name="anim" type="AnimationPlayer" parent="btnEmpezar1"]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/ocultar = SubResource( 2 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
 [node name="btnEmpezarDeNuevo" type="TextureButton" parent="."]
 
 editor/display_folded = true

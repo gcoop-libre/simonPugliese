@@ -26,12 +26,12 @@ func _ready():
 	get_node("/root/global").play_bg_music()
 	mostrarPugliese()
 	instanciarTelon()
+	telon.abrir_telon()
 	
 func instanciarTelon():
 	telon = load("res://simon/telon.tscn").instance()
 	add_child(telon)
 	telon.connect("telonAbierto", self, "_on_telon_abierto", [], CONNECT_ONESHOT)
-	telon.abrir_telon()
 
 func _on_telon_abierto():
 	telon.queue_free()
@@ -39,6 +39,7 @@ func _on_telon_abierto():
 		animarTextoBienvenida()
 	else:
 		get_node("btnEmpezar").show()
+		get_node("btnEmpezar").set_disabled(false)
 
 func animarTextoBienvenida():
 	dialog = get_node("/root/global").get_dialog()
@@ -74,6 +75,9 @@ func boton_apretado(quien):
 				yield(get_node("timerCancion"), "timeout")
 				get_node("cuadro_texto").queue_free()
 				if hayMasNiveles():
+					instanciarTelon()
+					telon.cerrar_telon()
+					yield(telon, "telonCerrado")
 					get_node("/root/global").siguienteNivel()
 					pass
 				else:
@@ -106,6 +110,7 @@ func jugar():
 	currentPosicion = 0
 	get_node("btnEmpezar/anim").play("ocultar")
 	yield(get_node("btnEmpezar/anim"), "finished")
+	get_node("btnEmpezar").set_disabled(true)
 	get_node("timerCortito").start()
 	yield(get_node("timerCortito"), "timeout")
 	continuarPatron()
@@ -141,6 +146,9 @@ func ganarJuego():
 func _on_btnEmpezarDeNuevo_pressed():
 	get_node("btnEmpezarDeNuevo/anim").play("ocultar")
 	yield(get_node("btnEmpezarDeNuevo/anim"), "finished")
+	instanciarTelon()
+	telon.cerrar_telon()
+	yield(telon, "telonCerrado")
 	get_tree().get_root().get_node("/root/global").empezarJuego()
 
 func animarMusicosOrquesta():
