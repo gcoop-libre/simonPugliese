@@ -19,7 +19,7 @@ var orquesta
 var pugliese
 var cancion
 var dialog
-var pausa = load("res://game/pausa.tscn")
+var pausa = load("res://pausa.tscn")
 
 func _ready():
 	get_tree().set_auto_accept_quit(false)

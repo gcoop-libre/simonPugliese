@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=1]
 
-[ext_resource path="res://assets/sonidos_ui/click.wav" type="Sample" id=1]
+[ext_resource path="res://assets/click.smp" type="Sample" id=1]
 
 [sub_resource type="SampleLibrary" id=1]
 
 samples/click = {
-"db": 24.0,
+"db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 1 )
