@@ -68,7 +68,7 @@ func play_intro_song():
 func play_bg_music():
 	get_node("/root/global/musica").stop_all()
 	if(mapa_niveles[nivelActual]['tipo'] == 'simon'):
-		cancion = get_node("/root/global/musica").play('bg_music')
+		cancion = get_node("/root/global/musica").play('bar')
 	else:
 		cancion = get_node("/root/global/musica").play('calle')
 	playing_intro = false

@@ -104,14 +104,14 @@ default/reverb_send = 0.0
 default/chorus_send = 0.0
 script/script = ExtResource( 10 )
 
-[connection signal="textoCompleto" from="RichTextLabel" to="boton" method="_on_RichTextLabel_textoCompleto" flags=7]
-
 [connection signal="textoCompleto" from="RichTextLabel" to="Timer" method="_on_RichTextLabel_textoCompleto" flags=7]
 
 [connection signal="textoCompleto" from="RichTextLabel" to="." method="_on_RichTextLabel_textoCompleto"]
 
-[connection signal="timeout" from="Timer" to="RichTextLabel" method="_on_Timer_timeout"]
+[connection signal="textoCompleto" from="RichTextLabel" to="boton" method="_on_RichTextLabel_textoCompleto" flags=7]
 
 [connection signal="timeout" from="Timer" to="Timer" method="_on_Timer_timeout"]
+
+[connection signal="timeout" from="Timer" to="RichTextLabel" method="_on_Timer_timeout"]
 
 
