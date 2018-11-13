@@ -84,9 +84,10 @@ func boton_apretado(quien):
 					pass
 				else:
 					ganarJuego()
-			get_node("timerRespuesta").start()
-			yield( get_node("timerRespuesta"), "timeout" )
-			continuarPatron()
+			else: 
+				get_node("timerRespuesta").start()
+				yield( get_node("timerRespuesta"), "timeout" )
+				continuarPatron()
 		else:
 			# si todavia me faltan notas del patron parcial, habilito input
 			deshabilitarInput(false)
@@ -133,6 +134,7 @@ func deshabilitarInput(booleano):
 			get_node("teclado/"+octava.get_name()+"/"+boton.get_name()+"/boton-lb").set_ignore_mouse(booleano)
 
 func hayMasNiveles():
+	print(get_node("/root/global").subNivelActual)
 	return cantidadNiveles - 1 > get_node("/root/global").subNivelActual
 	
 func ganarJuego():

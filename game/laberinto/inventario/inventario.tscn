@@ -1,18 +1,10 @@
-[gd_scene load_steps=7 format=1]
+[gd_scene load_steps=6 format=1]
 
 [ext_resource path="res://laberinto/inventario/inventario.gd" type="Script" id=1]
 [ext_resource path="res://assets/laberinto/violin.png" type="Texture" id=2]
-[ext_resource path="res://assets/Hauracherell NC.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://assets/Hauracherell NC.fnt" type="BitmapFont" id=3]
 [ext_resource path="res://assets/laberinto/contrabajo.png" type="Texture" id=4]
 [ext_resource path="res://assets/laberinto/badoneon.png" type="Texture" id=5]
-
-[sub_resource type="DynamicFont" id=1]
-
-font/size = 24
-extra_spacing/bottom = 2
-font/use_mipmaps = false
-font/use_filter = false
-font/font = ExtResource( 3 )
 
 [node name="inventario" type="HBoxContainer"]
 
@@ -82,7 +74,7 @@ margin/left = 4.0
 margin/top = 29.0
 margin/right = 21.0
 margin/bottom = -12.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "0"
 align = 1
@@ -143,7 +135,7 @@ margin/left = 4.0
 margin/top = 29.0
 margin/right = 21.0
 margin/bottom = -12.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "0"
 align = 1
@@ -204,7 +196,7 @@ margin/left = 4.0
 margin/top = 29.0
 margin/right = 21.0
 margin/bottom = -12.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "0"
 align = 1
