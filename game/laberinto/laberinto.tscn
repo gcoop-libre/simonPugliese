@@ -67,13 +67,14 @@
 [ext_resource path="res://assets/laberinto/frames/anim-camion-quieto/W/camion-W-0002.png" type="Texture" id=65]
 [ext_resource path="res://assets/laberinto/frames/anim-camion-quieto/W/camion-W-0003.png" type="Texture" id=66]
 [ext_resource path="res://assets/laberinto/frames/anim-camion-quieto/W/camion-W-0004.png" type="Texture" id=67]
-[ext_resource path="res://mostrar.tres" type="Animation" id=68]
-[ext_resource path="res://assets/labels/win_laberinto.png" type="Texture" id=69]
-[ext_resource path="res://assets/sounds/collision.smp" type="Sample" id=70]
-[ext_resource path="res://assets/sounds/engine_idle.smp" type="Sample" id=71]
-[ext_resource path="res://assets/sounds/engine_running.smp" type="Sample" id=72]
-[ext_resource path="res://assets/sounds/win.smp" type="Sample" id=73]
-[ext_resource path="res://laberinto/sonidos.gd" type="Script" id=74]
+[ext_resource path="res://assets/laberinto/humo.tex" type="Texture" id=68]
+[ext_resource path="res://mostrar.tres" type="Animation" id=69]
+[ext_resource path="res://assets/labels/win_laberinto.png" type="Texture" id=70]
+[ext_resource path="res://assets/sounds/collision.smp" type="Sample" id=71]
+[ext_resource path="res://assets/sounds/engine_idle.smp" type="Sample" id=72]
+[ext_resource path="res://assets/sounds/engine_running.smp" type="Sample" id=73]
+[ext_resource path="res://assets/sounds/win.smp" type="Sample" id=74]
+[ext_resource path="res://laberinto/sonidos.gd" type="Script" id=75]
 
 [sub_resource type="SampleLibrary" id=1]
 
@@ -145,39 +146,31 @@ animations = [ {
 "speed": 8.0
 } ]
 
-[sub_resource type="ImageTexture" id=4]
-
-flags = 7
-image = Image()
-size = Vector2( 0, 0 )
-storage = 0
-lossy_quality = 0.7
-
 [sub_resource type="SampleLibrary" id=5]
 
 samples/collision = {
 "db": -8.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 70 )
+"sample": ExtResource( 71 )
 }
 samples/engine_idle = {
 "db": -12.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 71 )
+"sample": ExtResource( 72 )
 }
 samples/engine_running = {
 "db": -5.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 72 )
+"sample": ExtResource( 73 )
 }
 samples/win = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 73 )
+"sample": ExtResource( 74 )
 }
 
 [node name="escena" type="Node2D"]
@@ -191,6 +184,7 @@ tile = ""
 
 [node name="inventario" parent="." instance=ExtResource( 3 )]
 
+editor/display_folded = true
 margin/top = -2.0
 margin/right = 944.0
 margin/bottom = 51.0
@@ -213,7 +207,6 @@ margin/bottom = 53.0
 
 [node name="bandoneon" parent="inventario"]
 
-editor/display_folded = true
 margin/bottom = 53.0
 
 [node name="Background" parent="inventario/bandoneon"]
@@ -279,7 +272,7 @@ config/preprocess = 3600.0
 config/process_mode = 1
 config/offset = Vector2( -50, 0 )
 config/explosiveness = 0.38
-config/texture = SubResource( 4 )
+config/texture = ExtResource( 68 )
 params/direction = 270.0
 params/spread = 5.0
 params/linear_velocity = 150.0
@@ -306,7 +299,7 @@ transform/pos = Vector2( 640, -100.592 )
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/mostrar = ExtResource( 68 )
+anims/mostrar = ExtResource( 69 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -316,7 +309,7 @@ autoplay = ""
 
 transform/pos = Vector2( 10, -100 )
 transform/scale = Vector2( 0.25, 0.25 )
-texture = ExtResource( 69 )
+texture = ExtResource( 70 )
 
 [node name="sonidos_laberinto" type="SamplePlayer" parent="."]
 
@@ -335,7 +328,7 @@ default/filter/gain = 1.0
 default/reverb_room = 0
 default/reverb_send = 0.0
 default/chorus_send = 0.0
-script/script = ExtResource( 74 )
+script/script = ExtResource( 75 )
 is_playing = false
 
 [node name="timerLargo" type="Timer" parent="sonidos_laberinto"]

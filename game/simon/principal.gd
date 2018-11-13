@@ -134,7 +134,6 @@ func deshabilitarInput(booleano):
 			get_node("teclado/"+octava.get_name()+"/"+boton.get_name()+"/boton-lb").set_ignore_mouse(booleano)
 
 func hayMasNiveles():
-	print(get_node("/root/global").subNivelActual)
 	return cantidadNiveles - 1 > get_node("/root/global").subNivelActual
 	
 func ganarJuego():
