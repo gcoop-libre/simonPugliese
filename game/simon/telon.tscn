@@ -43,4 +43,6 @@ animation = "cierra"
 centered = false
 flip_h = true
 
+[connection signal="telonCerrado" from="." to="." method="_on_telon_telonCerrado"]
+
 
