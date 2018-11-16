@@ -137,11 +137,11 @@ func hayMasNiveles():
 	return cantidadNiveles - 1 > get_node("/root/global").subNivelActual
 	
 func ganarJuego():
-	# agregar sonido de aplausos
 	get_node("label/fin").show()
 	get_node("label/anim").play("mostrar")
 	yield(get_node("label/anim"), "finished")
 	get_node("label/fin").hide()
+	get_node("/root/global").stop_bg_music()
 	get_node("teclado/sonidos_ui").play("intro_la_yumba")
 	mostrarPugliese()
 	get_node("btnEmpezarDeNuevo/anim").play("mostrar")

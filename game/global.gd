@@ -74,6 +74,11 @@ func play_bg_music():
 	playing_intro = false
 	playing_bg_music = true
 
+func stop_bg_music():
+	get_node("/root/global/musica").stop_all()
+	playing_intro = false
+	playing_bg_music = false
+		
 func empezarJuego():
 	nivelActual = 0
 	subNivelActual = 0
