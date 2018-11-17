@@ -19,18 +19,15 @@ var orquesta
 var pugliese
 var cancion
 var dialog
-var pausa
-var telon
+var pausa = load("res://pausa.tscn")
 
 func _ready():
 	get_tree().set_auto_accept_quit(false)
 	current_scene = get_tree().get_root().get_child(get_tree().get_root().get_child_count() -1 )
 	mapa_niveles = [nivel_1, nivel_2, nivel_3, nivel_4, nivel_5]
-	orquesta = preload("res://orquesta/orquesta.tscn").instance()
-	pugliese = preload("res://orquesta/pugliese.tscn").instance()
-	dialog = preload("res://dialog/dialog.tscn")
-	telon = preload("res://simon/telon.tscn").instance() 
-	pausa = preload("res://pausa.tscn").instance()
+	orquesta = load("res://orquesta/orquesta.tscn")
+	pugliese = load("res://orquesta/pugliese.tscn")
+	dialog = load("res://dialog/dialog.tscn")
 	play_intro_song()
 
 func _notification(what):
@@ -123,27 +120,24 @@ func sumarItem(nombreItem):
 	self.set(nombreItem, self.get(nombreItem) + 1)
 	
 func get_orquesta():
-	return orquesta
+	return orquesta.instance()
 	
 func get_pugliese():
-	return pugliese
+	return pugliese.instance()
 
 func get_dialog():
 	return dialog.instance()
-	
+
 func apretar_ui_button():
 	get_node("sonidos_ui").play("click")
 	get_node("TimerBoton").start()
 	yield(get_node("TimerBoton"), "timeout")
 
 func get_boton_pausa():
-	return pausa
+	return pausa.instance()
 	
 func irAlMenu():
 	call_deferred("_deferred_goto_scene", "res://menu/info.tscn")
 
 func get_fondo_principal():
 	return load(str("res://orquesta/fondo_",subNivelActual,".tscn")).instance();
-
-func get_telon():
-	return telon

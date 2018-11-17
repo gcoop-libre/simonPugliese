@@ -29,11 +29,12 @@ func _ready():
 	telon.abrir_telon()
 	
 func instanciarTelon():
-	telon = get_node("/root/global").get_telon()
+	telon = load("res://simon/telon.tscn").instance()
 	add_child(telon)
 	telon.connect("telonAbierto", self, "_on_telon_abierto", [], CONNECT_ONESHOT)
 
 func _on_telon_abierto():
+	telon.queue_free()
 	if(get_node("/root/global").esPrimerNivel()):
 		animarTextoBienvenida()
 	else:
@@ -76,6 +77,7 @@ func boton_apretado(quien):
 				yield(get_node("timerCancion"), "timeout")
 				get_node("cuadro_texto").queue_free()
 				if hayMasNiveles():
+					instanciarTelon()
 					telon.cerrar_telon()
 					yield(telon, "telonCerrado")
 					get_node("/root/global").siguienteNivel()
