@@ -17,7 +17,7 @@ transform/pos = Vector2( 629.16, 574.337 )
 
 visibility/visible = false
 transform/pos = Vector2( -9.52264, -24.4867 )
-transform/scale = Vector2( 0.6, 0.6 )
+transform/scale = Vector2( 0.8, 0.8 )
 
 [node name="bg" type="TextureFrame" parent="."]
 

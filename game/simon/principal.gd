@@ -29,12 +29,12 @@ func _ready():
 	telon.abrir_telon()
 	
 func instanciarTelon():
-	telon = load("res://simon/telon.tscn").instance()
+	telon = get_node("/root/global").get_telon()
 	add_child(telon)
 	telon.connect("telonAbierto", self, "_on_telon_abierto", [], CONNECT_ONESHOT)
 
 func _on_telon_abierto():
-	telon.queue_free()
+	remove_child(telon)
 	if(get_node("/root/global").esPrimerNivel()):
 		animarTextoBienvenida()
 	else:
