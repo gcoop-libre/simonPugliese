@@ -39,6 +39,7 @@ func _on_telon_abierto():
 		animarTextoBienvenida()
 	else:
 		get_node("btnEmpezar").show()
+		get_node("btnEmpezar").set_fixed_process(true)
 		get_node("btnEmpezar").set_disabled(false)
 
 func animarTextoBienvenida():
@@ -113,6 +114,7 @@ func jugar():
 	get_node("btnEmpezar/anim").play("ocultar")
 	yield(get_node("btnEmpezar/anim"), "finished")
 	get_node("btnEmpezar").set_disabled(true)
+	get_node("btnEmpezarDeNuevo").set_fixed_process(false)
 	get_node("timerCortito").start()
 	yield(get_node("timerCortito"), "timeout")
 	continuarPatron()
@@ -145,8 +147,10 @@ func ganarJuego():
 	get_node("teclado/sonidos_ui").play("intro_la_yumba")
 	mostrarPugliese()
 	get_node("btnEmpezarDeNuevo/anim").play("mostrar")
+	get_node("btnEmpezarDeNuevo").set_fixed_process(true)
 
 func _on_btnEmpezarDeNuevo_pressed():
+	get_node("btnEmpezarDeNuevo").set_fixed_process(false)
 	get_node("btnEmpezarDeNuevo/anim").play("ocultar")
 	yield(get_node("btnEmpezarDeNuevo/anim"), "finished")
 	instanciarTelon()
@@ -173,7 +177,7 @@ func _on_empezar_pressed():
 func _on_btnEmpezar_pressed():
 	get_node("fondo/fondo/posicionPugliese/pugliese").hide()
 	jugar()
-	
+
 func esJugable():
 	return true
 	
