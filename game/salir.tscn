@@ -22,14 +22,17 @@ func _on_salir_pressed():
 
 [node name="salir" type="TextureButton"]
 
+process/pause_mode = 2
+anchor/right = 1
+anchor/bottom = 1
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 1224.0
 margin/top = 2.0
-margin/right = 1276.0
-margin/bottom = 65.0
+margin/right = 4.0
+margin/bottom = 655.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
