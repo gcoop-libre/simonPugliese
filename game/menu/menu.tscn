@@ -154,7 +154,7 @@ params/resize_mode = 0
 params/scale = Vector2( 0.5, 0.5 )
 params/stretch_mode = 1
 
-[node name="salir" type="TextureButton" parent="CenterContainer/title screen/buttons"]
+[node name="creditos" type="TextureButton" parent="CenterContainer/title screen/buttons"]
 
 rect/min_size = Vector2( 0, 100 )
 focus/ignore_mouse = false
@@ -210,6 +210,6 @@ centered = false
 
 [connection signal="pressed" from="CenterContainer/title screen/buttons/acerca" to="." method="_on_acerca_pressed"]
 
-[connection signal="pressed" from="CenterContainer/title screen/buttons/salir" to="." method="_on_salir_pressed"]
+[connection signal="pressed" from="CenterContainer/title screen/buttons/creditos" to="." method="_on_creditos_pressed"]
 
 

@@ -19,3 +19,7 @@ func _on_acerca_pressed():
 
 func esJugable():
 	return false
+
+func _on_creditos_pressed():
+	get_node("/root/global").apretar_ui_button()
+	get_node("/root/global").irALosCreditos()
