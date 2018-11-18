@@ -27,7 +27,7 @@ func _ready():
 	mostrarPugliese()
 	instanciarTelon()
 	telon.abrir_telon()
-	
+
 func instanciarTelon():
 	telon = get_node("/root/global").get_telon()
 	add_child(telon)
@@ -51,7 +51,7 @@ func animarTextoBienvenida():
 	dialog.mostrarTexto(textoBienvenida)
 	dialog.conectarBoton("_on_empezar_pressed", self)
 	add_child(dialog)
-	
+
 func conectarTeclado():
 	for octava in get_node("teclado").get_children():
 		for boton in octava.get_children():
@@ -100,7 +100,7 @@ func boton_apretado(quien):
 		get_node("label/error").hide()
 		patronTocado = [] 
 		continuarPatron()
-	
+
 func checkPatronTocado():
 	for i in range(patronTocado.size()):
 		if str(patronTocado[i]) != str(patron[i]):
@@ -128,7 +128,7 @@ func continuarPatron():
 		boton.apretar()
 		yield( boton, "finApretado")
 	deshabilitarInput(false)
-	
+
 func deshabilitarInput(booleano):
 	for octava in get_node("teclado").get_children():
 		for boton in octava.get_children():
@@ -137,7 +137,7 @@ func deshabilitarInput(booleano):
 
 func hayMasNiveles():
 	return cantidadNiveles - 1 > get_node("/root/global").subNivelActual
-	
+
 func ganarJuego():
 	get_node("label/fin").show()
 	get_node("label/anim").play("mostrar")
@@ -160,7 +160,7 @@ func _on_btnEmpezarDeNuevo_pressed():
 
 func animarMusicosOrquesta():
 	get_node("fondo/fondo/escenario/orquesta").animarMusicos()
-	
+
 func mostrarPugliese():
 	get_node("teclado").quitar_teclas()
 	get_node("fondo/fondo/posicionPugliese/pugliese").show()
@@ -180,21 +180,30 @@ func _on_btnEmpezar_pressed():
 
 func esJugable():
 	return true
-	
+
 func tocarCancion():
 	mostrarPugliese()
 	var canciones = get_node("canciones")
 	canciones.sonar()
 	animarTextoCancion()
-	
+
 func animarTextoCancion():
 	var textoCancion = get_node("canciones").get_texto_cancion()
 	dialog = get_node("/root/global").get_dialog()
-	var posicion = (get_node("nombre_cancion").get_pos())
-	var polygon = Vector2Array([Vector2(posicion.x, posicion.y), Vector2(posicion.x, posicion.y + 80), Vector2(posicion.x + 426, posicion.y + 80), Vector2(posicion.x + 426, posicion.y)])
-	dialog.set_polygon(polygon)
-	dialog.posicionarTexto(Vector2(posicion.x + 40, posicion.y + 20))
-	dialog.mostrarTexto(textoCancion)
+	ubicarTextoCancion(dialog, textoCancion)
 	add_child(dialog) 
 	dialog.quitarBoton()
-	
+
+func ubicarTextoCancion(dialogo, texto):
+	# Traer posición del objeto nombre_cancion
+	var posicion = (get_node("nombre_cancion").get_pos())
+	# Calcular ancho y posición x del dialogo en funcion del texto
+	var lenTexto = texto[0].length()
+	var ancho = lenTexto * 11.3
+	var posx = posicion.x - (ancho / 2)
+	var polygon = Vector2Array([Vector2(posx, posicion.y), Vector2(posx, posicion.y + 80), Vector2(posx + ancho, posicion.y + 80), Vector2(posx + ancho, posicion.y)])
+	# Posicionar dialogo y texto
+	dialogo.set_polygon(polygon)
+	dialogo.posicionarTexto(Vector2(posx + (ancho * 0.08), posicion.y + 20))
+	dialog.mostrarTexto(texto)
+	return dialogo
