@@ -196,11 +196,11 @@ func _ready():
 func get_texto_cancion():
 	var txt = \"\"
 	if(track == \"cancion_0\"):
-		txt = [\"La yumba - Simon Pugliese y Orquesta\"]
+		txt = [\"La Yumba - Música: Osvaldo Pugliese\"]
 	if(track == \"cancion_1\"):
-		txt = [\"La otra yumba - Simon Pugliese y Orquesta\"]
+		txt = [\"Recuerdo - Música: Osvaldo Pugliese, Letra: Eduardo Moreno\"]
 	if(track == \"cancion_2\"):
-		txt = [\"La otra otra yumba - Simon Pugliese y Orquesta\"]
+		txt = [\"La Mariposa - Música: Pedro Maffia, Letra: Celedonio Flores\"]
 	return txt
 
 func sonar():
