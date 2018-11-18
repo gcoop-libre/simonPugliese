@@ -3,8 +3,8 @@
 extends HBoxContainer
 
 func _ready():
-	pass
-	
+	add_child(get_node("/root/global").get_boton_salir())
+
 func _on_jugar_pressed():
 	get_node("/root/global").apretar_ui_button()
 	get_node("/root/global").empezarJuego()

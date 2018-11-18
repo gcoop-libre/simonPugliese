@@ -7,8 +7,8 @@
 [ext_resource path="res://assets/buttons/jugar.pbm" type="BitMap" id=5]
 [ext_resource path="res://assets/buttons/acerca_de.png" type="Texture" id=6]
 [ext_resource path="res://assets/buttons/acerca_de_pressed.png" type="Texture" id=7]
-[ext_resource path="res://assets/buttons/salir.png" type="Texture" id=8]
-[ext_resource path="res://assets/buttons/salir_pressed.png" type="Texture" id=9]
+[ext_resource path="res://assets/buttons/creditos.png" type="Texture" id=8]
+[ext_resource path="res://assets/buttons/creditos_pressed.png" type="Texture" id=9]
 [ext_resource path="res://simon/fondos/fondo-plaza.jpg" type="Texture" id=10]
 
 [node name="menu" type="HBoxContainer"]
@@ -161,9 +161,9 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 0
 size_flags/vertical = 0
-margin/left = 0.0
+margin/left = 77.0
 margin/top = 208.0
-margin/right = 299.0
+margin/right = 221.5
 margin/bottom = 308.0
 toggle_mode = false
 enabled_focus_mode = 2

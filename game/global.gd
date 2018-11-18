@@ -21,6 +21,7 @@ var cancion
 var dialog
 var pausa
 var telon
+var salir
 
 func _ready():
 	get_tree().set_auto_accept_quit(false)
@@ -29,6 +30,7 @@ func _ready():
 	orquesta = preload("res://orquesta/orquesta.tscn")
 	pugliese = preload("res://orquesta/pugliese.tscn")
 	pausa = preload("res://pausa.tscn")
+	salir = preload("res://salir.tscn")
 	dialog = preload("res://dialog/dialog.tscn")
 	telon = preload("res://simon/telon.tscn")
 	play_intro_song()
@@ -118,6 +120,7 @@ func _deferred_goto_scene(path):
     get_tree().set_current_scene( current_scene )
     if(current_scene.esJugable()):
         current_scene.add_child(get_boton_pausa())
+        current_scene.add_child(get_boton_salir())
 
 func sumarItem(nombreItem):
 	self.set(nombreItem, self.get(nombreItem) + 1)
@@ -138,7 +141,10 @@ func apretar_ui_button():
 
 func get_boton_pausa():
 	return pausa.instance()
-	
+
+func get_boton_salir():
+	return salir.instance()
+
 func irAlMenu():
 	call_deferred("_deferred_goto_scene", "res://menu/info.tscn")
 

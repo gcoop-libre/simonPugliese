@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://assets/buttons/cerrar.png" type="Texture" id=1]
+
+[sub_resource type="GDScript" id=1]
+
+script/source = "extends TextureButton
+
+# class member variables go here, for example:
+# var a = 2
+# var b = \"textvar\"
+
+func _ready():
+	# Called every time the node is added to the scene.
+	# Initialization here
+	pass
+
+func _on_salir_pressed():
+	get_tree().set_pause(true)
+	get_node(\"/root/global\").pausarSonido()
+	get_node(\"/root/global\").promptSalir()"
+
+[node name="salir" type="TextureButton"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1224.0
+margin/top = 2.0
+margin/right = 1276.0
+margin/bottom = 65.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 1 )
+params/resize_mode = 0
+params/stretch_mode = 0
+script/script = SubResource( 1 )
+
+[connection signal="pressed" from="." to="." method="_on_salir_pressed"]
+
+
