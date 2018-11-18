@@ -12,3 +12,5 @@ Simon Pugliese está desarrollado con la herramienta Godot Engine.
 Acerca de [Pugliese](http://es.wikipedia.org/wiki/Osvaldo_Pugliese)
 Acerca de [Simon](http://es.wikipedia.org/wiki/Simon_%28juego%29)
 Acerca de [Godot](https://godotengine.org/)
+
+[Web](https://simonpugliese.com.ar)
