@@ -512,7 +512,7 @@ textures/click_mask = ExtResource( 11 )
 [node name="B2" parent="teclado/octava2" instance=ExtResource( 5 )]
 
 editor/display_folded = true
-transform/pos = Vector2( 1023.84, 466.781 )
+transform/pos = Vector2( 1021.5, 466 )
 
 [node name="boton-lb" parent="teclado/octava2/B2"]
 
