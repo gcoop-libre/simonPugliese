@@ -37,8 +37,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="3.0005272"
-     inkscape:cx="81.306259"
-     inkscape:cy="791.65137"
+     inkscape:cx="230.14921"
+     inkscape:cy="905.63471"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -232,47 +232,52 @@
            id="tspan5885-0-9"
            sodipodi:role="line">Acerca de</tspan></text>
     </g>
-    <rect
-       style="opacity:1;fill:#b12645;fill-opacity:0;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect6173-8-5"
-       width="173.59471"
-       height="45.254833"
-       x="75.791367"
-       y="275.87057" />
     <g
-       id="g4596">
+       id="g4583"
+       inkscape:export-xdpi="310"
+       inkscape:export-ydpi="310">
+      <rect
+         y="275.87057"
+         x="75.791367"
+         height="45.254833"
+         width="173.59471"
+         id="rect6173-8-5"
+         style="opacity:1;fill:#b12645;fill-opacity:0;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       <g
-         id="g4577">
-        <rect
-           style="opacity:1;fill:#c98ee9;fill-opacity:1;stroke:#006000;stroke-width:1;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
-           id="rect5881-3-7-0"
-           width="171"
-           height="36"
-           x="77.088722"
-           y="282.81143"
-           rx="4"
-           ry="4" />
-        <rect
-           style="opacity:1;fill:#b766e1;fill-opacity:1;stroke:#006000;stroke-width:1;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
-           id="rect5881-9-3"
-           width="171"
-           height="36"
-           x="77.088722"
-           y="281.24799"
-           rx="4"
-           ry="4" />
-      </g>
-      <text
-         id="text5883-2-6"
-         y="310.32141"
-         x="111.45934"
-         style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32.44398499px;line-height:1.69000006;font-family:'Hauracherell NC';-inkscape-font-specification:'Hauracherell NC';fill:#ffffff;fill-opacity:1;stroke:none;stroke-opacity:1"
-           y="310.32141"
+         id="g4596">
+        <g
+           id="g4577">
+          <rect
+             ry="4"
+             rx="4"
+             y="282.81143"
+             x="77.088722"
+             height="36"
+             width="171"
+             id="rect5881-3-7-0"
+             style="opacity:1;fill:#c98ee9;fill-opacity:1;stroke:#006000;stroke-width:1;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0" />
+          <rect
+             ry="4"
+             rx="4"
+             y="281.24799"
+             x="77.088722"
+             height="36"
+             width="171"
+             id="rect5881-9-3"
+             style="opacity:1;fill:#b766e1;fill-opacity:1;stroke:#006000;stroke-width:1;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0" />
+        </g>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
            x="111.45934"
-           id="tspan5885-0-1"
-           sodipodi:role="line">Créditos</tspan></text>
+           y="310.32141"
+           id="text5883-2-6"><tspan
+             sodipodi:role="line"
+             id="tspan5885-0-1"
+             x="111.45934"
+             y="310.32141"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32.44398499px;line-height:1.69000006;font-family:'Hauracherell NC';-inkscape-font-specification:'Hauracherell NC';fill:#ffffff;fill-opacity:1;stroke:none;stroke-opacity:1">Créditos</tspan></text>
+      </g>
     </g>
     <g
        id="g4589">
