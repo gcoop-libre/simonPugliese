@@ -22,6 +22,7 @@ var dialog
 var pausa
 var telon
 var salir
+var link_sitio 
 
 func _ready():
 	get_tree().set_auto_accept_quit(false)
@@ -33,6 +34,7 @@ func _ready():
 	salir = preload("res://salir.tscn")
 	dialog = preload("res://dialog/dialog.tscn")
 	telon = preload("res://simon/telon.tscn")
+	link_sitio = preload("res://menu/link_sitio.tscn")
 	play_intro_song()
 
 func _notification(what):
@@ -144,6 +146,9 @@ func get_boton_pausa():
 
 func get_boton_salir():
 	return salir.instance()
+
+func get_link_sitio():
+	return link_sitio.instance()
 
 func irAlMenu():
 	call_deferred("_deferred_goto_scene", "res://menu/info.tscn")

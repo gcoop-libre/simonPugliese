@@ -13,6 +13,9 @@ func mostrarTexto(txt):
 func conectarBoton(_func, nodoControlador):
 	get_node("boton").connect("pressed", nodoControlador, _func, [], CONNECT_ONESHOT)
 	
+func conectarTextoCompleto(_func, nodoControlador):
+	get_node("RichTextLabel").connect("textoCompleto", nodoControlador, _func, [], CONNECT_ONESHOT)
+
 func ocultar():
 	hide()
 	
