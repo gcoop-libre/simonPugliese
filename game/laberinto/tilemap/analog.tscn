@@ -20,9 +20,9 @@ normal = ExtResource( 1 )
 pressed = ExtResource( 2 )
 bitmask = null
 shape = null
-shape_centered = true
-shape_visible = true
-passby_press = false
+shape_centered = false
+shape_visible = false
+passby_press = true
 action = "ui_up"
 visibility_mode = 1
 
@@ -35,7 +35,7 @@ bitmask = null
 shape = null
 shape_centered = true
 shape_visible = true
-passby_press = false
+passby_press = true
 action = "ui_right"
 visibility_mode = 1
 
@@ -48,7 +48,7 @@ bitmask = null
 shape = null
 shape_centered = true
 shape_visible = true
-passby_press = false
+passby_press = true
 action = "ui_left"
 visibility_mode = 1
 
@@ -61,7 +61,7 @@ bitmask = null
 shape = null
 shape_centered = true
 shape_visible = true
-passby_press = false
+passby_press = true
 action = "ui_down"
 visibility_mode = 1
 
