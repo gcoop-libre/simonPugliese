@@ -257,7 +257,7 @@ _update_shape_index = 0
 transform/pos = Vector2( 68.9066, 92.2083 )
 frames = SubResource( 3 )
 animation = "anim-right-stop"
-frame = 1
+frame = 2
 playing = true
 
 [node name="humo" type="Particles2D" parent="personaje/camion"]
@@ -351,6 +351,9 @@ one_shot = true
 autostart = false
 
 [node name="analog" parent="." instance=ExtResource( 76 )]
+
+transform/pos = Vector2( 20.0422, 713.169 )
+transform/scale = Vector2( 0.5, 0.5 )
 
 [connection signal="gane" from="." to="." method="_on_escena_gane" flags=6]
 
