@@ -11,9 +11,7 @@ script/source = "extends TextureButton
 # var b = \"textvar\"
 
 func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here
-	pass
+	set_focus_mode(0)
 
 func _on_salir_pressed():
 	get_tree().set_pause(true)

@@ -4,6 +4,7 @@ var textura_pausado = load("res://assets/buttons/play.png")
 var textura_jugando = load("res://assets/buttons/pause.png")
 
 func _ready():
+	set_focus_mode(0)
 	set_normal_texture(textura_jugando)
 	
 func _on_pausa_pressed():
