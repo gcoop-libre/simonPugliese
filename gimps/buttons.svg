@@ -28,6 +28,60 @@
          offset="0"
          id="stop4436" />
     </linearGradient>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Invert"
+       id="filter4658">
+      <feColorMatrix
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 -0.21 -0.72 -0.07 2 0 "
+         result="color2"
+         id="feColorMatrix4660" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Invert"
+       id="filter4662">
+      <feColorMatrix
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 -0.21 -0.72 -0.07 2 0 "
+         result="color2"
+         id="feColorMatrix4664" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Invert"
+       id="filter4666">
+      <feColorMatrix
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 -0.21 -0.72 -0.07 2 0 "
+         result="color2"
+         id="feColorMatrix4668" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Invert"
+       id="filter5117">
+      <feColorMatrix
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 -0.21 -0.72 -0.07 2 0 "
+         result="color2"
+         id="feColorMatrix5119" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB"
+       inkscape:label="Invert"
+       id="filter5117-7">
+      <feColorMatrix
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 -0.21 -0.72 -0.07 2 0 "
+         result="color2"
+         id="feColorMatrix5119-7" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB"
+       inkscape:label="Invert"
+       id="filter5159">
+      <feColorMatrix
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 -0.21 -0.72 -0.07 2 0 "
+         result="color2"
+         id="feColorMatrix5161" />
+    </filter>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -36,9 +90,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.1216931"
-     inkscape:cx="224.88126"
-     inkscape:cy="465.10227"
+     inkscape:zoom="8.4867725"
+     inkscape:cx="60.670984"
+     inkscape:cy="403.09553"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -848,213 +902,519 @@
            sodipodi:role="line"
            id="tspan5217-8">▶️</tspan></text>
     </g>
-    <g
-       id="g4467">
-      <rect
-         y="630.16241"
-         x="84.691536"
-         height="37.675316"
-         width="31.399956"
-         id="rect6173-31-7-6"
-         style="opacity:1;fill:#b12645;fill-opacity:0;stroke:none;stroke-width:0.38805407;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      <rect
-         ry="3.3300591"
-         rx="3.5355282"
-         y="635.9408"
-         x="84.926201"
-         height="29.970531"
-         width="30.930622"
-         id="rect5881-3-9-5-7"
-         style="opacity:1;fill:#6a6a6a;fill-opacity:1;stroke:#006000;stroke-width:0.38805407;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0" />
-      <rect
-         ry="3.3300591"
-         rx="2.988749"
-         y="634.01483"
-         x="84.926201"
-         height="29.970531"
-         width="30.930622"
-         id="rect5881-4-3-5"
-         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#006000;stroke-width:0.38805407;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0" />
-      <flowRoot
-         transform="matrix(0.18088083,0,0,0.83251474,89.967544,439.20163)"
-         style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         id="flowRoot6465-2-35"
-         xml:space="preserve"><flowRegion
-           id="flowRegion6467-9-62"><rect
-             y="230.70412"
-             x="57.629204"
-             height="114.5513"
-             width="257.03333"
-             id="rect6469-1-9" /></flowRegion><flowPara
-           style="font-size:40px;line-height:1.69000006"
-           id="flowPara6471-2-1"> </flowPara></flowRoot>      <text
-         sodipodi:linespacing="0%"
-         id="text5883-7-5-27"
-         y="661.64661"
-         x="91.504791"
-         style="font-style:normal;font-weight:normal;font-size:35px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35px;line-height:1.69000006;font-family:'Hauracherell NC';-inkscape-font-specification:'Hauracherell NC';fill:#000000;fill-opacity:1;stroke:none;stroke-opacity:1"
-           y="661.64661"
-           x="91.504791"
-           id="tspan5885-8-6-0"
-           sodipodi:role="line">🠺</tspan></text>
-    </g>
-    <g
-       transform="translate(40.062351,-3.8269513e-7)"
-       id="g4335-9">
-      <rect
-         y="630.16241"
-         x="84.691536"
-         height="37.675316"
-         width="31.399956"
-         id="rect6173-31-7-6-3"
-         style="opacity:1;fill:#b12645;fill-opacity:0;stroke:none;stroke-width:0.38805407;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      <rect
-         ry="3.3300591"
-         rx="3.5355282"
-         y="635.9408"
-         x="84.926201"
-         height="29.970531"
-         width="30.930622"
-         id="rect5881-3-9-5-7-6"
-         style="opacity:1;fill:#6a6a6a;fill-opacity:1;stroke:#006000;stroke-width:0.38805407;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0" />
-      <rect
-         ry="3.3300591"
-         rx="2.988749"
-         y="634.01483"
-         x="84.926201"
-         height="29.970531"
-         width="30.930622"
-         id="rect5881-4-3-5-0"
-         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#006000;stroke-width:0.38805407;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0" />
-      <flowRoot
-         transform="matrix(0.18088083,0,0,0.83251474,89.967544,439.20163)"
-         style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         id="flowRoot6465-2-35-6"
-         xml:space="preserve"><flowRegion
-           id="flowRegion6467-9-62-2"><rect
-             y="230.70412"
-             x="57.629204"
-             height="114.5513"
-             width="257.03333"
-             id="rect6469-1-9-6" /></flowRegion><flowPara
-           style="font-size:40px;line-height:1.69000006"
-           id="flowPara6471-2-1-1"> </flowPara></flowRoot>      <text
-         sodipodi:linespacing="0%"
-         id="text5883-7-5-27-8"
-         y="661.64661"
-         x="89.40274"
-         style="font-style:normal;font-weight:normal;font-size:35px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35px;line-height:1.69000006;font-family:'Hauracherell NC';-inkscape-font-specification:'Hauracherell NC';fill:#000000;fill-opacity:1;stroke:none;stroke-opacity:1"
-           y="661.64661"
-           x="89.40274"
-           id="tspan5885-8-6-0-7"
-           sodipodi:role="line">🠻</tspan></text>
-    </g>
+    <rect
+       style="opacity:1;fill:#b12645;fill-opacity:0;stroke:none;stroke-width:0.38805407;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect6173-31-7-6"
+       width="31.399956"
+       height="37.675316"
+       x="84.691536"
+       y="630.39807" />
+    <rect
+       style="opacity:1;fill:#b12645;fill-opacity:0;stroke:none;stroke-width:0.38805407;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect6173-31-7-6-3"
+       width="31.399956"
+       height="37.675316"
+       x="124.75388"
+       y="630.39807" />
     <rect
        style="opacity:1;fill:#b12645;fill-opacity:0;stroke:none;stroke-width:0.38805407;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect6173-31-7-6-3-2"
        width="31.399956"
        height="37.675316"
        x="165.28755"
-       y="630.63373" />
+       y="630.39807" />
     <rect
-       style="opacity:1;fill:#6a6a6a;fill-opacity:1;stroke:#006000;stroke-width:0.38805407;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
-       id="rect5881-3-9-5-7-6-0"
-       width="30.930622"
-       height="29.970531"
-       x="165.52222"
-       y="636.41211"
-       rx="3.5355282"
-       ry="3.3300591" />
-    <rect
-       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#006000;stroke-width:0.38805407;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
-       id="rect5881-4-3-5-0-2"
-       width="30.930622"
-       height="29.970531"
-       x="165.52222"
-       y="634.48615"
-       rx="2.988749"
-       ry="3.3300591" />
+       style="opacity:1;fill:#b12645;fill-opacity:0;stroke:none;stroke-width:0.38805407;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4658)"
+       id="rect6173-31-7-6-5"
+       width="31.399956"
+       height="37.675316"
+       x="84.455879"
+       y="676.58759" />
     <flowRoot
        xml:space="preserve"
-       id="flowRoot6465-2-35-6-3"
-       style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       transform="matrix(0.18088083,0,0,0.83251474,170.56356,439.67295)"><flowRegion
-         id="flowRegion6467-9-62-2-7"><rect
-           id="rect6469-1-9-6-5"
+       id="flowRoot6465-2-35-61"
+       style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter4658)"
+       transform="matrix(0.18088083,0,0,0.83251474,89.731887,485.62682)"><flowRegion
+         id="flowRegion6467-9-62-0"><rect
+           id="rect6469-1-9-63"
            width="257.03333"
            height="114.5513"
            x="57.629204"
            y="230.70412" /></flowRegion><flowPara
-         id="flowPara6471-2-1-1-9"
-         style="font-size:40px;line-height:1.69000006"> </flowPara></flowRoot>    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:35px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="169.99876"
-       y="662.11792"
-       id="text5883-7-5-27-8-2"
-       sodipodi:linespacing="0%"><tspan
-         sodipodi:role="line"
-         id="tspan5885-8-6-0-7-2"
-         x="169.99876"
-         y="662.11792"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35px;line-height:1.69000006;font-family:'Hauracherell NC';-inkscape-font-specification:'Hauracherell NC';fill:#000000;fill-opacity:1;stroke:none;stroke-opacity:1">🠹</tspan><tspan
-         sodipodi:role="line"
-         x="169.99876"
-         y="721.26794"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35px;line-height:1.69000006;font-family:'Hauracherell NC';-inkscape-font-specification:'Hauracherell NC';fill:#000000;fill-opacity:1;stroke:none;stroke-opacity:1"
-         id="tspan4448" /></text>
-    <rect
-       style="opacity:1;fill:#b12645;fill-opacity:0;stroke:none;stroke-width:0.38805407;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect6173-31-7-6-9"
+         id="flowPara6471-2-1-2"
+         style="font-size:40px;line-height:1.69000006"> </flowPara></flowRoot>    <rect
+       style="opacity:1;fill:#b12645;fill-opacity:0;stroke:none;stroke-width:0.38805407;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4662)"
+       id="rect6173-31-7-6-3-5"
        width="31.399956"
        height="37.675316"
-       x="203.93593"
-       y="631.57635" />
+       x="124.51823"
+       y="676.58759" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot6465-2-35-6-7"
+       style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter4662)"
+       transform="matrix(0.18088083,0,0,0.83251474,129.79424,485.62682)"><flowRegion
+         id="flowRegion6467-9-62-2-6"><rect
+           id="rect6469-1-9-6-56"
+           width="257.03333"
+           height="114.5513"
+           x="57.629204"
+           y="230.70412" /></flowRegion><flowPara
+         id="flowPara6471-2-1-1-93"
+         style="font-size:40px;line-height:1.69000006"> </flowPara></flowRoot>    <rect
+       style="opacity:1;fill:#b12645;fill-opacity:0;stroke:none;stroke-width:0.38805407;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4666)"
+       id="rect6173-31-7-6-3-2-2"
+       width="31.399956"
+       height="37.675316"
+       x="165.0519"
+       y="677.0589" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot6465-2-35-6-3-7"
+       style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter4666)"
+       transform="matrix(0.18088083,0,0,0.83251474,170.3279,486.09814)"><flowRegion
+         id="flowRegion6467-9-62-2-7-4"><rect
+           id="rect6469-1-9-6-5-4"
+           width="257.03333"
+           height="114.5513"
+           x="57.629204"
+           y="230.70412" /></flowRegion><flowPara
+         id="flowPara6471-2-1-1-9-3"
+         style="font-size:40px;line-height:1.69000006"> </flowPara></flowRoot>    <rect
+       style="opacity:1;fill:#b12645;fill-opacity:0;stroke:none;stroke-width:0.38805407;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect6173-31-7-6-31"
+       width="31.399956"
+       height="37.675316"
+       x="127.46398"
+       y="628.88861" />
+    <g
+       id="g4919"
+       transform="translate(0,0.60147853)">
+      <rect
+         inkscape:export-ydpi="310"
+         inkscape:export-xdpi="310"
+         inkscape:export-filename="/home/marin/jueguitos/simonPugliese/game/assets/buttons/arrows/abajo.png"
+         y="632.43695"
+         x="127.49252"
+         height="32.285534"
+         width="31.460722"
+         id="rect4782-4"
+         style="opacity:1;fill:#bc2929;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.24291496" />
+      <rect
+         ry="3.3300591"
+         rx="3.5355282"
+         y="634.66699"
+         x="127.69865"
+         height="29.970531"
+         width="30.930622"
+         id="rect5881-3-9-5-7-4"
+         style="opacity:1;fill:#6a6a6a;fill-opacity:1;stroke:#006000;stroke-width:0.38805407;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0" />
+      <rect
+         ry="3.3300591"
+         rx="2.988749"
+         y="632.74103"
+         x="127.69865"
+         height="29.970531"
+         width="30.930622"
+         id="rect5881-4-3-5-9"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#c0c0c0;stroke-width:0.38805407;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.24291496" />
+      <text
+         sodipodi:linespacing="0%"
+         id="text5883-7-5-27-2"
+         y="660.3728"
+         x="132.17519"
+         style="font-style:normal;font-weight:normal;font-size:35px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35px;line-height:1.69000006;font-family:'Hauracherell NC';-inkscape-font-specification:'Hauracherell NC';fill:#000000;fill-opacity:1;stroke:none;stroke-opacity:1"
+           y="660.3728"
+           x="132.17519"
+           id="tspan5885-8-6-0-0"
+           sodipodi:role="line">🠻</tspan></text>
+    </g>
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.24291496"
+       id="rect4753-6"
+       width="31.460732"
+       height="32.521191"
+       x="127.37469"
+       y="632.97516"
+       rx="2.98875"
+       ry="3.33006"
+       inkscape:export-filename="/home/marin/jueguitos/simonPugliese/game/assets/buttons/arrows/derecha.png"
+       inkscape:export-xdpi="310"
+       inkscape:export-ydpi="310" />
+    <rect
+       style="opacity:1;fill:#b12645;fill-opacity:0;stroke:none;stroke-width:0.38805407;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect6173-31-7-6-31-2"
+       width="31.399956"
+       height="37.675316"
+       x="163.87358"
+       y="629.36621" />
+    <g
+       id="g4896"
+       transform="translate(0,0.178442)">
+      <rect
+         inkscape:export-ydpi="310"
+         inkscape:export-xdpi="310"
+         inkscape:export-filename="/home/marin/jueguitos/simonPugliese/game/assets/buttons/arrows/arriba.png"
+         y="632.91455"
+         x="163.90211"
+         height="32.285534"
+         width="31.460722"
+         id="rect4782-4-9"
+         style="opacity:1;fill:#bc2929;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.24291496" />
+      <rect
+         ry="3.3300591"
+         rx="3.5355282"
+         y="635.14459"
+         x="164.10825"
+         height="29.970531"
+         width="30.930622"
+         id="rect5881-3-9-5-7-4-6"
+         style="opacity:1;fill:#6a6a6a;fill-opacity:1;stroke:#006000;stroke-width:0.38805407;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0" />
+      <rect
+         ry="3.3300591"
+         rx="2.988749"
+         y="633.21863"
+         x="164.10825"
+         height="29.970531"
+         width="30.930622"
+         id="rect5881-4-3-5-9-6"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#c0c0c0;stroke-width:0.38805407;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.24291496" />
+      <text
+         sodipodi:linespacing="0%"
+         id="text5883-7-5-27-2-4"
+         y="660.8504"
+         x="168.58479"
+         style="font-style:normal;font-weight:normal;font-size:35px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35px;line-height:1.69000006;font-family:'Hauracherell NC';-inkscape-font-specification:'Hauracherell NC';fill:#000000;fill-opacity:1;stroke:none;stroke-opacity:1"
+           y="660.8504"
+           x="168.58479"
+           id="tspan5885-8-6-0-0-9"
+           sodipodi:role="line">🠹</tspan></text>
+      <rect
+         inkscape:export-ydpi="310"
+         inkscape:export-xdpi="310"
+         inkscape:export-filename="/home/marin/jueguitos/simonPugliese/game/assets/buttons/arrows/derecha.png"
+         ry="3.33006"
+         rx="2.98875"
+         y="632.79669"
+         x="163.78429"
+         height="32.521191"
+         width="31.460732"
+         id="rect4753-6-5"
+         style="opacity:1;fill:none;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.24291496" />
+    </g>
+    <rect
+       style="opacity:1;fill:#bc2929;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.24291496"
+       id="rect4782-4-2"
+       width="31.460722"
+       height="32.285534"
+       x="128.19951"
+       y="669.71228"
+       inkscape:export-filename="/home/marin/jueguitos/simonPugliese/game/assets/buttons/arrows/abajo_pressed.png"
+       inkscape:export-xdpi="310"
+       inkscape:export-ydpi="310" />
+    <rect
+       style="opacity:1;fill:#6a6a6a;fill-opacity:1;stroke:#006000;stroke-width:0.38805407;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
+       id="rect5881-3-9-5-7-4-61"
+       width="30.930622"
+       height="29.970531"
+       x="128.40564"
+       y="671.94232"
+       rx="3.5355282"
+       ry="3.3300591" />
+    <rect
+       style="opacity:0;fill:#bc2929;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.24291496"
+       id="rect4782-4-9-9"
+       width="31.460722"
+       height="32.285534"
+       x="164.6091"
+       y="669.76685"
+       inkscape:export-filename="/home/marin/jueguitos/simonPugliese/game/assets/buttons/arrows/arriba_pressed.png"
+       inkscape:export-xdpi="310"
+       inkscape:export-ydpi="310" />
+    <rect
+       style="opacity:1;fill:#6a6a6a;fill-opacity:1;stroke:#006000;stroke-width:0.38805407;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
+       id="rect5881-3-9-5-7-4-6-4"
+       width="30.930622"
+       height="29.970531"
+       x="164.81523"
+       y="671.99689"
+       rx="3.5355282"
+       ry="3.3300591" />
+    <rect
+       style="opacity:1;fill:#bc2929;fill-opacity:0;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.24291496"
+       id="rect4782"
+       width="31.460722"
+       height="32.285534"
+       x="45.011215"
+       y="633.09302"
+       inkscape:export-filename="/home/marin/jueguitos/simonPugliese/game/assets/buttons/arrows/derecha.png"
+       inkscape:export-xdpi="310"
+       inkscape:export-ydpi="310" />
+    <rect
+       style="opacity:1;fill:#6a6a6a;fill-opacity:1;stroke:#006000;stroke-width:0.38805407;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
+       id="rect5881-3-9-5-7"
+       width="30.930622"
+       height="29.970531"
+       x="45.217346"
+       y="635.32306"
+       rx="3.5355282"
+       ry="3.3300591" />
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#c0c0c0;stroke-width:0.38805407;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.24291496"
+       id="rect5881-4-3-5"
+       width="30.930622"
+       height="29.970531"
+       x="45.217346"
+       y="633.39709"
+       rx="2.988749"
+       ry="3.3300591" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:35px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="51.795937"
+       y="661.02887"
+       id="text5883-7-5-27"
+       sodipodi:linespacing="0%"><tspan
+         sodipodi:role="line"
+         id="tspan5885-8-6-0"
+         x="51.795937"
+         y="661.02887"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35px;line-height:1.69000006;font-family:'Hauracherell NC';-inkscape-font-specification:'Hauracherell NC';fill:#000000;fill-opacity:1;stroke:none;stroke-opacity:1">🠺</tspan></text>
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.24291496"
+       id="rect4753"
+       width="31.460732"
+       height="32.521191"
+       x="44.893387"
+       y="632.97516"
+       rx="2.98875"
+       ry="3.33006"
+       inkscape:export-filename="/home/marin/jueguitos/simonPugliese/game/assets/buttons/arrows/derecha.png"
+       inkscape:export-xdpi="310"
+       inkscape:export-ydpi="310" />
+    <rect
+       style="opacity:1;fill:#bc2929;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.24291496"
+       id="rect4782-48"
+       width="31.460722"
+       height="32.285534"
+       x="45.718201"
+       y="669.76685"
+       inkscape:export-filename="/home/marin/jueguitos/simonPugliese/game/assets/buttons/arrows/derecha_pressed.png"
+       inkscape:export-xdpi="310"
+       inkscape:export-ydpi="310" />
     <rect
        style="opacity:1;fill:#6a6a6a;fill-opacity:1;stroke:#006000;stroke-width:0.38805407;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
        id="rect5881-3-9-5-7-7"
        width="30.930622"
        height="29.970531"
-       x="204.17059"
-       y="637.35474"
+       x="45.924332"
+       y="671.99689"
        rx="3.5355282"
        ry="3.3300591" />
     <rect
-       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#006000;stroke-width:0.38805407;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
-       id="rect5881-4-3-5-3"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.24291496"
+       id="rect4753-7"
+       width="31.460732"
+       height="32.521191"
+       x="45.600372"
+       y="669.64899"
+       rx="2.98875"
+       ry="3.33006"
+       inkscape:export-filename="/home/marin/jueguitos/simonPugliese/game/assets/buttons/arrows/derecha.png"
+       inkscape:export-xdpi="310"
+       inkscape:export-ydpi="310" />
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#c0c0c0;stroke-width:0.38805407;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.24291496;filter:url(#filter5117)"
+       id="rect5881-4-3-5-1"
        width="30.930622"
        height="29.970531"
-       x="204.17059"
-       y="635.42877"
+       x="46.04216"
+       y="671.13141"
        rx="2.988749"
        ry="3.3300591" />
-    <flowRoot
+    <text
        xml:space="preserve"
-       id="flowRoot6465-2-35-61"
-       style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       transform="matrix(0.18088083,0,0,0.83251474,209.21194,440.61559)"><flowRegion
-         id="flowRegion6467-9-62-29"><rect
-           id="rect6469-1-9-3"
-           width="257.03333"
-           height="114.5513"
-           x="57.629204"
-           y="230.70412" /></flowRegion><flowPara
-         id="flowPara6471-2-1-19"
-         style="font-size:40px;line-height:1.69000006"> </flowPara></flowRoot>    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:35px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="209.46745"
-       y="660.94995"
-       id="text5883-7-5-27-4"
+       style="font-style:normal;font-weight:normal;font-size:35px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter5117)"
+       x="52.62075"
+       y="698.76318"
+       id="text5883-7-5-27-7"
        sodipodi:linespacing="0%"><tspan
          sodipodi:role="line"
-         id="tspan5885-8-6-0-78"
-         x="209.46745"
-         y="660.94995"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35px;line-height:1.69000006;font-family:'Hauracherell NC';-inkscape-font-specification:'Hauracherell NC';fill:#000000;fill-opacity:1;stroke:none;stroke-opacity:1">🠸 </tspan></text>
+         id="tspan5885-8-6-0-2"
+         x="52.62075"
+         y="698.76318"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35px;line-height:1.69000006;font-family:'Hauracherell NC';-inkscape-font-specification:'Hauracherell NC';fill:#000000;fill-opacity:1;stroke:none;stroke-opacity:1">🠺</tspan></text>
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#c0c0c0;stroke-width:0.38805407;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.24291496;filter:url(#filter5117)"
+       id="rect5881-4-3-5-9-0"
+       width="30.930622"
+       height="29.970531"
+       x="128.52347"
+       y="671.07684"
+       rx="2.988749"
+       ry="3.3300591" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:35px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter5117)"
+       x="133.00002"
+       y="698.70862"
+       id="text5883-7-5-27-2-6"
+       sodipodi:linespacing="0%"><tspan
+         sodipodi:role="line"
+         id="tspan5885-8-6-0-0-1"
+         x="133.00002"
+         y="698.70862"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35px;line-height:1.69000006;font-family:'Hauracherell NC';-inkscape-font-specification:'Hauracherell NC';fill:#000000;fill-opacity:1;stroke:none;stroke-opacity:1">🠻</tspan></text>
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#c0c0c0;stroke-width:0.38805407;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.24291496;filter:url(#filter5117)"
+       id="rect5881-4-3-5-9-6-9"
+       width="30.930622"
+       height="29.970531"
+       x="164.93306"
+       y="671.13141"
+       rx="2.988749"
+       ry="3.3300591" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:35px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter5117)"
+       x="169.40961"
+       y="698.76318"
+       id="text5883-7-5-27-2-4-0"
+       sodipodi:linespacing="0%"><tspan
+         sodipodi:role="line"
+         id="tspan5885-8-6-0-0-9-9"
+         x="169.40961"
+         y="698.76318"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35px;line-height:1.69000006;font-family:'Hauracherell NC';-inkscape-font-specification:'Hauracherell NC';fill:#000000;fill-opacity:1;stroke:none;stroke-opacity:1">🠹</tspan></text>
+    <rect
+       style="opacity:1;fill:#bc2929;fill-opacity:0;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.24291496"
+       id="rect4753-6-5-1"
+       width="31.460732"
+       height="32.521191"
+       x="164.49127"
+       y="669.64899"
+       rx="2.98875"
+       ry="3.33006"
+       inkscape:export-filename="/home/marin/jueguitos/simonPugliese/game/assets/buttons/arrows/derecha.png"
+       inkscape:export-xdpi="310"
+       inkscape:export-ydpi="310" />
+    <rect
+       style="opacity:1;fill:#bc2929;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.24291496"
+       id="rect4782-5"
+       width="31.460722"
+       height="32.285534"
+       x="-118.18391"
+       y="633.02972"
+       inkscape:export-filename="/home/marin/jueguitos/simonPugliese/game/assets/buttons/arrows/derecha.png"
+       inkscape:export-xdpi="310"
+       inkscape:export-ydpi="310"
+       transform="scale(-1,1)" />
+    <rect
+       style="opacity:1;fill:#6a6a6a;fill-opacity:1;stroke:#006000;stroke-width:0.38805407;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
+       id="rect5881-3-9-5-7-9"
+       width="30.930622"
+       height="29.970531"
+       x="-117.97778"
+       y="635.25977"
+       rx="3.5355282"
+       ry="3.3300591"
+       transform="scale(-1,1)" />
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#c0c0c0;stroke-width:0.38805407;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.24291496"
+       id="rect5881-4-3-5-7"
+       width="30.930622"
+       height="29.970531"
+       x="-117.97778"
+       y="633.3338"
+       rx="2.988749"
+       ry="3.3300591"
+       transform="scale(-1,1)" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:35px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-111.39919"
+       y="660.96558"
+       id="text5883-7-5-27-76"
+       sodipodi:linespacing="0%"
+       transform="scale(-1,1)"><tspan
+         sodipodi:role="line"
+         id="tspan5885-8-6-0-7"
+         x="-111.39919"
+         y="660.96558"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35px;line-height:1.69000006;font-family:'Hauracherell NC';-inkscape-font-specification:'Hauracherell NC';fill:#000000;fill-opacity:1;stroke:none;stroke-opacity:1">🠺</tspan></text>
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.24291496"
+       id="rect4753-3"
+       width="31.460732"
+       height="32.521191"
+       x="-118.30173"
+       y="632.91187"
+       rx="2.98875"
+       ry="3.33006"
+       inkscape:export-filename="/home/marin/jueguitos/simonPugliese/game/assets/buttons/arrows/derecha.png"
+       inkscape:export-xdpi="310"
+       inkscape:export-ydpi="310"
+       transform="scale(-1,1)" />
+    <rect
+       style="opacity:1;fill:#bc2929;fill-opacity:0;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.24291496"
+       id="rect4782-48-6"
+       width="31.460722"
+       height="32.285534"
+       x="-117.47692"
+       y="669.70361"
+       inkscape:export-filename="/home/marin/jueguitos/simonPugliese/game/assets/buttons/arrows/izquierda_pressed.png"
+       inkscape:export-xdpi="310"
+       inkscape:export-ydpi="310"
+       transform="scale(-1,1)" />
+    <rect
+       style="opacity:1;fill:#6a6a6a;fill-opacity:1;stroke:#006000;stroke-width:0.38805407;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
+       id="rect5881-3-9-5-7-7-5"
+       width="30.930622"
+       height="29.970531"
+       x="-117.27079"
+       y="671.93365"
+       rx="3.5355282"
+       ry="3.3300591"
+       transform="scale(-1,1)" />
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.24291496"
+       id="rect4753-7-6"
+       width="31.460732"
+       height="32.521191"
+       x="-117.59475"
+       y="669.58575"
+       rx="2.98875"
+       ry="3.33006"
+       inkscape:export-filename="/home/marin/jueguitos/simonPugliese/game/assets/buttons/arrows/derecha.png"
+       inkscape:export-xdpi="310"
+       inkscape:export-ydpi="310"
+       transform="scale(-1,1)" />
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#c0c0c0;stroke-width:0.38805407;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.24291496;filter:url(#filter5117-7)"
+       id="rect5881-4-3-5-1-3"
+       width="30.930622"
+       height="29.970531"
+       x="85.751015"
+       y="671.13141"
+       rx="2.988749"
+       ry="3.3300591"
+       transform="matrix(-1,0,0,1,202.90398,-0.0632622)" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:35px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter5117-7)"
+       x="92.329605"
+       y="698.76318"
+       id="text5883-7-5-27-7-9"
+       sodipodi:linespacing="0%"
+       transform="matrix(-1,0,0,1,202.90398,-0.0632622)"><tspan
+         sodipodi:role="line"
+         id="tspan5885-8-6-0-2-4"
+         x="92.329605"
+         y="698.76318"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35px;line-height:1.69000006;font-family:'Hauracherell NC';-inkscape-font-specification:'Hauracherell NC';fill:#000000;fill-opacity:1;stroke:none;stroke-opacity:1">🠺</tspan></text>
   </g>
 </svg>
