@@ -15,7 +15,7 @@ func _on_salir_pressed():
 
 func _on_acerca_pressed():
 	get_node("/root/global").apretar_ui_button()
-	get_node("/root/global").irAlMenu()
+	get_node("/root/global").irAAcercaDe()
 
 func esJugable():
 	return false

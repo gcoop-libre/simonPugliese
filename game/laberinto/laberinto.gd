@@ -12,7 +12,7 @@ func _ready():
 		jugar()
 	
 func animarTextoBienvenida():
-	dialog = get_node("/root/global").get_dialog()
+	dialog = get_node("/root/global").get_dialog_jugar()
 	var polygon = Vector2Array([Vector2(391, 264), Vector2(391, 530), Vector2(890, 530), Vector2(890, 264)])
 	dialog.set_polygon(polygon)
 	dialog.posicionarTexto(Vector2(410,280))

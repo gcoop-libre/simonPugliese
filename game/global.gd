@@ -134,7 +134,19 @@ func get_pugliese():
 	return pugliese.instance()
 
 func get_dialog():
-	return dialog.instance()
+	var dialogo = dialog.instance()
+	dialogo.quitarBoton()
+	return dialogo
+
+func get_dialog_jugar():
+	var dialogJugar = dialog.instance()
+	dialogJugar.get_node("boton").configurarTexturasJugar()
+	return dialogJugar
+
+func get_dialog_volver():
+	var dialogJugar = dialog.instance()
+	dialogJugar.get_node("boton").configurarTexturasVolver()
+	return dialogJugar
 
 func apretar_ui_button():
 	get_node("sonidos_ui").play("click")
@@ -151,6 +163,9 @@ func get_link_sitio():
 	return link_sitio.instance()
 
 func irAlMenu():
+	call_deferred("_deferred_goto_scene", "res://menu/menu.tscn")
+
+func irAAcercaDe():
 	call_deferred("_deferred_goto_scene", "res://menu/info.tscn")
 
 func irALosCreditos():

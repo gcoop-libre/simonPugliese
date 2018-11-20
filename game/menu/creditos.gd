@@ -4,9 +4,9 @@ var textoCreditos = ["Realizado por gcoop - Cooperativa de Software Libre en God
 var dialog 
 
 func _ready():
-	dialog = get_node("/root/global").get_dialog()
+	dialog = get_node("/root/global").get_dialog_volver()
 	dialog.mostrarTexto(textoCreditos)
-	dialog.conectarBoton("_on_jugar_pressed", get_parent())
+	dialog.conectarBoton("irAlMenu", get_node("/root/global"))
 	dialog.conectarTextoCompleto("agregarLinkSitio", self)
 	add_child(dialog)
 	

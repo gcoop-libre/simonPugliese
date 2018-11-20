@@ -43,7 +43,7 @@ func _on_telon_abierto():
 		get_node("btnEmpezar").set_disabled(false)
 
 func animarTextoBienvenida():
-	dialog = get_node("/root/global").get_dialog()
+	dialog = get_node("/root/global").get_dialog_jugar()
 	var polygon = Vector2Array([Vector2(64, 310), Vector2(64, 700), Vector2(610, 700), Vector2(610, 310)])
 	dialog.set_polygon(polygon)
 	dialog.posicionarTexto(Vector2(92,330))
@@ -192,7 +192,6 @@ func animarTextoCancion():
 	dialog = get_node("/root/global").get_dialog()
 	dialog = setPolygonCancion(dialog, textoCancion)
 	add_child(dialog) 
-	dialog.quitarBoton()
 	dialog.mostrarTexto(textoCancion)
 
 func setPolygonCancion(dialog, texto):
