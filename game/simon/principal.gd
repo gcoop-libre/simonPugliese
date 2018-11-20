@@ -190,11 +190,12 @@ func tocarCancion():
 func animarTextoCancion():
 	var textoCancion = get_node("canciones").get_texto_cancion()
 	dialog = get_node("/root/global").get_dialog()
-	ubicarTextoCancion(dialog, textoCancion)
+	dialog = setPolygonCancion(dialog, textoCancion)
 	add_child(dialog) 
 	dialog.quitarBoton()
+	dialog.mostrarTexto(textoCancion)
 
-func ubicarTextoCancion(dialogo, texto):
+func setPolygonCancion(dialog, texto):
 	# Traer posición del objeto nombre_cancion
 	var posicion = (get_node("nombre_cancion").get_pos())
 	# Calcular ancho y posición x del dialogo en funcion del texto
@@ -203,7 +204,6 @@ func ubicarTextoCancion(dialogo, texto):
 	var posx = posicion.x - (ancho / 2)
 	var polygon = Vector2Array([Vector2(posx, posicion.y), Vector2(posx, posicion.y + 80), Vector2(posx + ancho, posicion.y + 80), Vector2(posx + ancho, posicion.y)])
 	# Posicionar dialogo y texto
-	dialogo.set_polygon(polygon)
-	dialogo.posicionarTexto(Vector2(posx + (ancho * 0.08), posicion.y + 20))
-	dialog.mostrarTexto(texto)
-	return dialogo
+	dialog.set_polygon(polygon)
+	dialog.posicionarTexto(Vector2(posx + (ancho * 0.08), posicion.y + 20))
+	return dialog
