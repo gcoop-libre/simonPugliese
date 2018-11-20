@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://assets/buttons/pause.png" type="Texture" id=1]
+
+[node name="analog" type="Node2D"]
+
+transform/pos = Vector2( 93.5304, 638.011 )
+
+[node name="derecha" type="TouchScreenButton" parent="."]
+
+normal = ExtResource( 1 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = "ui_right"
+visibility_mode = 1
+
+
