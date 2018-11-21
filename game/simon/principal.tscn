@@ -723,8 +723,16 @@ wait_time = 0.4
 one_shot = false
 autostart = false
 
+[node name="timerSuperCortito" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 0.15
+one_shot = false
+autostart = false
+
 [node name="label" type="Node2D" parent="."]
 
+editor/display_folded = true
 transform/pos = Vector2( 640, -100 )
 
 [node name="anim" type="AnimationPlayer" parent="label"]

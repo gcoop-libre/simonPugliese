@@ -3,9 +3,9 @@ extends Node2D
 var currentPosicion = 0
 var patronTocado = []
 var textoBienvenida = ["¡Bienvenidos, bienvenidas!", "Osvaldito Pugliese y los músicos quieren armar \nla orquesta y necesitan tu ayuda.", "Te proponemos un desafío ¿Te sumás?", "Prepará las antenas que vas a tener que \nrepetir la melodía"]
-var nivel_1 = ['C1', 'D1', 'E2']
-var nivel_2 = ['C#1', 'D#1', 'A1']
-var nivel_3 = ['A2', 'F#2', 'E2']
+var nivel_1 = ["C#1", "A1", "B1", "A1", "A1", "G#1", "F#1", "C#2", "A1"]
+var nivel_2 = ["G1", "A1", "F1", "E1", "E1", "G1", "F1", "E1", "G1", "F1", "E1", "D1"]
+var nivel_3 = ["D2", "C#1", "D2", "E2", "F1", "E2", "C#2", "D2", "C#2", "D2", "E2", "F2", "E2"]
 var niveles = [nivel_1, nivel_2, nivel_3]
 var patron = null
 var cantidadNiveles
@@ -125,7 +125,9 @@ func continuarPatron():
 		var nombreOctava = "octava" + str(nombreBoton[-1])
 		var boton = get_node("teclado/"+nombreOctava+"/" + nombreBoton )
 		boton.apretar()
-		yield( boton, "finApretado")
+		yield(boton, "finApretado")
+		get_node("timerSuperCortito").start()
+		yield(get_node("timerSuperCortito"), "timeout")
 	deshabilitarInput(false)
 
 func deshabilitarInput(booleano):
@@ -138,13 +140,13 @@ func hayMasNiveles():
 	return cantidadNiveles - 1 > get_node("/root/global").subNivelActual
 
 func ganarJuego():
+	get_node("teclado/sonidos_ui").play("aplausos")
 	get_node("label/fin").show()
 	get_node("label/anim").play("mostrar")
 	yield(get_node("label/anim"), "finished")
 	get_node("label/fin").hide()
 	get_node("/root/global").stop_bg_music()
 	get_node("teclado/sonidos_ui").play("intro_la_yumba")
-	mostrarPugliese()
 	get_node("btnEmpezarDeNuevo/anim").play("mostrar")
 	get_node("btnEmpezarDeNuevo").set_fixed_process(true)
 
