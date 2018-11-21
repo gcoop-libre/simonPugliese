@@ -73,9 +73,8 @@ func boton_apretado(quien):
 				get_node("label/anim").play("mostrar")
 				yield(get_node("label/anim"), "finished")
 				get_node("label/ganaste").hide()
-				get_node("timerCancion").start()
 				tocarCancion()
-				yield(get_node("timerCancion"), "timeout")
+				yield(get_node("canciones"), "song_finished")
 				get_node("cuadro_texto").queue_free()
 				if hayMasNiveles():
 					instanciarTelon()
@@ -184,8 +183,8 @@ func esJugable():
 func tocarCancion():
 	mostrarPugliese()
 	var canciones = get_node("canciones")
-	canciones.sonar()
 	animarTextoCancion()
+	canciones.sonar()
 
 func animarTextoCancion():
 	var textoCancion = get_node("canciones").get_texto_cancion()

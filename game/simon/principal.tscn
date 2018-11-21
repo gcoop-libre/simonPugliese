@@ -33,9 +33,9 @@
 [ext_resource path="res://assets/labels/fin.png" type="Texture" id=31]
 [ext_resource path="res://assets/labels/win_simon.png" type="Texture" id=32]
 [ext_resource path="res://assets/labels/error.png" type="Texture" id=33]
-[ext_resource path="res://assets/sounds/cancion_3.smp" type="Sample" id=34]
-[ext_resource path="res://assets/sounds/cancion_1.smp" type="Sample" id=35]
-[ext_resource path="res://assets/sounds/cancion_2.smp" type="Sample" id=36]
+[ext_resource path="res://assets/sounds/cancion_1.smp" type="Sample" id=34]
+[ext_resource path="res://assets/sounds/cancion_2.smp" type="Sample" id=35]
+[ext_resource path="res://assets/sounds/cancion_3.smp" type="Sample" id=36]
 
 [sub_resource type="SampleLibrary" id=1]
 
@@ -165,13 +165,13 @@ tracks/1/keys = {
 [sub_resource type="SampleLibrary" id=6]
 
 samples/cancion_0 = {
-"db": 0.0,
+"db": 5.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 34 )
 }
 samples/cancion_1 = {
-"db": 0.0,
+"db": 5.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 35 )
@@ -188,22 +188,33 @@ samples/cancion_2 = {
 script/source = "extends SamplePlayer
 
 var track
+var playing
+signal song_finished
 
 func _ready():
+	playing = false
 	track = str(\"cancion_\",get_node(\"/root/global\").subNivelActual)
+	set_process(true)
 
 func get_texto_cancion():
 	var txt = \"\"
 	if(track == \"cancion_0\"):
-		txt = [\"La Yumba - Música: Osvaldo Pugliese\"]
-	if(track == \"cancion_1\"):
 		txt = [\"Recuerdo - Música: Osvaldo Pugliese, Letra: Eduardo Moreno\"]
-	if(track == \"cancion_2\"):
+	if(track == \"cancion_1\"):
 		txt = [\"La Mariposa - Música: Pedro Maffia, Letra: Celedonio Flores\"]
+	if(track == \"cancion_2\"):
+		txt = [\"La Yumba - Música: Osvaldo Pugliese\"]
 	return txt
 
 func sonar():
-	play(track)"
+	get_node(\"/root/global\").stop_bg_music()
+	playing = true
+	play(track)
+
+func _process(delta):
+	if(!is_active() && playing):
+		emit_signal(\"song_finished\")
+		playing = false"
 
 [node name="scene" type="Node2D"]
 
@@ -415,6 +426,7 @@ textures/click_mask = ExtResource( 17 )
 
 [node name="octava2" type="Node2D" parent="teclado"]
 
+editor/display_folded = true
 script/script = ExtResource( 4 )
 
 [node name="C2" parent="teclado/octava2" instance=ExtResource( 5 )]
@@ -759,13 +771,6 @@ default/reverb_room = 2
 default/reverb_send = 0.0
 default/chorus_send = 0.0
 script/script = SubResource( 7 )
-
-[node name="timerCancion" type="Timer" parent="."]
-
-process_mode = 1
-wait_time = 6.0
-one_shot = true
-autostart = false
 
 [connection signal="nivelGanado" from="." to="." method="_on_scene_nivelGanado" flags=6]
 
