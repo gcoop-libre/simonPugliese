@@ -76,6 +76,7 @@ margin/top = 575.0
 margin/right = 1179.2
 margin/bottom = 638.0
 toggle_mode = false
+click_on_press = true
 enabled_focus_mode = 2
 shortcut = null
 textures/normal = ExtResource( 5 )
@@ -104,16 +105,16 @@ default/reverb_send = 0.0
 default/chorus_send = 0.0
 script/script = ExtResource( 10 )
 
-[connection signal="textoCompleto" from="RichTextLabel" to="typing" method="_on_RichTextLabel_textoCompleto"]
-
 [connection signal="textoCompleto" from="RichTextLabel" to="." method="_on_RichTextLabel_textoCompleto"]
 
-[connection signal="textoCompleto" from="RichTextLabel" to="Timer" method="_on_RichTextLabel_textoCompleto" flags=7]
+[connection signal="textoCompleto" from="RichTextLabel" to="typing" method="_on_RichTextLabel_textoCompleto"]
 
 [connection signal="textoCompleto" from="RichTextLabel" to="boton" method="_on_RichTextLabel_textoCompleto" flags=7]
 
-[connection signal="timeout" from="Timer" to="Timer" method="_on_Timer_timeout"]
+[connection signal="textoCompleto" from="RichTextLabel" to="Timer" method="_on_RichTextLabel_textoCompleto" flags=7]
 
 [connection signal="timeout" from="Timer" to="RichTextLabel" method="_on_Timer_timeout"]
+
+[connection signal="timeout" from="Timer" to="Timer" method="_on_Timer_timeout"]
 
 

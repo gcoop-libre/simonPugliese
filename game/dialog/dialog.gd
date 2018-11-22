@@ -3,7 +3,7 @@ var completo = false
 var ok_held = false
 
 func _ready():
-	set_fixed_process(true)
+	set_process_input(true)
 	get_node("boton").hide()
 
 func mostrarTexto(txt):
@@ -28,8 +28,8 @@ func posicionarBoton(posicion):
 func quitarBoton():
 	get_node("boton").queue_free()
 	
-func _fixed_process(delta):
-	var ok = Input.is_action_pressed('ui_accept') || Input.is_action_pressed("touch")
+func _input(event):
+	var ok = event.is_action('ui_accept') || event.is_action_pressed("touch")
 	if ok and not ok_held:
 		apurar()
 	ok_held = ok
@@ -37,9 +37,7 @@ func _fixed_process(delta):
 func apurar():
 	if !(completo):
 		get_node("RichTextLabel").completarTexto()
-	else:
-		if(has_node("boton")):
-			get_node("boton").emit_signal("pressed")
 
 func _on_RichTextLabel_textoCompleto():
 	completo = true
+	set_process_input(false)
