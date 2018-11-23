@@ -11,7 +11,7 @@ func _on_RichTextLabel_textoCompleto():
 	set_process_input(true)
 	
 func _input(event):
-	ok = event.is_action("ui_accept")
+	ok = event.is_action_pressed("ui_accept")
 	if ok and not ok_held:
 		emit_signal("pressed")
 	ok_held = ok

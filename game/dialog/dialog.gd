@@ -29,7 +29,7 @@ func quitarBoton():
 	get_node("boton").queue_free()
 	
 func _input(event):
-	var ok = event.is_action('ui_accept') || event.is_action_pressed("touch")
+	var ok = event.is_action_pressed('ui_accept') || event.is_action_pressed("touch")
 	if ok and not ok_held:
 		apurar()
 	ok_held = ok
