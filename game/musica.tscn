@@ -7,7 +7,7 @@
 [sub_resource type="SampleLibrary" id=1]
 
 samples/bar = {
-"db": 0.0,
+"db": -6.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 1 )
