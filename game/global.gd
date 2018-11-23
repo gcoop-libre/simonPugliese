@@ -23,6 +23,7 @@ var pausa
 var telon
 var salir
 var link_sitio 
+var ayuda
 
 func _ready():
 	get_tree().set_auto_accept_quit(false)
@@ -35,6 +36,7 @@ func _ready():
 	dialog = preload("res://dialog/dialog.tscn")
 	telon = preload("res://simon/telon.tscn")
 	link_sitio = preload("res://menu/link_sitio.tscn")
+	ayuda = preload("res://simon/ayuda.tscn")
 	play_intro_song()
 
 func _notification(what):
@@ -176,3 +178,6 @@ func get_fondo_principal():
 
 func get_telon():
 	return telon.instance()
+
+func get_ayuda():
+	return ayuda.instance()

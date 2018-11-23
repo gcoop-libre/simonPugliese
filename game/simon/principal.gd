@@ -59,7 +59,7 @@ func conectarTeclado():
 
 func boton_apretado(quien):
 	deshabilitarInput(true)
-	patronTocado.append( str(quien.get_name()) )
+	patronTocado.append(str(quien.get_name()))
 	# chequeamos si la nota es la correcta
 	if ( checkPatronTocado() ):
 		# chequeamos si ya toque las notas que me piden (patron parcial)
@@ -91,6 +91,7 @@ func boton_apretado(quien):
 		else:
 			# si todavia me faltan notas del patron parcial, habilito input
 			deshabilitarInput(false)
+			get_node("timerHelp").start()
 	else:
 		get_node("teclado/sonidos_ui").play("error")
 		get_node("label/error").show()
@@ -102,9 +103,17 @@ func boton_apretado(quien):
 
 func checkPatronTocado():
 	for i in range(patronTocado.size()):
+		ocultarAyuda(patron[i])
 		if str(patronTocado[i]) != str(patron[i]):
 			return false
 	return true
+
+func ocultarAyuda(nombreBoton):
+	get_node("timerHelp").stop()
+	var nombreOctava = "octava" + str(nombreBoton[-1])
+	var posAyuda = get_node("teclado/"+nombreOctava+"/" + nombreBoton + "/pos_ayuda")
+	for child in posAyuda.get_children(): 
+		child.queue_free()
 
 func jugar():
 	mostrarTeclado()
@@ -129,6 +138,14 @@ func continuarPatron():
 		get_node("timerSuperCortito").start()
 		yield(get_node("timerSuperCortito"), "timeout")
 	deshabilitarInput(false)
+	get_node("timerHelp").start()
+
+func _on_timerHelp_timeout():
+	var nombreBoton = patron[patronTocado.size()]
+	var nombreOctava = "octava" + str(nombreBoton[-1])
+	var ayuda = get_node("/root/global").get_ayuda()
+	var posAyuda = get_node("teclado/"+nombreOctava+"/" + nombreBoton + "/pos_ayuda")
+	posAyuda.add_child(ayuda)
 
 func deshabilitarInput(booleano):
 	for octava in get_node("teclado").get_children():

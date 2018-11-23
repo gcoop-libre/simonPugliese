@@ -6,9 +6,6 @@
 [node name="boton" type="Node2D"]
 
 script/script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="boton-lb" type="TextureButton" parent="."]
 

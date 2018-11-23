@@ -234,48 +234,52 @@ script/script = ExtResource( 2 )
 
 [node name="fondo_piano" type="Sprite" parent="teclado"]
 
-transform/pos = Vector2( 568.736, 309.022 )
+transform/pos = Vector2( 569.844, 307.914 )
 transform/scale = Vector2( 0.77, 0.21 )
 texture = ExtResource( 3 )
 
 [node name="octava1" type="Node2D" parent="teclado"]
 
-editor/display_folded = true
 script/script = ExtResource( 4 )
 
 [node name="C1" parent="teclado/octava1" instance=ExtResource( 5 )]
 
-editor/display_folded = true
-transform/pos = Vector2( 477.006, 199.635 )
+transform/pos = Vector2( 62.0059, 201.635 )
 
 [node name="boton-lb" parent="teclado/octava1/C1"]
 
-margin/left = -415.0
-margin/top = 2.0
-margin/right = -78.0
-margin/bottom = -3516.0
+margin/left = 0.0
+margin/right = -5.0
+margin/bottom = -159.0
 textures/normal = ExtResource( 6 )
 textures/pressed = ExtResource( 7 )
 textures/click_mask = ExtResource( 8 )
 
+[node name="pos_ayuda" type="Position2D" parent="teclado/octava1/C1"]
+
+transform/pos = Vector2( 33, 187 )
+
 [node name="D1" parent="teclado/octava1" instance=ExtResource( 5 )]
 
-editor/display_folded = true
 transform/pos = Vector2( 477.006, 199.635 )
 
 [node name="boton-lb" parent="teclado/octava1/D1"]
 
 margin/left = -343.0
 margin/top = 2.0
-margin/right = 70.0
-margin/bottom = -401.0
+margin/right = 338.0
+margin/bottom = -161.0
 textures/normal = ExtResource( 9 )
 textures/pressed = ExtResource( 10 )
 textures/click_mask = ExtResource( 11 )
 
+[node name="pos_ayuda" type="Position2D" parent="teclado/octava1/D1"]
+
+transform/pos = Vector2( -306.927, 189 )
+z/relative = false
+
 [node name="E1" parent="teclado/octava1" instance=ExtResource( 5 )]
 
-editor/display_folded = true
 transform/pos = Vector2( 625.092, 486.926 )
 transform/rot = 180.0
 transform/scale = Vector2( -1, -1 )
@@ -283,132 +287,161 @@ transform/scale = Vector2( -1, -1 )
 [node name="boton-lb" parent="teclado/octava1/E1"]
 
 margin/left = -419.0
-margin/top = -286.0
-margin/right = 146.0
-margin/bottom = -113.0
+margin/top = -288.0
+margin/right = 414.0
+margin/bottom = 128.0
 textures/normal = ExtResource( 12 )
 textures/pressed = ExtResource( 13 )
 textures/click_mask = ExtResource( 14 )
 
+[node name="pos_ayuda" type="Position2D" parent="teclado/octava1/E1"]
+
+transform/pos = Vector2( -383.036, -98.2911 )
+transform/rot = -5.00896e-06
+
 [node name="F1" parent="teclado/octava1" instance=ExtResource( 5 )]
 
-editor/display_folded = true
 transform/pos = Vector2( 1023.84, 466.781 )
 
 [node name="boton-lb" parent="teclado/octava1/F1"]
 
 margin/left = -746.0
 margin/top = -266.0
-margin/right = 473.0
-margin/bottom = -133.0
+margin/right = 741.0
+margin/bottom = 107.0
 textures/normal = ExtResource( 6 )
 textures/pressed = ExtResource( 7 )
 textures/click_mask = ExtResource( 8 )
 
+[node name="pos_ayuda" type="Position2D" parent="teclado/octava1/F1"]
+
+transform/pos = Vector2( -711.557, -78.9125 )
+
 [node name="G1" parent="teclado/octava1" instance=ExtResource( 5 )]
 
-editor/display_folded = true
 transform/pos = Vector2( 1023.84, 466.781 )
 
 [node name="boton-lb" parent="teclado/octava1/G1"]
 
 margin/left = -674.0
 margin/top = -266.0
-margin/right = 401.0
-margin/bottom = -133.0
+margin/right = 669.0
+margin/bottom = 107.0
 textures/normal = ExtResource( 9 )
 textures/pressed = ExtResource( 10 )
 textures/click_mask = ExtResource( 11 )
 
+[node name="pos_ayuda" type="Position2D" parent="teclado/octava1/G1"]
+
+transform/pos = Vector2( -638.251, -78.0981 )
+
 [node name="A1" parent="teclado/octava1" instance=ExtResource( 5 )]
 
-editor/display_folded = true
 transform/pos = Vector2( 1023.84, 466.781 )
 
 [node name="boton-lb" parent="teclado/octava1/A1"]
 
 margin/left = -601.0
 margin/top = -266.0
-margin/right = 328.0
-margin/bottom = -133.0
+margin/right = 596.0
+margin/bottom = 107.0
 textures/normal = ExtResource( 9 )
 textures/pressed = ExtResource( 10 )
 textures/click_mask = ExtResource( 11 )
 
+[node name="pos_ayuda" type="Position2D" parent="teclado/octava1/A1"]
+
+transform/pos = Vector2( -566.389, -78.0981 )
+
 [node name="B1" parent="teclado/octava1" instance=ExtResource( 5 )]
 
-editor/display_folded = true
 transform/pos = Vector2( 1023.84, 466.781 )
 
 [node name="boton-lb" parent="teclado/octava1/B1"]
 
 margin/left = -527.0
 margin/top = -267.0
-margin/right = 254.0
-margin/bottom = -132.0
+margin/right = 522.0
+margin/bottom = 107.0
 textures/normal = ExtResource( 12 )
 textures/pressed = ExtResource( 13 )
 textures/click_mask = ExtResource( 14 )
 
+[node name="pos_ayuda" type="Position2D" parent="teclado/octava1/B1"]
+
+transform/pos = Vector2( -489.826, -78.0981 )
+
 [node name="C#1" parent="teclado/octava1" instance=ExtResource( 5 )]
 
-editor/display_folded = true
 transform/pos = Vector2( 737.039, 380.106 )
 
 [node name="boton-lb" parent="teclado/octava1/C#1"]
 
 margin/left = -621.0
 margin/top = -194.0
-margin/right = 348.0
-margin/bottom = -167.0
+margin/right = 651.0
+margin/bottom = 110.0
 textures/normal = ExtResource( 15 )
 textures/pressed = ExtResource( 16 )
 textures/click_mask = ExtResource( 17 )
 
+[node name="pos_ayuda" type="Position2D" parent="teclado/octava1/C#1"]
+
+transform/pos = Vector2( -605.391, -111.156 )
+
 [node name="D#1" parent="teclado/octava1" instance=ExtResource( 5 )]
 
-editor/display_folded = true
 transform/pos = Vector2( 737.039, 380.106 )
 
 [node name="boton-lb" parent="teclado/octava1/D#1"]
 
 margin/left = -547.0
 margin/top = -194.0
-margin/right = 274.0
-margin/bottom = -77.0
+margin/right = 577.0
+margin/bottom = 110.0
 textures/normal = ExtResource( 15 )
 textures/pressed = ExtResource( 16 )
 textures/click_mask = ExtResource( 17 )
 
+[node name="pos_ayuda" type="Position2D" parent="teclado/octava1/D#1"]
+
+transform/pos = Vector2( -531.271, -111.156 )
+
 [node name="F#1" parent="teclado/octava1" instance=ExtResource( 5 )]
 
-editor/display_folded = true
 transform/pos = Vector2( 737.039, 380.106 )
 
 [node name="boton-lb" parent="teclado/octava1/F#1"]
 
 margin/left = -405.0
 margin/top = -197.0
-margin/right = 132.0
-margin/bottom = -74.0
+margin/right = 435.0
+margin/bottom = 113.0
 textures/normal = ExtResource( 15 )
 textures/pressed = ExtResource( 16 )
 textures/click_mask = ExtResource( 17 )
 
+[node name="pos_ayuda" type="Position2D" parent="teclado/octava1/F#1"]
+
+transform/pos = Vector2( -388.732, -112.785 )
+
 [node name="G#1" parent="teclado/octava1" instance=ExtResource( 5 )]
 
-editor/display_folded = true
 transform/pos = Vector2( 737.039, 380.106 )
 
 [node name="boton-lb" parent="teclado/octava1/G#1"]
 
 margin/left = -331.0
 margin/top = -197.0
-margin/right = 58.0
-margin/bottom = -74.0
+margin/right = 361.0
+margin/bottom = 113.0
 textures/normal = ExtResource( 15 )
 textures/pressed = ExtResource( 16 )
 textures/click_mask = ExtResource( 17 )
+
+[node name="pos_ayuda" type="Position2D" parent="teclado/octava1/G#1"]
+
+transform/pos = Vector2( -314.612, -112.156 )
 
 [node name="A#1" parent="teclado/octava1" instance=ExtResource( 5 )]
 
@@ -418,50 +451,58 @@ transform/pos = Vector2( 738.845, 376.496 )
 
 margin/left = -260.0
 margin/top = -194.0
-margin/right = -13.0
-margin/bottom = -77.0
+margin/right = 290.0
+margin/bottom = 110.0
 textures/normal = ExtResource( 15 )
 textures/pressed = ExtResource( 16 )
 textures/click_mask = ExtResource( 17 )
 
+[node name="pos_ayuda" type="Position2D" parent="teclado/octava1/A#1"]
+
+transform/pos = Vector2( -241.484, -106.917 )
+
 [node name="octava2" type="Node2D" parent="teclado"]
 
-editor/display_folded = true
 script/script = ExtResource( 4 )
 
 [node name="C2" parent="teclado/octava2" instance=ExtResource( 5 )]
 
-editor/display_folded = true
 transform/pos = Vector2( 936.744, 206.157 )
 
 [node name="boton-lb" parent="teclado/octava2/C2"]
 
 margin/left = -368.0
 margin/top = -6.0
-margin/right = 95.0
-margin/bottom = -393.0
+margin/right = 363.0
+margin/bottom = -153.0
 textures/normal = ExtResource( 6 )
 textures/pressed = ExtResource( 7 )
 textures/click_mask = ExtResource( 8 )
 
+[node name="pos_ayuda" type="Position2D" parent="teclado/octava2/C2"]
+
+transform/pos = Vector2( -332.868, 181.526 )
+
 [node name="D2" parent="teclado/octava2" instance=ExtResource( 5 )]
 
-editor/display_folded = true
 transform/pos = Vector2( 477.006, 201.635 )
 
 [node name="boton-lb" parent="teclado/octava2/D2"]
 
 margin/left = 164.0
 margin/top = -2.0
-margin/right = -437.0
-margin/bottom = -397.0
+margin/right = -169.0
+margin/bottom = -157.0
 textures/normal = ExtResource( 9 )
 textures/pressed = ExtResource( 10 )
 textures/click_mask = ExtResource( 11 )
 
+[node name="pos_ayuda" type="Position2D" parent="teclado/octava2/D2"]
+
+transform/pos = Vector2( 201.732, 187.677 )
+
 [node name="E2" parent="teclado/octava2" instance=ExtResource( 5 )]
 
-editor/display_folded = true
 transform/pos = Vector2( 631.102, 490.596 )
 transform/rot = 180.0
 transform/scale = Vector2( -1, -1 )
@@ -470,146 +511,178 @@ transform/scale = Vector2( -1, -1 )
 
 margin/left = 83.0
 margin/top = -292.0
-margin/right = -356.0
-margin/bottom = -107.0
+margin/right = -88.0
+margin/bottom = 132.0
 textures/normal = ExtResource( 12 )
 textures/pressed = ExtResource( 13 )
 textures/click_mask = ExtResource( 14 )
 
+[node name="pos_ayuda" type="Position2D" parent="teclado/octava2/E2"]
+
+transform/pos = Vector2( 117.684, -102.913 )
+transform/rot = -5.00896e-06
+
 [node name="F2" parent="teclado/octava2" instance=ExtResource( 5 )]
 
-editor/display_folded = true
 transform/pos = Vector2( 1023.84, 466.781 )
 
 [node name="boton-lb" parent="teclado/octava2/F2"]
 
 margin/left = -238.0
 margin/top = -267.0
-margin/right = -35.0
-margin/bottom = -132.0
+margin/right = 233.0
+margin/bottom = 108.0
 textures/normal = ExtResource( 6 )
 textures/pressed = ExtResource( 7 )
 textures/click_mask = ExtResource( 8 )
 
+[node name="pos_ayuda" type="Position2D" parent="teclado/octava2/F2"]
+
+transform/pos = Vector2( -203.378, -78.2837 )
+
 [node name="G2" parent="teclado/octava2" instance=ExtResource( 5 )]
 
-editor/display_folded = true
 transform/pos = Vector2( 1023.84, 466.781 )
 
 [node name="boton-lb" parent="teclado/octava2/G2"]
 
 margin/left = -166.0
 margin/top = -268.0
-margin/right = -107.0
-margin/bottom = -131.0
+margin/right = 161.0
+margin/bottom = 109.0
 textures/normal = ExtResource( 9 )
 textures/pressed = ExtResource( 10 )
 textures/click_mask = ExtResource( 11 )
 
+[node name="pos_ayuda" type="Position2D" parent="teclado/octava2/G2"]
+
+transform/pos = Vector2( -132.516, -77.4692 )
+
 [node name="A2" parent="teclado/octava2" instance=ExtResource( 5 )]
 
-editor/display_folded = true
 transform/pos = Vector2( 1313.25, 207.519 )
 
 [node name="boton-lb" parent="teclado/octava2/A2"]
 
 margin/left = -383.0
-margin/top = -9.0
-margin/right = 110.0
-margin/bottom = -390.0
+margin/top = -8.0
+margin/right = 378.0
+margin/bottom = -151.0
 textures/normal = ExtResource( 9 )
 textures/pressed = ExtResource( 10 )
 textures/click_mask = ExtResource( 11 )
 
+[node name="pos_ayuda" type="Position2D" parent="teclado/octava2/A2"]
+
+transform/pos = Vector2( -346.177, 180.978 )
+
 [node name="B2" parent="teclado/octava2" instance=ExtResource( 5 )]
 
-editor/display_folded = true
 transform/pos = Vector2( 1021.5, 466 )
 
 [node name="boton-lb" parent="teclado/octava2/B2"]
 
 margin/left = -19.0
 margin/top = -268.0
-margin/right = -254.0
-margin/bottom = -131.0
+margin/right = 14.0
+margin/bottom = 108.0
 textures/normal = ExtResource( 12 )
 textures/pressed = ExtResource( 13 )
 textures/click_mask = ExtResource( 14 )
 
+[node name="pos_ayuda" type="Position2D" parent="teclado/octava2/B2"]
+
+transform/pos = Vector2( 18.0645, -77.5027 )
+
 [node name="C#2" parent="teclado/octava2" instance=ExtResource( 5 )]
 
-editor/display_folded = true
 transform/pos = Vector2( 737.039, 381.106 )
 
 [node name="boton-lb" parent="teclado/octava2/C#2"]
 
 margin/left = -114.0
 margin/top = -198.0
-margin/right = -159.0
-margin/bottom = -73.0
+margin/right = 144.0
+margin/bottom = 114.0
 textures/normal = ExtResource( 15 )
 textures/pressed = ExtResource( 16 )
 textures/click_mask = ExtResource( 17 )
 
+[node name="pos_ayuda" type="Position2D" parent="teclado/octava2/C#2"]
+
+transform/pos = Vector2( -98.2117, -112.414 )
+
 [node name="D#2" parent="teclado/octava2" instance=ExtResource( 5 )]
 
-editor/display_folded = true
 transform/pos = Vector2( 737.039, 380.106 )
 
 [node name="boton-lb" parent="teclado/octava2/D#2"]
 
 margin/left = -40.0
 margin/top = -198.0
-margin/right = -233.0
-margin/bottom = -73.0
+margin/right = 70.0
+margin/bottom = 114.0
 textures/normal = ExtResource( 15 )
 textures/pressed = ExtResource( 16 )
 textures/click_mask = ExtResource( 17 )
 
+[node name="pos_ayuda" type="Position2D" parent="teclado/octava2/D#2"]
+
+transform/pos = Vector2( -24.0916, -111.414 )
+
 [node name="F#2" parent="teclado/octava2" instance=ExtResource( 5 )]
 
-editor/display_folded = true
 transform/pos = Vector2( 737.039, 381.106 )
 
 [node name="boton-lb" parent="teclado/octava2/F#2"]
 
 margin/left = 103.0
 margin/top = -198.0
-margin/right = -376.0
-margin/bottom = -73.0
+margin/right = -73.0
+margin/bottom = 114.0
 textures/normal = ExtResource( 15 )
 textures/pressed = ExtResource( 16 )
 textures/click_mask = ExtResource( 17 )
 
+[node name="pos_ayuda" type="Position2D" parent="teclado/octava2/F#2"]
+
+transform/pos = Vector2( 120.076, -112.414 )
+
 [node name="G#2" parent="teclado/octava2" instance=ExtResource( 5 )]
 
-editor/display_folded = true
 transform/pos = Vector2( 737.039, 381.106 )
 
 [node name="boton-lb" parent="teclado/octava2/G#2"]
 
 margin/left = 173.0
 margin/top = -198.0
-margin/right = -446.0
-margin/bottom = -73.0
+margin/right = -143.0
+margin/bottom = 114.0
 textures/normal = ExtResource( 15 )
 textures/pressed = ExtResource( 16 )
 textures/click_mask = ExtResource( 17 )
 
+[node name="pos_ayuda" type="Position2D" parent="teclado/octava2/G#2"]
+
+transform/pos = Vector2( 190.753, -110.785 )
+
 [node name="A#2" parent="teclado/octava2" instance=ExtResource( 5 )]
 
-editor/display_folded = true
 transform/pos = Vector2( 737.845, 376.388 )
 
 [node name="boton-lb" parent="teclado/octava2/A#2"]
 
-margin/left = 249.0
-margin/top = -195.0
-margin/right = -522.0
-margin/bottom = -76.0
+margin/left = 247.0
+margin/top = -193.0
+margin/right = -217.0
+margin/bottom = 109.0
 textures/normal = ExtResource( 15 )
 textures/pressed = ExtResource( 16 )
 textures/click_mask = ExtResource( 17 )
+
+[node name="pos_ayuda" type="Position2D" parent="teclado/octava2/A#2"]
+
+transform/pos = Vector2( 263.696, -104.438 )
 
 [node name="sonidos" type="SamplePlayer" parent="teclado"]
 
@@ -780,11 +853,20 @@ default/reverb_send = 0.0
 default/chorus_send = 0.0
 script/script = SubResource( 7 )
 
+[node name="timerHelp" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 3.0
+one_shot = true
+autostart = false
+
 [connection signal="nivelGanado" from="." to="." method="_on_scene_nivelGanado" flags=6]
 
 [connection signal="pressed" from="btnEmpezar" to="." method="_on_btnEmpezar_pressed"]
 
 [connection signal="pressed" from="btnEmpezarDeNuevo" to="." method="_on_btnEmpezarDeNuevo_pressed"]
+
+[connection signal="timeout" from="timerHelp" to="." method="_on_timerHelp_timeout"]
 
 
 [editable path="teclado/octava1/C1"]
