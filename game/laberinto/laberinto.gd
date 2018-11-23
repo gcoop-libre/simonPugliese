@@ -26,6 +26,7 @@ func _on_empezar_pressed():
 	jugar()
 
 func jugar():
+	get_node("reloj/tiempo").contarTiempo()
 	get_node("personaje").set_fixed_process(true)
 	get_node("personaje/camion/humo").show()
 
