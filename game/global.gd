@@ -46,7 +46,7 @@ func _notification(what):
 		call_deferred("promptSalir")
 
 func promptSalir():
-	var salirDialog = load("res://menu/SalirDialog.tscn").instance()
+	var salirDialog = load("res://menu/salirDialog.tscn").instance()
 	prompt(salirDialog)
 
 func prompt(_dialog):

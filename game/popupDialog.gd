@@ -3,8 +3,8 @@ extends ConfirmationDialog
 func _ready():
 	pass
 
-func _on_SalirDialog_confirmed():
+func _on_salirDialog_confirmed():
 	get_tree().quit()
 
-func _on_SalirDialog_popup_hide():
+func _on_salirDialog_popup_hide():
 	get_node("/root/global").resume()

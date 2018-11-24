@@ -2,7 +2,7 @@
 
 [ext_resource path="res://popupDialog.gd" type="Script" id=1]
 
-[node name="SalirDialog" type="ConfirmationDialog"]
+[node name="salirDialog" type="ConfirmationDialog"]
 
 process/pause_mode = 2
 focus/ignore_mouse = false
@@ -19,8 +19,8 @@ dialog/text = "¿Salir?"
 dialog/hide_on_ok = true
 script/script = ExtResource( 1 )
 
-[connection signal="confirmed" from="." to="." method="_on_SalirDialog_confirmed"]
+[connection signal="confirmed" from="." to="." method="_on_salirDialog_confirmed"]
 
-[connection signal="popup_hide" from="." to="." method="_on_SalirDialog_popup_hide"]
+[connection signal="popup_hide" from="." to="." method="_on_salirDialog_popup_hide"]
 
 
