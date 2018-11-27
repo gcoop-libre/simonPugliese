@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=1]
+[gd_scene load_steps=46 format=1]
 
 [ext_resource path="res://simon/principal.gd" type="Script" id=1]
 [ext_resource path="res://simon/botonGrupo.gd" type="Script" id=2]
@@ -88,6 +88,25 @@ samples/win_level_2 = {
 "sample": ExtResource( 26 )
 }
 
+[sub_resource type="GDScript" id=8]
+
+script/source = "extends TextureButton
+
+# class member variables go here, for example:
+# var a = 2
+# var b = \"textvar\"
+var held = false
+
+func _ready():
+	# Called every time the node is added to the scene.
+	# Initialization here
+	pass
+
+func _input(event):
+	if(event.is_action_pressed(\"ui_accept\") && not held):
+		emit_signal(\"pressed\")
+	held = true"
+
 [sub_resource type="Animation" id=2]
 
 length = 0.5
@@ -103,6 +122,26 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Vector2( 523, 401 ), Vector2( 507, 401 ), Vector2( 659, 402 ), Vector2( 1297, 407 ) ]
 }
+
+[sub_resource type="GDScript" id=9]
+
+script/source = "extends TextureButton
+
+# class member variables go here, for example:
+# var a = 2
+# var b = \"textvar\"
+
+var held = false
+
+func _ready():
+	# Called every time the node is added to the scene.
+	# Initialization here
+	pass
+
+func _input(event):
+	if(event.is_action_pressed(\"ui_accept\") && not held):
+		emit_signal(\"pressed\")
+	held = true"
 
 [sub_resource type="Animation" id=3]
 
@@ -240,6 +279,7 @@ texture = ExtResource( 3 )
 
 [node name="octava1" type="Node2D" parent="teclado"]
 
+editor/display_folded = true
 script/script = ExtResource( 4 )
 
 [node name="C1" parent="teclado/octava1" instance=ExtResource( 5 )]
@@ -463,6 +503,7 @@ transform/pos = Vector2( -241.484, -106.917 )
 
 [node name="octava2" type="Node2D" parent="teclado"]
 
+editor/display_folded = true
 script/script = ExtResource( 4 )
 
 [node name="C2" parent="teclado/octava2" instance=ExtResource( 5 )]
@@ -738,6 +779,7 @@ textures/click_mask = ExtResource( 29 )
 params/resize_mode = 0
 params/scale = Vector2( 0.4, 0.4 )
 params/stretch_mode = 0
+script/script = SubResource( 8 )
 
 [node name="anim" type="AnimationPlayer" parent="btnEmpezar"]
 
@@ -769,6 +811,7 @@ textures/click_mask = ExtResource( 29 )
 params/resize_mode = 0
 params/scale = Vector2( 0.4, 0.4 )
 params/stretch_mode = 0
+script/script = SubResource( 9 )
 
 [node name="anim" type="AnimationPlayer" parent="btnEmpezarDeNuevo"]
 
