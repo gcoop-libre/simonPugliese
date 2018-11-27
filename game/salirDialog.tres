@@ -1,87 +1,21 @@
-[gd_scene load_steps=9 format=1]
+[gd_resource type="Theme" load_steps=2 format=1]
 
-[ext_resource path="res://assets/big.fnt" type="BitmapFont" id=1]
-[ext_resource path="res://popupDialog.gd" type="Script" id=2]
+[ext_resource path="res://assets/Hauracherell NC.fnt" type="BitmapFont" id=1]
 
-[sub_resource type="StyleBoxFlat" id=1]
-
-content_margin/left = -1.0
-content_margin/right = -1.0
-content_margin/top = -1.0
-content_margin/bottom = -1.0
-bg_color = Color( 0.242188, 0.242188, 0.242188, 1 )
-light_color = Color( 0.355469, 0.355469, 0.355469, 1 )
-dark_color = Color( 0.8, 0.8, 0.8, 1 )
-border_size = 0
-border_blend = true
-draw_bg = true
-
-[sub_resource type="StyleBoxFlat" id=3]
-
-content_margin/left = -1.0
-content_margin/right = -1.0
-content_margin/top = -1.0
-content_margin/bottom = -1.0
-bg_color = Color( 0.352941, 0.352941, 0.352941, 1 )
-light_color = Color( 0.355469, 0.355469, 0.355469, 1 )
-dark_color = Color( 0.8, 0.8, 0.8, 1 )
-border_size = 0
-border_blend = true
-draw_bg = true
-
-[sub_resource type="StyleBoxFlat" id=4]
-
-content_margin/left = -1.0
-content_margin/right = -1.0
-content_margin/top = -1.0
-content_margin/bottom = -1.0
-bg_color = Color( 0.242188, 0.242188, 0.242188, 1 )
-light_color = Color( 0.355469, 0.355469, 0.355469, 1 )
-dark_color = Color( 0.8, 0.8, 0.8, 1 )
-border_size = 0
-border_blend = true
-draw_bg = true
-
-[sub_resource type="StyleBoxFlat" id=5]
-
-content_margin/left = -1.0
-content_margin/right = -1.0
-content_margin/top = -1.0
-content_margin/bottom = -1.0
-bg_color = Color( 0.242188, 0.242188, 0.242188, 1 )
-light_color = Color( 0.355469, 0.355469, 0.355469, 1 )
-dark_color = Color( 0.8, 0.8, 0.8, 1 )
-border_size = 0
-border_blend = true
-draw_bg = true
-
-[sub_resource type="StyleBoxFlat" id=6]
-
-content_margin/left = -1.0
-content_margin/right = -1.0
-content_margin/top = -1.0
-content_margin/bottom = -1.0
-bg_color = Color( 0.172549, 0.164706, 0.196078, 1 )
-light_color = Color( 0, 0.10791, 0.53125, 1 )
-dark_color = Color( 0.210114, 0.232215, 0.351562, 1 )
-border_size = 0
-border_blend = true
-draw_bg = true
-
-[sub_resource type="Theme" id=7]
+[resource]
 
 default_font = ExtResource( 1 )
-Button/colors/font_color = Color( 0.839844, 0.839844, 0.839844, 1 )
-Button/colors/font_color_disabled = Color( 0.839216, 0.839216, 0.839216, 1 )
-Button/colors/font_color_hover = Color( 0.839216, 0.839216, 0.839216, 1 )
-Button/colors/font_color_pressed = Color( 0.709115, 0.710938, 0.477661, 1 )
+Button/colors/font_color = Color( 0.71875, 0.668213, 0.668213, 1 )
+Button/colors/font_color_disabled = Color( 0.717647, 0.666667, 0.666667, 1 )
+Button/colors/font_color_hover = Color( 0.560784, 0.654902, 0.556863, 1 )
+Button/colors/font_color_pressed = Color( 0.560784, 0.654902, 0.556863, 1 )
 Button/constants/hseparation = 0
 Button/fonts/font = null
-Button/styles/disabled = SubResource( 1 )
+Button/styles/disabled = null
 Button/styles/focus = null
-Button/styles/hover = SubResource( 3 )
-Button/styles/normal = SubResource( 4 )
-Button/styles/pressed = SubResource( 5 )
+Button/styles/hover = null
+Button/styles/normal = null
+Button/styles/pressed = null
 ButtonGroup/styles/panel = null
 CheckBox/colors/font_color = Color( 0, 0, 0, 1 )
 CheckBox/colors/font_color_disabled = Color( 0, 0, 0, 1 )
@@ -113,11 +47,11 @@ CheckButton/styles/focus = null
 CheckButton/styles/hover = null
 CheckButton/styles/normal = null
 CheckButton/styles/pressed = null
-ColorPicker/constants/color_width = 100
-ColorPicker/constants/hseparator = 4
-ColorPicker/constants/label_width = 50
-ColorPicker/constants/value_height = 23
-ColorPicker/constants/value_width = 50
+ColorPicker/constants/color_width = 0
+ColorPicker/constants/hseparator = 0
+ColorPicker/constants/label_width = 0
+ColorPicker/constants/value_height = 0
+ColorPicker/constants/value_width = 0
 ColorPicker/icons/add_preset = null
 ColorPicker/icons/screen_picker = null
 ColorPickerButton/colors/font_color = Color( 0, 0, 0, 1 )
@@ -131,8 +65,8 @@ ColorPickerButton/styles/focus = null
 ColorPickerButton/styles/hover = null
 ColorPickerButton/styles/normal = null
 ColorPickerButton/styles/pressed = null
-Dialogs/constants/button_margin = 50
-Dialogs/constants/margin = 50
+Dialogs/constants/button_margin = 0
+Dialogs/constants/margin = 0
 EditorIcons/icons/ResizedFile = null
 EditorIcons/icons/ResizedFolder = null
 FileDialog/colors/files_disabled = Color( 0, 0, 0, 1 )
@@ -205,9 +139,9 @@ ItemList/styles/cursor = null
 ItemList/styles/cursor_unfocused = null
 ItemList/styles/selected = null
 ItemList/styles/selected_focus = null
-Label/colors/font_color = Color( 0.853989, 0.853455, 0.921875, 1 )
+Label/colors/font_color = Color( 0, 0, 0, 1 )
 Label/colors/font_color_shadow = Color( 0, 0, 0, 1 )
-Label/constants/line_spacing = 2
+Label/constants/line_spacing = 0
 Label/constants/shadow_as_outline = 0
 Label/constants/shadow_offset_x = 0
 Label/constants/shadow_offset_y = 0
@@ -282,7 +216,7 @@ ReferenceFrame/styles/border = null
 RichTextLabel/colors/default_color = Color( 0, 0, 0, 1 )
 RichTextLabel/colors/font_color_selected = Color( 0, 0, 0, 1 )
 RichTextLabel/colors/selection_color = Color( 0, 0, 0, 1 )
-RichTextLabel/constants/line_separation = 2
+RichTextLabel/constants/line_separation = 0
 RichTextLabel/constants/table_hseparation = 0
 RichTextLabel/constants/table_vseparation = 0
 RichTextLabel/fonts/bold_font = null
@@ -437,36 +371,12 @@ VSplitContainer/constants/separation = 0
 VSplitContainer/icons/grabber = null
 VSplitContainer/styles/bg = null
 WindowDialog/colors/title_color = Color( 0, 0, 0, 1 )
-WindowDialog/constants/close_h_ofs = 22
-WindowDialog/constants/close_v_ofs = 20
-WindowDialog/constants/title_height = 60
-WindowDialog/constants/titlebar_height = 60
+WindowDialog/constants/close_h_ofs = 0
+WindowDialog/constants/close_v_ofs = 0
+WindowDialog/constants/title_height = 0
+WindowDialog/constants/titlebar_height = 0
 WindowDialog/fonts/title_font = null
 WindowDialog/icons/close = null
 WindowDialog/icons/close_hilite = null
-WindowDialog/styles/panel = SubResource( 6 )
-
-[node name="salirDialog" type="ConfirmationDialog"]
-
-process/pause_mode = 2
-visibility/self_opacity = 0.9146
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = SubResource( 7 )
-margin/left = 295.0
-margin/top = 154.0
-margin/right = 1015.0
-margin/bottom = 562.0
-popup/exclusive = true
-window/title = ""
-dialog/text = "                 ¿SALIR?"
-dialog/hide_on_ok = true
-script/script = ExtResource( 2 )
-
-[connection signal="confirmed" from="." to="." method="_on_salirDialog_confirmed"]
-
-[connection signal="popup_hide" from="." to="." method="_on_salirDialog_popup_hide"]
-
+WindowDialog/styles/panel = null
 
