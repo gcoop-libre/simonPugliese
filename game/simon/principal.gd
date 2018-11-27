@@ -5,7 +5,7 @@ var patronTocado = []
 var textoBienvenida = ["¡Bienvenidos, bienvenidas!", "Osvaldito Pugliese y los músicos quieren armar \nla orquesta y necesitan tu ayuda.", "Te proponemos un desafío ¿Te sumás?", "Prepará las antenas que vas a tener que \nrepetir la melodía"]
 var nivel_1 = ["C#1", "A1", "B1", "A1", "G#1", "F#1", "C#2", "A1"]
 var nivel_2 = ["G1", "A1", "F1", "E1", "G1", "F1", "E1", "G1", "F1", "E1", "D1"]
-var nivel_3 = ["D2", "C#1", "D2", "E2", "F1", "E2", "C#2", "D2", "C#2", "D2", "E2", "F2", "E2"]
+var nivel_3 = ["D2", "C#2", "D2", "E2", "F2", "E2", "C#2", "D2", "C#2", "D2", "E2", "F2", "E2"]
 var niveles = [nivel_1, nivel_2, nivel_3]
 var patron = null
 var cantidadNiveles
