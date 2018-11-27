@@ -1,7 +1,8 @@
 extends ConfirmationDialog
 
 func _ready():
-	pass
+	get_cancel().set_text("Cancelar")
+	get_ok().set_text("Aceptar")
 
 func _on_salirDialog_confirmed():
 	get_tree().quit()
