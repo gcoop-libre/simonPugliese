@@ -1,33 +1,6 @@
-[gd_scene load_steps=12 format=1]
+[gd_scene load_steps=9 format=1]
 
 [ext_resource path="res://laberinto/tilemap/tileset_scaled.res" type="TileSet" id=1]
-
-[sub_resource type="GDScript" id=1]
-
-script/source = "extends Position2D
-
-export var instrumento = \"violin\"
-
-func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here
-	pass
-"
-
-[sub_resource type="GDScript" id=2]
-
-script/source = "extends Position2D
-
-export var instrumento = \"violin\"
-# class member variables go here, for example:
-# var a = 2
-# var b = \"textvar\"
-
-func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here
-	pass
-"
 
 [sub_resource type="GDScript" id=3]
 
@@ -45,21 +18,6 @@ func _ready():
 "
 
 [sub_resource type="GDScript" id=4]
-
-script/source = "extends Position2D
-
-export var instrumento = \"violin\"
-# class member variables go here, for example:
-# var a = 2
-# var b = \"textvar\"
-
-func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here
-	pass
-"
-
-[sub_resource type="GDScript" id=5]
 
 script/source = "extends Position2D
 
@@ -170,18 +128,6 @@ tile_data = IntArray( -65537, 15, -131072, 15, -131071, 15, -131070, 15, -131069
 
 [node name="posiciones" type="Node2D" parent="."]
 
-[node name="pos1" type="Position2D" parent="posiciones"]
-
-transform/pos = Vector2( 775.235, 129.869 )
-script/script = SubResource( 1 )
-instrumento = "violin"
-
-[node name="pos2" type="Position2D" parent="posiciones"]
-
-transform/pos = Vector2( 1175.47, 124.958 )
-script/script = SubResource( 2 )
-instrumento = "violin"
-
 [node name="pos3" type="Position2D" parent="posiciones"]
 
 transform/pos = Vector2( 1120.23, 321.379 )
@@ -192,12 +138,6 @@ instrumento = "violin"
 
 transform/pos = Vector2( 1071.29, 628.298 )
 script/script = SubResource( 4 )
-instrumento = "violin"
-
-[node name="pos5" type="Position2D" parent="posiciones"]
-
-transform/pos = Vector2( 626.601, 578.468 )
-script/script = SubResource( 5 )
 instrumento = "violin"
 
 [node name="pos6" type="Position2D" parent="posiciones"]

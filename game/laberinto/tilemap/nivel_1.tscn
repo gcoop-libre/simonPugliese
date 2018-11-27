@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=1]
+[gd_scene load_steps=9 format=1]
 
 [ext_resource path="res://laberinto/tilemap/tileset_scaled.res" type="TileSet" id=1]
 
@@ -48,7 +48,7 @@ func _ready():
 
 script/source = "extends Position2D
 
-export var instrumento = \"violin\"
+export var instrumento = \"bandoneon\"
 # class member variables go here, for example:
 # var a = 2
 # var b = \"textvar\"
@@ -62,8 +62,8 @@ func _ready():
 [sub_resource type="GDScript" id=5]
 
 script/source = "extends Position2D
+export var instrumento = \"bandoneon\"
 
-export var instrumento = \"violin\"
 # class member variables go here, for example:
 # var a = 2
 # var b = \"textvar\"
@@ -77,8 +77,8 @@ func _ready():
 [sub_resource type="GDScript" id=6]
 
 script/source = "extends Position2D
-
 export var instrumento = \"bandoneon\"
+
 # class member variables go here, for example:
 # var a = 2
 # var b = \"textvar\"
@@ -90,51 +90,6 @@ func _ready():
 "
 
 [sub_resource type="GDScript" id=7]
-
-script/source = "extends Position2D
-export var instrumento = \"bandoneon\"
-
-# class member variables go here, for example:
-# var a = 2
-# var b = \"textvar\"
-
-func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here
-	pass
-"
-
-[sub_resource type="GDScript" id=8]
-
-script/source = "extends Position2D
-export var instrumento = \"bandoneon\"
-
-# class member variables go here, for example:
-# var a = 2
-# var b = \"textvar\"
-
-func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here
-	pass
-"
-
-[sub_resource type="GDScript" id=9]
-
-script/source = "extends Position2D
-export var instrumento = \"bandoneon\"
-
-# class member variables go here, for example:
-# var a = 2
-# var b = \"textvar\"
-
-func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here
-	pass
-"
-
-[sub_resource type="GDScript" id=10]
 
 script/source = "extends Position2D
 export var instrumento = \"contrabajo\"
@@ -190,46 +145,28 @@ transform/pos = Vector2( 873.026, 375.643 )
 script/script = SubResource( 3 )
 instrumento = "violin"
 
-[node name="pos4" type="Position2D" parent="posiciones"]
-
-transform/pos = Vector2( 721.185, 476.311 )
-script/script = SubResource( 4 )
-instrumento = "violin"
-
-[node name="pos5" type="Position2D" parent="posiciones"]
-
-transform/pos = Vector2( 725.458, 322.719 )
-script/script = SubResource( 5 )
-instrumento = "violin"
-
 [node name="pos6" type="Position2D" parent="posiciones"]
 
 transform/pos = Vector2( 236.857, 378.158 )
-script/script = SubResource( 6 )
+script/script = SubResource( 4 )
 instrumento = "bandoneon"
 
 [node name="pos7" type="Position2D" parent="posiciones"]
 
 transform/pos = Vector2( 470.621, 76.661 )
-script/script = SubResource( 7 )
+script/script = SubResource( 5 )
 instrumento = "bandoneon"
 
 [node name="pos8" type="Position2D" parent="posiciones"]
 
 transform/pos = Vector2( 169.882, 223.754 )
-script/script = SubResource( 8 )
-instrumento = "bandoneon"
-
-[node name="pos9" type="Position2D" parent="posiciones"]
-
-transform/pos = Vector2( 925.883, 275.117 )
-script/script = SubResource( 9 )
+script/script = SubResource( 6 )
 instrumento = "bandoneon"
 
 [node name="pos10" type="Position2D" parent="posiciones"]
 
 transform/pos = Vector2( 581.21, 578.046 )
-script/script = SubResource( 10 )
+script/script = SubResource( 7 )
 instrumento = "contrabajo"
 
 [node name="items" type="Node2D" parent="."]
