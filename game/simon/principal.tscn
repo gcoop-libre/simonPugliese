@@ -177,7 +177,7 @@ samples/cancion_1 = {
 "sample": ExtResource( 35 )
 }
 samples/cancion_2 = {
-"db": 0.0,
+"db": 5.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 36 )
@@ -839,7 +839,7 @@ texture = ExtResource( 33 )
 
 config/polyphony = 29
 config/samples = SubResource( 6 )
-default/volume_db = 12.65
+default/volume_db = 1.0
 default/pitch_scale = 1.0
 default/pan = 0.0
 default/depth = 0.0
