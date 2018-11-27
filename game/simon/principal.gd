@@ -3,7 +3,7 @@ extends Node2D
 var currentPosicion = 0
 var patronTocado = []
 var textoBienvenida = ["¡Bienvenidos, bienvenidas!", "Osvaldito Pugliese y los músicos quieren armar \nla orquesta y necesitan tu ayuda.", "Te proponemos un desafío ¿Te sumás?", "Prepará las antenas que vas a tener que \nrepetir la melodía"]
-var nivel_1 = ["C#2"]#, "D2", "C#2", "D2", "E2", "F2", "E2"] # La yumba
+var nivel_1 = ["C#2", "D2", "C#2", "D2", "E2", "F2", "E2"] # La yumba
 var nivel_2 = ["G1", "A1", "F1", "E1", "G1", "F1", "E1", "G1", "F1", "E1", "D1"] # La mariposa
 var nivel_3 = ["C#1", "A1", "B1", "A1", "G#1", "F#1", "C#2", "A1"] # Recuerdo
 var niveles = [nivel_1, nivel_2, nivel_3]
