@@ -1,0 +1,68 @@
+#!/bin/bash
+
+echo "*************************************************"
+echo "* Exportador de Simon Pugliese para Godot 2.1.5 *"
+echo "*************************************************"
+
+godot=$(which godot)
+REPO="https://github.com/gcoop-libre/simonPugliese.git"
+
+while [ -z "$VERSION" ] && [ -z "$EXISTE" ]; do
+    echo "Ingresá el numero de versión (release) para exportar:"
+    read VERSION
+done
+
+mkdir -v ~/exports-release-"$VERSION"
+cd game
+
+# android
+EXPORT_PATH="~/exports/simon-pugliese-v$VERSION.apk"
+echo "Exportando para Android en $EXPORT_PATH"
+$godot -export "Android" "$EXPORT_PATH"
+echo "Exportado finalizado!"
+echo "-------------------------------"
+
+## linux 64
+#EXPORT_PATH="~/exports/simon-pugliese-linux-64-v$VERSION"
+#echo "Exportando para Linux 64 en $EXPORT_PATH"
+#$godot -export "Linux X11" "$EXPORT_PATH"
+#echo "-------------------------------"
+#
+## o$x 64
+#EXPORT_PATH="~/exports/simon-pugliese-osx-64-v$VERSION"
+#echo "Exportando para OSX 64 en $EXPORT_PATH"
+#$godot -export "Mac OSX" "$EXPORT_PATH"
+#echo "-------------------------------"
+#
+## window$ 64
+#EXPORT_PATH="~/exports/simon-pugliese-windows-64-v$VERSION.exe"
+#echo "Exportando para Windows 64 en $EXPORT_PATH"
+#$godot -export "Windows Desktop" "$EXPORT_PATH"
+#echo "-------------------------------"
+#
+## Cambiamos lo necesario para exportar para x86.
+#sed -i -E 's/bits_mode=1/bits_mode=2/g' export.cfg
+#sed -i -E 's/64_bits=true/64_bits=false/g' export.cfg
+#
+## linux 32
+#EXPORT_PATH="~/exports/simon-pugliese-linux-32-v$VERSION"
+#echo "Exportando para Linux 32 en $EXPORT_PATH"
+#$godot -export "Linux X11" "$EXPORT_PATH"
+#echo "-------------------------------"
+#
+## o$x 32
+#EXPORT_PATH="~/exports/simon-pugliese-osx-32-v$VERSION"
+#echo "Exportando para OSX 32 en $EXPORT_PATH"
+#$godot -export "Mac OSX" "$EXPORT_PATH"
+#echo "-------------------------------"
+#
+## window$ 32
+#EXPORT_PATH="~/exports/simon-pugliese-windows-32-v$VERSION.exe"
+#echo "Exportando para Windows 32 en $EXPORT_PATH"
+#$godot -export "Windows Desktop" "$EXPORT_PATH"
+#echo "-------------------------------"
+#
+git checkout .
+
+echo "Listo!"
+echo "Los ejecutables están en ~/exports"
