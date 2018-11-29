@@ -1,18 +1,25 @@
 #!/bin/bash
 
+godot=$(which godot)
+REPO="https://github.com/gcoop-libre/simonPugliese.git"
+
 echo "*************************************************"
 echo "* Exportador de Simon Pugliese para Godot 2.1.5 *"
 echo "*************************************************"
 
-godot=$(which godot)
-REPO="https://github.com/gcoop-libre/simonPugliese.git"
-
-while [ -z "$VERSION" ] && [ -z "$EXISTE" ]; do
+while [ -z "$VERSION" ] || [ -z "$EXISTE" ]; do
     echo "Ingresá el numero de versión (release) para exportar:"
     read VERSION
+    BRANCH="release/$VERSION"
+    # Validamos que exista el branch en el repo
+    EXISTE=$( git ls-remote --heads "$REPO" | grep "$BRANCH" )
+    if [ -z "$EXISTE" ]
+    then
+	echo "No existe el branch $BRANCH en el repositorio remoto: $REPO"
+    fi
 done
 
-echo "Creando directorio para los ejecutables en el directorio padre del repo."
+echo "Creando directorio para los ejecutables en el directorio padre del repo local."
 mkdir -p ../exports-release-"$VERSION"
 EXPORT_PATH="../../exports-release-$VERSION"
 cd game
@@ -38,8 +45,7 @@ $godot -export "Windows Desktop" "$EXPORT_PATH/simon-pugliese-windows-64-v$VERSI
 echo "-------------------------------"
 
 # Cambiamos lo necesario para exportar para x86.
-sed -i -E 's/bits_mode=1/bits_mode=2/g' export.cfg
-sed -i -E 's/64_bits=true/64_bits=false/g' export.cfg
+sed -i.bkp -E 's/64_bits=true/64_bits=false/g' export.cfg
 
 # linux 32
 echo "Exportando para Linux 32 en $EXPORT_PATH"
@@ -56,7 +62,7 @@ echo "Exportando para Windows 32 en $EXPORT_PATH"
 $godot -export "Windows Desktop" "$EXPORT_PATH/simon-pugliese-windows-32-v$VERSION.exe"
 echo "-------------------------------"
 
-git checkout .
+mv export.cfg.bkp export.cfg
 
 echo "Listo!"
-echo "Los ejecutables están en ~/exports"
+echo "Los ejecutables están en $EXPORT_PATH"
