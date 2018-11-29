@@ -32,16 +32,19 @@ echo "-------------------------------"
 # linux 64
 echo "Exportando para Linux 64 en $EXPORT_PATH"
 $godot -export "Linux X11" "$EXPORT_PATH/simon-pugliese-linux-64-v$VERSION"
+chmod +x "$EXPORT_PATH/simon-pugliese-linux-64-v$VERSION"
 echo "-------------------------------"
 
 # o$x 64
-echo "Exportando para OSX 64 en $EXPORT_PATH"
-$godot -export "Mac OSX" "$EXPORT_PATH/simon-pugliese-osx-64-v$VERSION"
+echo "Exportando para OSX 32/64 en $EXPORT_PATH"
+$godot -export "Mac OSX" "$EXPORT_PATH/simon-pugliese-osx-v$VERSION"
+chmod +x "$EXPORT_PATH/simon-pugliese-osx-v$VERSION"
 echo "-------------------------------"
 
 # window$ 64
 echo "Exportando para Windows 64 en $EXPORT_PATH"
 $godot -export "Windows Desktop" "$EXPORT_PATH/simon-pugliese-windows-64-v$VERSION.exe"
+chmod +x "$EXPORT_PATH/simon-pugliese-windows-64-v$VERSION.exe"
 echo "-------------------------------"
 
 # Cambiamos lo necesario para exportar para x86.
@@ -50,16 +53,13 @@ sed -i.bkp -E 's/64_bits=true/64_bits=false/g' export.cfg
 # linux 32
 echo "Exportando para Linux 32 en $EXPORT_PATH"
 $godot -export "Linux X11" "$EXPORT_PATH/simon-pugliese-linux-32-v$VERSION"
-echo "-------------------------------"
-
-# o$x 32
-echo "Exportando para OSX 32 en $EXPORT_PATH"
-$godot -export "Mac OSX" "$EXPORT_PATH/simon-pugliese-osx-32-v$VERSION"
+chmod +x "$EXPORT_PATH/simon-pugliese-linux-32-v$VERSION"
 echo "-------------------------------"
 
 # window$ 32
 echo "Exportando para Windows 32 en $EXPORT_PATH"
 $godot -export "Windows Desktop" "$EXPORT_PATH/simon-pugliese-windows-32-v$VERSION.exe"
+chmod +x "$EXPORT_PATH/simon-pugliese-windows-32-v$VERSION.exe"
 echo "-------------------------------"
 
 mv export.cfg.bkp export.cfg
