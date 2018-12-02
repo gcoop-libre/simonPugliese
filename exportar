@@ -19,32 +19,37 @@ while [ -z "$VERSION" ] || [ -z "$EXISTE" ]; do
     fi
 done
 
+echo "Checkouteando a $BRANCH"
+git checkout "$BRANCH"
+
 echo "Creando directorio para los ejecutables en el directorio padre del repo local."
 mkdir -p ../exports-release-"$VERSION"
-EXPORT_PATH="../../exports-release-$VERSION"
+echo "Comenzando exportado de Simon Pugliese v$VERSION"
+
+EXPORT_PATH="../../exports-release-v$VERSION"
 cd game
 
 # android
 echo "Exportando para Android..."
-$godot -export "Android" "$EXPORT_PATH/simon-pugliese-v$VERSION.apk"
+$godot -export "Android" "$EXPORT_PATH/simon-pugliese.apk"
 echo "-------------------------------"
 
 # linux 64
 echo "Exportando para Linux 64 en $EXPORT_PATH"
-$godot -export "Linux X11" "$EXPORT_PATH/simon-pugliese-linux-64-v$VERSION"
-chmod +x "$EXPORT_PATH/simon-pugliese-linux-64-v$VERSION"
+$godot -export "Linux X11" "$EXPORT_PATH/simon-pugliese-linux-64"
+chmod +x "$EXPORT_PATH/simon-pugliese-linux-64"
 echo "-------------------------------"
 
 # o$x 64
 echo "Exportando para OSX 32/64 en $EXPORT_PATH"
-$godot -export "Mac OSX" "$EXPORT_PATH/simon-pugliese-osx-v$VERSION"
-chmod +x "$EXPORT_PATH/simon-pugliese-osx-v$VERSION"
+$godot -export "Mac OSX" "$EXPORT_PATH/simon-pugliese-osx"
+chmod +x "$EXPORT_PATH/simon-pugliese-osx"
 echo "-------------------------------"
 
 # window$ 64
 echo "Exportando para Windows 64 en $EXPORT_PATH"
-$godot -export "Windows Desktop" "$EXPORT_PATH/simon-pugliese-windows-64-v$VERSION.exe"
-chmod +x "$EXPORT_PATH/simon-pugliese-windows-64-v$VERSION.exe"
+$godot -export "Windows Desktop" "$EXPORT_PATH/simon-pugliese-windows-64.exe"
+chmod +x "$EXPORT_PATH/simon-pugliese-windows-64"
 echo "-------------------------------"
 
 # Cambiamos lo necesario para exportar para x86.
@@ -52,14 +57,14 @@ sed -i.bkp -E 's/64_bits=true/64_bits=false/g' export.cfg
 
 # linux 32
 echo "Exportando para Linux 32 en $EXPORT_PATH"
-$godot -export "Linux X11" "$EXPORT_PATH/simon-pugliese-linux-32-v$VERSION"
-chmod +x "$EXPORT_PATH/simon-pugliese-linux-32-v$VERSION"
+$godot -export "Linux X11" "$EXPORT_PATH/simon-pugliese-linux-32"
+chmod +x "$EXPORT_PATH/simon-pugliese-linux-32"
 echo "-------------------------------"
 
 # window$ 32
 echo "Exportando para Windows 32 en $EXPORT_PATH"
-$godot -export "Windows Desktop" "$EXPORT_PATH/simon-pugliese-windows-32-v$VERSION.exe"
-chmod +x "$EXPORT_PATH/simon-pugliese-windows-32-v$VERSION.exe"
+$godot -export "Windows Desktop" "$EXPORT_PATH/simon-pugliese-windows-32.exe"
+chmod +x "$EXPORT_PATH/simon-pugliese-windows-32.exe"
 echo "-------------------------------"
 
 mv export.cfg.bkp export.cfg
